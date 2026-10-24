@@ -18,26 +18,11 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
-<script src="https://cdn.tailwindcss.com"></script>
-<script>
-  tailwind.config = {
-    theme: {
-      extend: {
-        colors: {
-          ink: '#020617', navy: '#0F172A', slate2: '#334155', line: '#E2E8F0', paper: '#F8FAFC',
-          cta: { DEFAULT: '#0369A1', dark: '#075985', soft: '#E0F2FE' },
-          violet2: '#2563EB', sky2: '#0EA5E9'
-        },
-        fontFamily: { heading: ['"Space Grotesk"', 'sans-serif'], body: ['"DM Sans"', 'sans-serif'] },
-        maxWidth: { prose: '68ch' }
-      }
-    }
-  }
-</script>
+<link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/site.css">
 <style>
-  body { font-family: 'DM Sans', sans-serif; }
-  h1, h2, h3, .font-heading { font-family: 'Space Grotesk', sans-serif; letter-spacing: -0.01em; }
+  body { font-family: 'Schibsted Grotesk', sans-serif; }
+  h1, h2, h3, .font-heading { font-family: 'Schibsted Grotesk', sans-serif; letter-spacing: -0.01em; }
   :focus-visible { outline: 2px solid #0369A1; outline-offset: 2px; border-radius: 6px; }
   .missing { border: 1.5px dashed #D97706; background: #FFFBEB; color: #92400E; border-radius: 6px; padding: 0 .4em; font-weight: 500; white-space: normal; }
   .missing-block { border: 2px dashed #D97706; background: repeating-linear-gradient(135deg,#FFFBEB 0 12px,#FEF3C7 12px 24px); color: #92400E; }
@@ -56,14 +41,13 @@
   }
   .cta-video { animation: vdrift 6s ease-in-out 1 forwards; transform-origin: 60% 50%; }
   @keyframes vdrift { from { transform: scale(1.08) translate3d(-3%, 1%, 0); filter: hue-rotate(0deg) saturate(1.1); } to { transform: scale(1.22) translate3d(3%, -2%, 0); filter: hue-rotate(25deg) saturate(1.35); } }
-  /* GYIK: finom nyitás/zárás */
+  
   details.reveal { overflow: hidden; border-left: 3px solid transparent; padding-left: 0; transition: border-color .3s ease, padding-left .3s ease, background-color .3s ease; border-radius: 6px; }
   details.reveal[open] { border-left-color: #0369A1; padding-left: 14px; background-color: rgba(3,105,161,.04); }
   details.reveal > p { opacity: 0; transform: translateY(-6px); transition: opacity .35s ease .05s, transform .35s cubic-bezier(.2,.8,.2,1) .05s; }
   details.reveal[open] > p { opacity: 1; transform: none; }
   details .chev { transition: transform .35s cubic-bezier(.34,1.56,.64,1) !important; }
-
-  /* Cica-kabalák */
+  
   .mascot { position: absolute; pointer-events: none; user-select: none; filter: drop-shadow(0 18px 22px rgba(15,23,42,.28)); z-index: 5; }
   .mascot-float { animation: mfloat 4.5s ease-in-out infinite; }
   @keyframes mfloat { 0%,100% { transform: translateY(0) rotate(-1deg); } 50% { transform: translateY(-10px) rotate(1.5deg); } }
@@ -74,13 +58,11 @@
   .mascot-jump.in, .in .mascot-jump { animation: mjump 1.1s cubic-bezier(.34,1.56,.64,1) .2s 1 both; }
   @keyframes mjump { 0% { transform: translateY(40px) scale(.9); opacity: 0; } 55% { transform: translateY(-18px) scale(1.04); opacity: 1; } 100% { transform: translateY(0) scale(1); opacity: 1; } }
   @media (prefers-reduced-motion: reduce) { .mascot, .mascot * { animation: none !important; transition: none !important; opacity: 1 !important; transform: none !important; } }
-
-  /* Lábléc-cica: lebeg és időnként integet */
+  
   .footer-cat { transform-origin: 60% 95%; animation: fcat 6s ease-in-out infinite; }
   @keyframes fcat { 0%,100% { transform: translateY(0) rotate(0); } 12% { transform: translateY(-6px) rotate(-6deg); } 18% { transform: translateY(-6px) rotate(5deg); } 24% { transform: translateY(-6px) rotate(-5deg); } 30% { transform: translateY(0) rotate(0); } 60% { transform: translateY(-10px) rotate(1deg); } }
   @media (prefers-reduced-motion: reduce) { .footer-cat { animation: none; } }
-
-  /* Szél-motívumok (csak széles képernyőn, a tartalom mellett) */
+  
   .side-deco { display: none; position: fixed; top: 0; bottom: 0; width: calc((100vw - 72rem) / 2 - 24px); pointer-events: none; z-index: 1; overflow: hidden; }
   .side-left { left: 0; } .side-right { right: 0; }
   @media (min-width: 1400px) { .side-deco { display: block; } }
@@ -90,7 +72,7 @@
   .side-right .sd-dots { -webkit-mask-image: linear-gradient(270deg, #000, transparent 85%); mask-image: linear-gradient(270deg, #000, transparent 85%); }
   .sd-orb { width: 260px; height: 260px; border-radius: 9999px; filter: blur(60px); opacity: .22; animation: sdOrb 22s ease-in-out infinite alternate; }
   .sd-orb-a { background: #2563EB; top: 12%; left: -80px; }
-  .sd-orb-b { background: #7C3AED; bottom: 8%; right: -90px; animation-duration: 28s; animation-delay: -9s; }
+  .sd-orb-b { background: #2563EB; bottom: 8%; right: -90px; animation-duration: 28s; animation-delay: -9s; }
   .side-right .sd-orb-a { left: auto; right: -80px; } .side-right .sd-orb-b { right: auto; left: -90px; }
   @keyframes sdOrb { from { transform: translate(0,0) scale(1); } to { transform: translate(40px, 80px) scale(1.15); } }
   .sd-line { top: 18%; height: 64%; width: 12px; opacity: .45; stroke-dasharray: 600; stroke-dashoffset: 600; animation: sdDraw 3.5s ease-out .6s forwards, sdPulse 6s ease-in-out 4s infinite; }
@@ -107,10 +89,10 @@
   .side-left .sd-mono { left: 18%; } .side-right .sd-mono { right: 18%; }
   @media (prefers-reduced-motion: reduce) { .side-deco * { animation: none !important; stroke-dashoffset: 0 !important; } }
   html, body { overflow-x: clip; }
-  /* Jogi ablakok */
+  
   .legal-dlg { width: min(760px, calc(100vw - 32px)); max-height: calc(100dvh - 48px); padding: 0; border: 0; border-radius: 20px; box-shadow: 0 30px 80px rgba(2,6,23,.35); overflow: hidden; color: #334155; background: #fff; }
   .legal-dlg[open] { display: flex; flex-direction: column; animation: dlgIn .35s cubic-bezier(.16,1,.3,1); }
-  .legal-dlg::backdrop { background: rgba(15,23,42,.6); backdrop-filter: blur(4px); }
+  .legal-dlg::backdrop { background: rgba(15,23,42,.72); }
   @keyframes dlgIn { from { opacity: 0; transform: translateY(16px) scale(.98); } to { opacity: 1; transform: none; } }
   html:has(.legal-dlg[open]) { overflow: hidden; }
   .legal-head { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 18px 24px; border-bottom: 1px solid #E2E8F0; }
@@ -125,25 +107,24 @@
   .legal-body a { color: #0369A1; text-decoration: underline; text-underline-offset: 2px; }
   .legal-lead { margin-top: 18px !important; font-size: 16px; color: #0F172A; font-weight: 500; }
   .legal-date { margin-top: 24px !important; font-size: 13px; color: #64748B; }
-
-  /* ===== Mobil: AI-jelek helyett saját kompozíció (2026-10-19) ===== */
+  
   .m-cta { transition: transform .18s cubic-bezier(.2,.8,.2,1); }
   .m-cta-arrow { animation: nudge 1.8s cubic-bezier(.2,.8,.2,1) infinite; }
   @keyframes nudge { 0%, 60%, 100% { transform: translateX(0); } 30% { transform: translateX(5px); } }
   .m-hero-cat { animation: catIn .9s cubic-bezier(.2,1.4,.4,1) .5s both, floaty 4s ease-in-out 1.4s infinite; }
   @keyframes catIn { from { opacity: 0; transform: translateY(40px) rotate(-12deg) scale(.6); } to { opacity: 1; transform: none; } }
   @keyframes floaty { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
-  /* koppintás-visszajelzés mindenhol */
+  
   a, button, summary { -webkit-tap-highlight-color: transparent; }
   a:active, button:active, summary:active { transform: scale(.97); }
-  /* hero cím: szavanként felúszik */
+  
   .hw { display: inline-block; opacity: 0; transform: translateY(.45em); animation: wordUp .7s cubic-bezier(.2,.8,.2,1) forwards; }
   @keyframes wordUp { to { opacity: 1; transform: none; } }
-  /* testvérelemek lépcsőzetesen jelennek meg */
+  
   .reveal { transition-delay: var(--d, 0ms); }
   @media (max-width: 767px) {
     header#top { border-bottom-color: transparent !important; }
-    /* szolgáltatások: nagy betűs lista keretek és ikonok nélkül, a demó sötét blokk */
+    
     .m-services { gap: 44px; margin-top: 40px; }
     .m-services article { border: 0 !important; background: transparent !important; padding: 0 !important; box-shadow: none !important; }
     .m-services article > div:first-of-type { display: none; }
@@ -155,7 +136,7 @@
     .m-services article:last-child h3 { color: #fff; }
     .m-services article:last-child p { color: #CBD5E1; }
     .m-services article:last-child > span.absolute { top: -14px; left: 24px; }
-    /* lépések: húzható kártyák, számozás nélkül */
+    
     .m-steps { display: flex !important; overflow-x: auto; scroll-snap-type: x mandatory; gap: 12px; margin: 32px -16px 0; padding: 4px 16px 16px; scrollbar-width: none; }
     .m-steps::-webkit-scrollbar { display: none; }
     .m-steps > li { flex: 0 0 76%; scroll-snap-align: start; border: 0 !important; padding: 28px 24px !important; min-height: 190px;
@@ -166,11 +147,11 @@
     .m-steps > li.reveal.in:not(.on) { transform: scale(.93); opacity: .55; }
     .m-steps > li.on { background: #0F172A !important; }
     .m-steps > li.on h3 { color: #fff; } .m-steps > li.on p { color: #CBD5E1; }
-    /* Miért én: ikon-csempék ki */
+    
     .m-why > div > div:first-child { display: none; }
     .m-why h3 { font-size: 22px; }
     #warum figure .relative.overflow-hidden { box-shadow: none; }
-    /* keretek helyett tónuslépcső */
+    
     .m-flat, #kontakt .rounded-2xl.border { border-color: transparent !important; background-color: #F1F5F9 !important; }
     .m-flat summary > span > img { width: 44px; height: 44px; }
     #kontakt .auto-rows-fr { grid-auto-rows: auto; height: auto; }
@@ -182,8 +163,7 @@
     .m-cta-arrow, .m-hero-cat { animation: none; }
     .m-steps > li.reveal.in:not(.on) { transform: none; opacity: 1; }
   }
-
-  /* ===== Mobil háttér-motívumok (a desktop szél-motívumok párja) ===== */
+  
   .m-deco { display: none; }
   @media (max-width: 767px) {
     .m-deco-host { position: relative; overflow: hidden; }
@@ -203,7 +183,7 @@
     .m-deco.on .md-line path:first-child { animation: sdDraw 2.4s cubic-bezier(.2,.8,.2,1) .2s forwards; }
     .md-orb { width: 200px; height: 200px; border-radius: 9999px; background: #2563EB; opacity: .10; filter: blur(50px); animation: sdOrb 20s ease-in-out infinite alternate; }
     .m-deco.dark .md-orb { opacity: .22; }
-    /* belépéskor: a motívumok beúsznak */
+    
     .m-deco > * { opacity: 0; transition: opacity 1.2s ease; }
     .m-deco.on > * { opacity: 1; }
     .m-deco.on > .md-dia { opacity: .55; }
@@ -213,24 +193,22 @@
   @keyframes mdBreath { 0%,100% { scale: 1; rotate: -3deg; } 50% { scale: 1.07; rotate: 3deg; } }
   @keyframes mdDrift { from { transform: translate(0,0) rotate(0); } to { transform: translate(34px,-26px) rotate(8deg); } }
   @media (prefers-reduced-motion: reduce) { .m-deco * { animation: none !important; } .md-line path:first-child { stroke-dashoffset: 0; } }
-
-  /* ===== Több mozgás (2026-10-19) – a kinézet nem változik, csak mozog ===== */
-  /* címek: alulról, kitakarással úsznak be */
+  
   .reveal .h-rise { clip-path: inset(0 0 100% 0); transform: translateY(.35em); transition: clip-path .9s cubic-bezier(.2,.8,.2,1) .08s, transform .9s cubic-bezier(.2,.8,.2,1) .08s; }
   .reveal.in .h-rise { clip-path: inset(-20% -5% -20% -5%); transform: none; }
-  /* felpattanó apró elemek (pipák, ikonok, kártyák) */
+  
   .pop.reveal { transform: translateY(12px) scale(.86); transition: opacity .5s ease, transform .6s cubic-bezier(.2,1.5,.4,1); transition-delay: var(--d, 0ms); }
   .pop.reveal.in { transform: none; }
-  /* ikon-biccentés, amikor a kártya beúszik */
+  
   .reveal.in > svg.text-cta:first-child, .reveal.in > div > svg.text-cta { animation: nod .7s cubic-bezier(.2,.8,.2,1) .35s both; }
   @keyframes nod { 0% { transform: rotate(0) scale(1); } 35% { transform: rotate(-14deg) scale(1.18); } 70% { transform: rotate(8deg) scale(1.05); } 100% { transform: none; } }
-  /* fényes csík a fő gombokon */
+  
   .shine { position: relative; overflow: hidden; isolation: isolate; }
   .shine::after { content: ''; position: absolute; top: 0; bottom: 0; left: -60%; width: 40%; z-index: -1; pointer-events: none;
     background: linear-gradient(105deg, transparent, rgba(255,255,255,.45), transparent); transform: skewX(-18deg); animation: shine 5.5s ease-in-out 2s infinite; }
   .m-cta.shine::after { background: linear-gradient(105deg, transparent, rgba(37,99,235,.18), transparent); }
   @keyframes shine { 0%, 70% { left: -60%; } 100% { left: 130%; } }
-  /* cicák: apró billegés */
+  
   .mascot-float { animation: mfloat 4.5s ease-in-out infinite, sway 7s ease-in-out infinite; }
   @keyframes sway { 0%,100% { rotate: -2.5deg; } 50% { rotate: 2.5deg; } }
   @media (prefers-reduced-motion: reduce) {
@@ -238,8 +216,7 @@
     .shine::after, .reveal.in > svg.text-cta:first-child, .reveal.in > div > svg.text-cta { animation: none; }
     .mascot-float { animation: none; }
   }
-
-  /* ===== Mobilmenü (teljes képernyő, kör alakú nyitás a hamburgertől) ===== */
+  
   .burger { display: block; position: relative; width: 24px; height: 18px; }
   .burger i { position: absolute; left: 0; width: 24px; height: 2px; border-radius: 2px; background: #0F172A;
     transition: transform .45s cubic-bezier(.7,0,.2,1), opacity .25s ease, top .45s cubic-bezier(.7,0,.2,1), width .3s ease; }
@@ -253,7 +230,7 @@
   .mnav.open { clip-path: circle(160% at calc(100% - 36px) -32px); visibility: visible; transition: clip-path .75s cubic-bezier(.7,0,.2,1), visibility 0s; }
   .mnav-in { position: relative; z-index: 1; }
   .mnav a { opacity: 0; transform: translateY(26px); transition: opacity .45s ease, transform .6s cubic-bezier(.2,.8,.2,1), color .2s ease; }
-  .mnav a:not(.bg-cta) { color: #fff; font-family: 'Space Grotesk', system-ui, sans-serif; font-size: 34px; font-weight: 600; letter-spacing: -.02em; line-height: 1.15; padding: 10px 0; }
+  .mnav a:not(.bg-cta) { color: #fff; font-family: 'Schibsted Grotesk', system-ui, sans-serif; font-size: 34px; font-weight: 600; letter-spacing: -.02em; line-height: 1.15; padding: 10px 0; }
   .mnav a:not(.bg-cta):active, .mnav a:not(.bg-cta):hover { color: #60A5FA; }
   .mnav a.bg-cta { margin-top: 28px; font-size: 17px; padding: 16px 20px; border-radius: 9999px; background: #fff; color: #0F172A; }
   .mnav.open a { opacity: 1; transform: none; }
@@ -268,11 +245,9 @@
   html.menu-open { overflow: hidden; }
   html.menu-open #top { background: #fff; }
   @media (prefers-reduced-motion: reduce) { .mnav, .mnav a, .burger i { transition: none !important; } .mnav.open .mnav-mono, .mnav.open .mnav-dia { animation: none; } }
-
-  /* ===== FX: „ott tartó” hatások – mindegyik a <html> fx-… osztályához kötve (kapcsolók a JS-ben: const FX) ===== */
+  
   @property --ang { syntax: '<angle>'; inherits: false; initial-value: 0deg; }
-  /* 1) pinSteps – a „4 lépés” görgetés közben ott marad, a lépések egymás után kigyúlnak */
-  /* (Márton 2026-10-19: telefonon NE akadjon meg – a rögzítés csak gépen) */
+  
   @media (min-width: 768px) { html.fx-pinSteps #ablauf { height: 230vh; overflow: clip; }
     html.fx-pinSteps #ablauf > .max-w-6xl { position: sticky; top: calc(var(--hh, 64px) + 28px); }
     html.fx-pinSteps .m-steps > li { transition: transform .55s cubic-bezier(.2,.8,.2,1), background-color .55s ease, opacity .55s ease !important; }
@@ -284,14 +259,7 @@
   html.fx-pinSteps .fx-steps-bar > i { display: block; height: 100%; width: 0; border-radius: inherit; background: #2563EB; position: relative; overflow: hidden; }
   html.fx-pinSteps .fx-steps-bar > i::after { content: ''; position: absolute; inset: 0; width: 40%; background: linear-gradient(90deg, transparent, rgba(255,255,255,.8), transparent); animation: barGlint 1.6s linear infinite; }
   @keyframes barGlint { from { transform: translateX(-100%); } to { transform: translateX(300%); } }
-  /* 2) textShine – fénycsík fut végig a kiemelt szövegeken */
-  html.fx-textShine .bg-navy .grad-text .hw, html.fx-textShine #ctaBand h2 {
-    color: transparent; -webkit-background-clip: text; background-clip: text; background-size: 260% 100%; }
-  html.fx-textShine .bg-navy .grad-text .hw { background-image: linear-gradient(110deg, #60A5FA 0 42%, #EFF6FF 50%, #60A5FA 58% 100%);
-    animation: wordUp .7s cubic-bezier(.2,.8,.2,1) forwards, textShine 4.5s ease-in-out infinite; }
-  html.fx-textShine #ctaBand h2 { background-image: linear-gradient(110deg, #fff 0 42%, #93C5FD 50%, #fff 58% 100%); animation: textShine 5.5s ease-in-out 1s infinite; }
-  @keyframes textShine { 0% { background-position: 100% 0; } 45%, 100% { background-position: 0% 0; } }
-  /* 3) stickyCta – mobilon alul lebegő, csillogó „Ingyenes demót kérek” gomb */
+  
   .fx-pill { display: none; }
   @media (max-width: 767px) {
     html.fx-stickyCta .fx-pill { display: inline-flex; position: fixed; left: 50%; bottom: 18px; z-index: 30; align-items: center; gap: 8px; white-space: nowrap;
@@ -300,32 +268,25 @@
     html.fx-stickyCta .fx-pill.show { transform: translate(-50%, 0); }
     html.fx-stickyCta .fx-pill.shine::after { background: linear-gradient(105deg, transparent, rgba(255,255,255,.35), transparent); }
   }
-  /* 4) progress – vékony kék sáv a fejléc alján, ahogy haladsz lefelé, csillanással */
+  
   .fx-prog { display: none; }
   html.fx-progress .fx-prog { display: block; position: absolute; left: 0; right: 0; bottom: -1px; height: 3px; pointer-events: none; }
   html.fx-progress .fx-prog > i { display: block; height: 100%; width: 100%; transform-origin: 0 50%; transform: scaleX(0); background: #2563EB; }
   html.fx-progress .fx-prog > i::after { content: ''; position: absolute; top: 0; bottom: 0; width: 60px; right: 0; background: radial-gradient(closest-side, rgba(255,255,255,.95), transparent); }
-  /* 5) marquee – mozgó szalag a szolgáltatások után; görgetésre gyorsul, felfelé görgetve visszafelé megy */
+  
   .fx-band { display: none; }
   html.fx-marquee .fx-band { display: block; position: relative; z-index: 2; overflow: hidden; background: #0F172A; padding: 22px 0; }
   .fx-track { display: flex; width: max-content; animation: marq 38s linear infinite; }
-  .fx-track span { display: inline-flex; align-items: center; gap: 28px; padding-right: 28px; color: #fff; font-family: 'Space Grotesk', system-ui, sans-serif; font-weight: 600; font-size: 30px; letter-spacing: -.01em; white-space: nowrap; }
+  .fx-track span { display: inline-flex; align-items: center; gap: 28px; padding-right: 28px; color: #fff; font-family: 'Schibsted Grotesk', system-ui, sans-serif; font-weight: 600; font-size: 30px; letter-spacing: -.01em; white-space: nowrap; }
   .fx-track span:nth-child(even) { color: transparent; -webkit-text-stroke: 1.2px #60A5FA; }
   .fx-track svg { width: 16px; height: 16px; flex: none; }
   @keyframes marq { to { transform: translateX(-50%); } }
   @media (min-width: 768px) { .fx-track span { font-size: 44px; } html.fx-marquee .fx-band { padding: 30px 0; } }
-  /* 6) spotlight – a kártyákon fény követi az egeret; telefonon koppintásra felvillan */
+  
   html.fx-spotlight .fx-spot { position: relative; }
   html.fx-spotlight .fx-spot::after { content: ''; position: absolute; inset: 0; border-radius: inherit; pointer-events: none; opacity: 0; transition: opacity .35s ease;
     background: radial-gradient(260px circle at var(--mx, 50%) var(--my, 50%), rgba(37,99,235,.14), transparent 70%); }
   html.fx-spotlight .fx-spot:hover::after, html.fx-spotlight .fx-spot.tap::after { opacity: 1; }
-  /* 7) ring – körbefutó fénycsík a két „Ingyenes demó” doboz körül */
-  html.fx-ring .fx-ringed { position: relative; }
-  html.fx-ring .fx-ringed > .absolute { z-index: 3; } /* a címke („Az első lépés”) a csillogás FÖLÖTT */
-  html.fx-ring .fx-ringed::before { content: ''; position: absolute; inset: -2px; border-radius: inherit; padding: 2px; pointer-events: none; z-index: 2;
-    background: conic-gradient(from var(--ang), transparent 0 62%, #60A5FA 76%, #ffffff 82%, #60A5FA 88%, transparent 100%);
-    -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); -webkit-mask-composite: xor; mask-composite: exclude; animation: ring 4s linear infinite; }
-  @keyframes ring { to { --ang: 360deg; } }
   @media (prefers-reduced-motion: reduce) {
     html.fx-pinSteps #ablauf { height: auto; } html.fx-pinSteps #ablauf > .max-w-6xl { position: relative; top: 0; }
     .fx-track, html.fx-ring .fx-ringed::before, html.fx-textShine #ctaBand h2 { animation: none !important; }
@@ -334,8 +295,29 @@
   .lang-btn:hover .fx-flag { transform: scale(1.12) rotate(-4deg); }
   .lang-btn.bg-navy .fx-flag { box-shadow: 0 0 0 1.5px #fff; }
   @media (max-width: 639px) { .lang-btn { padding: 5px 4px !important; } .lang-btn .fx-flag { width: 20px; height: 14px; } }
+  
+  .m-services article { border: 0 !important; background: transparent !important; box-shadow: none !important; padding: 0 !important; }
+  .m-services article > div:first-of-type { display: none; }
+  .m-services article h3 { margin-top: 0; letter-spacing: -.02em; line-height: 1.1; font-size: clamp(26px, 2.6vw, 34px); }
+  .m-services article:last-child { background: #0F172A !important; border-radius: 24px; padding: 34px 28px 30px !important; }
+  .m-services article:last-child h3 { color: #fff; } .m-services article:last-child p { color: #CBD5E1; }
+  .m-services article:last-child > span.absolute { top: -14px; left: 28px; }
+  .m-steps > li { border: 0 !important; }
+  .m-steps > li > span:first-child { display: none; }
+  .m-why > div > div:first-child { display: none; }
+  #kontakt .auto-rows-fr > * > svg:first-child { display: none; }
+  #kontakt .auto-rows-fr > * > p:first-of-type { margin-top: 0; }
+  .m-flat, #kontakt .rounded-2xl.border { border-color: transparent !important; background-color: #F1F5F9 !important; }
+  .sd-orb, .md-orb { display: none !important; }
+  .hero-cat-big { filter: drop-shadow(0 24px 30px rgba(0,0,0,.35)); animation: catIn .9s cubic-bezier(.2,1.4,.4,1) .4s both, floaty 4.5s ease-in-out 1.4s infinite; }
+  @media (prefers-reduced-motion: reduce) { .hero-cat-big { animation: none; } }
+  .cta-video { filter: grayscale(1) sepia(1) hue-rotate(178deg) saturate(2.4) brightness(.9); } 
+  header#top nav a, header#top a.bg-cta { white-space: nowrap; }
+  @media (min-width: 1024px) and (max-width: 1279px) {  header#top nav { gap: 18px; font-size: 14px; } .lang-btn span { display: none; } }
 </style>
-</head>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"ProfessionalService","name":"TekingXtra","url":"https://tekingxtra.com/","logo":"https://tekingxtra.com/assets/tekingxtra-logo.png","image":"https://tekingxtra.com/assets/tekingxtra-logo.png","description":"Websites und Social Media für kleine Unternehmen, mit kostenloser Demo.","founder":{"@type":"Person","name":"Márton Révész"},"email":"reveszmarc@gmail.com","telephone":"+36 70 234 8601","address":{"@type":"PostalAddress","streetAddress":"Józsefhegyi utca 8.","postalCode":"2045","addressLocality":"Törökbálint","addressCountry":"HU"},"areaServed":"Worldwide","availableLanguage":["de","hu","en"],"priceRange":"ab 250 €","sameAs":["https://www.facebook.com/tekingxtra","https://www.instagram.com/tekingxtra_hu/","https://www.tiktok.com/@tekingxtra_hu"]}
+</script></head>
 <body class="bg-paper text-ink antialiased">
 <div class="side-deco side-left" aria-hidden="true">
   <div class="sd-dots"></div>
@@ -360,8 +342,7 @@
   <span class="sd-mono">X</span>
 </div>
 
-<!-- Header -->
-<header id="top" class="sticky top-0 z-40 bg-white/90 backdrop-blur border-b border-line">
+<header id="top" class="sticky top-0 z-40 bg-white border-b border-transparent">
   <div class="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between gap-4">
     <a href="#top" class="flex items-center gap-2.5 cursor-pointer group" aria-label="TekingXtra – Start">
       <span class="transition-transform duration-300 group-hover:-rotate-3 group-hover:scale-105"><svg class="w-11 h-8 shrink-0" viewBox="0 0 64 44" aria-hidden="true">
@@ -408,20 +389,14 @@
 </header>
 
 <main>
-<!-- Hero -->
+
 <section class="relative z-[2] overflow-hidden bg-navy">
   <video class="cta-video absolute inset-0 w-full h-full object-cover opacity-80" autoplay muted playsinline aria-hidden="true">
     <source src="assets/hero-video.mp4" type="video/mp4">
   </video>
   <div class="absolute inset-0 bg-gradient-to-b from-navy/85 via-navy/70 to-navy/85 md:bg-gradient-to-r md:from-navy/85 md:via-navy/50 md:to-navy/20" aria-hidden="true"></div>
-  <div class="max-md:hidden glow w-[420px] h-[420px] bg-sky2 -top-32 -right-24" aria-hidden="true"></div>
-  <div class="max-md:hidden glow w-[360px] h-[360px] bg-violet2 top-40 -left-40" style="animation-delay:-6s" aria-hidden="true"></div>
   <div class="relative max-w-6xl mx-auto px-4 pt-16 pb-20 md:pt-24 md:pb-28 grid lg:grid-cols-2 gap-14 items-center">
     <div>
-      <p class="max-md:hidden inline-flex items-center gap-2 text-[13px] font-medium text-cta bg-cta-soft rounded-full px-3 py-1 mb-6">
-        <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l1.9 5.8L20 10l-6.1 1.2L12 17l-1.9-5.8L4 10l6.1-1.2z"/></svg>
-        <span data-i18n="heroBadge">Weltweit</span>
-      </p>
       <h1 class="text-[40px] leading-[1.08] md:text-[56px] lg:text-[64px] font-bold text-white" data-i18n="heroTitle">Eine Website, die Kunden bringt – <span class="grad-text">mit kostenloser Demo.</span></h1>
       <p class="mt-6 text-[18px] leading-relaxed text-slate-300 max-w-prose" data-i18n="heroSub" id="heroSub">Ich gestalte moderne, mobilfreundliche Websites und betreue Facebook- und Instagram-Seiten für kleine Unternehmen und Vereine. Bevor Sie sich entscheiden, sehen Sie Ihre neue Website bereits als Entwurf.</p>
       <div class="md:hidden mt-9 flex items-end justify-between gap-3">
@@ -430,47 +405,15 @@
       </div>
     </div>
 
-    <!-- Hero visual: browser mockup -->
-    <div class="relative max-md:hidden" aria-hidden="true">
-      <img src="assets/narancs-orul.webp" alt="" class="mascot mascot-float -right-1 -bottom-10 w-24 sm:-right-6 sm:-bottom-16 sm:w-36 lg:-right-14 lg:w-44">
-      <div class="rounded-2xl border border-line bg-white shadow-[0_20px_60px_-20px_rgba(15,23,42,.25)] overflow-hidden">
-        <div class="flex items-center gap-1.5 px-4 h-10 border-b border-line bg-slate-50">
-          <span class="w-3 h-3 rounded-full bg-slate-300"></span><span class="w-3 h-3 rounded-full bg-slate-300"></span><span class="w-3 h-3 rounded-full bg-slate-300"></span>
-          <span class="ml-3 flex-1 h-6 rounded-md bg-white border border-line text-[12px] text-slate-400 px-2 flex items-center">ihr-betrieb.ch</span>
-        </div>
-        <div class="p-6 space-y-5">
-          <div class="flex items-center justify-between"><div class="h-3 w-24 rounded bg-navy/80"></div><div class="flex gap-3"><div class="h-2 w-10 rounded bg-slate-200"></div><div class="h-2 w-10 rounded bg-slate-200"></div><div class="h-6 w-20 rounded-md bg-cta"></div></div></div>
-          <div class="rounded-xl h-36 bg-gradient-to-br from-cta via-sky2 to-violet2 p-5 flex flex-col justify-end gap-2">
-            <div class="h-4 w-3/4 rounded bg-white/90"></div><div class="h-3 w-1/2 rounded bg-white/60"></div>
-          </div>
-          <div class="grid grid-cols-3 gap-3">
-            <div class="rounded-lg border border-line p-3 space-y-2"><div class="w-7 h-7 rounded-md bg-cta-soft"></div><div class="h-2 rounded bg-slate-200"></div><div class="h-2 w-2/3 rounded bg-slate-200"></div></div>
-            <div class="rounded-lg border border-line p-3 space-y-2"><div class="w-7 h-7 rounded-md bg-cta-soft"></div><div class="h-2 rounded bg-slate-200"></div><div class="h-2 w-2/3 rounded bg-slate-200"></div></div>
-            <div class="rounded-lg border border-line p-3 space-y-2"><div class="w-7 h-7 rounded-md bg-sky-100"></div><div class="h-2 rounded bg-slate-200"></div><div class="h-2 w-2/3 rounded bg-slate-200"></div></div>
-          </div>
-        </div>
-      </div>
-      <!-- phone -->
-      <div class="absolute -bottom-8 -left-4 sm:-left-8 w-28 sm:w-32 rounded-[22px] border-4 border-navy bg-white p-2 shadow-xl">
-        <div class="h-1.5 w-10 mx-auto rounded bg-slate-200 mb-2"></div>
-        <div class="rounded-lg h-16 bg-gradient-to-br from-cta to-violet2"></div>
-        <div class="mt-2 space-y-1.5"><div class="h-1.5 rounded bg-slate-200"></div><div class="h-1.5 w-2/3 rounded bg-slate-200"></div><div class="h-4 rounded bg-cta mt-2"></div></div>
-      </div>
-      <!-- chip -->
-      <div class="absolute -top-4 -right-2 sm:right-6 bg-white border border-line rounded-xl px-3 py-2 shadow-lg flex items-center gap-2 text-[13px] font-medium text-navy">
-        <svg class="w-4 h-4 text-emerald-600" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>
-        <span data-i18n="chipDemo">Ihre Demo ist bereit</span>
-      </div>
+    <div class="relative max-md:hidden flex justify-center lg:justify-end" aria-hidden="true">
+      <img src="assets/narancs-orul.webp" alt="" class="hero-cat-big w-64 lg:w-80">
     </div>
   </div>
 </section>
 
-
-<!-- Services -->
 <section id="leistungen" class="py-20 md:py-28 bg-white scroll-mt-16">
   <div class="max-w-6xl mx-auto px-4">
     <div class="max-w-2xl reveal">
-      <p class="max-md:hidden text-[14px] font-medium text-cta uppercase tracking-wider" data-i18n="servicesKicker">Leistungen</p>
       <h2 class="mt-3 text-[32px] md:text-[48px] leading-tight font-bold text-navy" data-i18n="servicesTitle">Alles, was Ihr Betrieb online braucht</h2>
       <p class="mt-4 text-[18px] text-slate2 leading-relaxed" data-i18n="servicesSub">Für Coiffeure, Cafés, Handwerk und Vereine.</p>
     </div>
@@ -485,7 +428,7 @@
         <h3 class="mt-6 text-[24px] font-semibold text-navy" data-i18n="s2t">Facebook &amp; Instagram</h3>
         <p class="mt-3 text-slate2 leading-relaxed" data-i18n="s2d">Ich betreue Ihre Seiten: Beiträge erstellen und für eine regelmässige Präsenz sorgen, damit Ihre Kunden Sie nicht vergessen.</p>
       </article>
-      <article class="reveal group relative rounded-2xl border-2 border-cta bg-gradient-to-b from-cta-soft/60 to-white p-8 transition-all duration-200 hover:-translate-y-1 hover:shadow-lg">
+      <article class="reveal group relative rounded-2xl border-2 border-cta bg-white p-8 transition-all duration-200 hover:-translate-y-1 hover:shadow-lg">
         <span class="mascot mascot-peek hidden sm:block -top-[104px] right-4 w-24" aria-hidden="true"><img src="assets/szurke-integet.webp" alt="" class="mascot-wave w-full"></span>
         <span class="absolute -top-3 left-8 bg-cta text-white text-[12px] font-medium px-3 py-1 rounded-full" data-i18n="s3badge">Der erste Schritt</span>
         <div class="w-12 h-12 rounded-xl bg-cta text-white grid place-items-center"><svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l1.9 5.8L20 10l-6.1 1.2L12 17l-1.9-5.8L4 10l6.1-1.2z"/><path d="M19 17v4M17 19h4"/></svg></div>
@@ -496,32 +439,26 @@
   </div>
 </section>
 
-<!-- Process -->
 <section id="ablauf" class="py-20 md:py-28 bg-paper scroll-mt-16 relative overflow-hidden">
   <div class="max-w-6xl mx-auto px-4 relative">
     <img src="assets/szurke-pacsi.webp" alt="" aria-hidden="true" class="reveal mascot mascot-peek hidden md:block right-8 -top-12 w-20 lg:w-24">
     <div class="max-w-2xl reveal">
-      <p class="max-md:hidden text-[14px] font-medium text-cta uppercase tracking-wider" data-i18n="processKicker">Ablauf</p>
       <h2 class="mt-3 text-[32px] md:text-[48px] leading-tight font-bold text-navy" data-i18n="processTitle">In vier Schritten zur neuen Website</h2>
     </div>
     <ol class="m-steps mt-10 sm:mt-14 grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6">
       <li class="reveal rounded-2xl bg-white border border-line p-5 sm:p-7">
-        <span class="font-heading text-[36px] sm:text-[48px] font-bold grad-text leading-none">01</span>
         <h3 class="mt-3 sm:mt-4 text-[17px] sm:text-[20px] font-semibold text-navy" data-i18n="p1t">Kontakt</h3>
         <p class="mt-2 text-slate2 leading-relaxed" data-i18n="p1d">Sie schreiben mir oder rufen an und erzählen kurz von Ihrem Betrieb.</p>
       </li>
       <li class="reveal rounded-2xl bg-white border border-line p-5 sm:p-7">
-        <span class="font-heading text-[36px] sm:text-[48px] font-bold grad-text leading-none">02</span>
         <h3 class="mt-3 sm:mt-4 text-[17px] sm:text-[20px] font-semibold text-navy" data-i18n="p2t">Gratis-Demo</h3>
         <p class="mt-2 text-slate2 leading-relaxed" data-i18n="p2d">Ich erstelle einen ersten Entwurf Ihrer Website – kostenlos.</p>
       </li>
       <li class="reveal rounded-2xl bg-white border border-line p-5 sm:p-7">
-        <span class="font-heading text-[36px] sm:text-[48px] font-bold grad-text leading-none">03</span>
         <h3 class="mt-3 sm:mt-4 text-[17px] sm:text-[20px] font-semibold text-navy" data-i18n="p3t">Feinschliff</h3>
         <p class="mt-2 text-slate2 leading-relaxed" data-i18n="p3d">Gemeinsam passen wir Texte, Bilder und Farben an, bis alles stimmt.</p>
       </li>
       <li class="reveal rounded-2xl bg-white border border-line p-5 sm:p-7">
-        <span class="font-heading text-[36px] sm:text-[48px] font-bold grad-text leading-none">04</span>
         <h3 class="mt-3 sm:mt-4 text-[17px] sm:text-[20px] font-semibold text-navy" data-i18n="p4t">Online gehen</h3>
         <p class="mt-2 text-slate2 leading-relaxed" data-i18n="p4d">Ihre Website geht live – und Ihre Kunden finden Sie im Netz.</p>
       </li>
@@ -529,13 +466,11 @@
   </div>
 </section>
 
-<!-- Why me -->
 <section id="warum" class="py-20 md:py-28 bg-white scroll-mt-16">
   <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-5 gap-10 lg:gap-14 items-center">
     <div class="md:col-span-2 reveal">
       <figure class="group relative max-w-[230px] sm:max-w-[300px] mx-auto md:mx-0">
-        <div class="max-md:hidden absolute -inset-3 rounded-[2rem] bg-gradient-to-br from-cta via-sky2 to-violet2 opacity-25 blur-xl transition-opacity duration-500 group-hover:opacity-45" aria-hidden="true"></div>
-        <div class="relative overflow-hidden rounded-3xl ring-1 ring-black/5 shadow-[0_30px_60px_-30px_rgba(15,23,42,.5)]">
+        <div class="relative overflow-hidden rounded-3xl">
           <img src="assets/marton.jpg" alt="Révész Márton" loading="lazy" class="block w-full h-auto transition-transform duration-700 ease-out group-hover:scale-[1.04]">
         </div>
         <figcaption class="absolute -bottom-4 left-6 bg-white rounded-xl px-4 py-2 shadow-lg text-[14px] font-semibold text-navy transition-transform duration-300 group-hover:-translate-y-1">Révész Márton</figcaption>
@@ -543,7 +478,6 @@
     </div>
     <div class="md:col-span-3">
       <div class="reveal">
-        <p class="max-md:hidden text-[14px] font-medium text-cta uppercase tracking-wider" data-i18n="whyKicker">Warum ich</p>
         <h2 class="mt-3 text-[32px] md:text-[48px] leading-tight font-bold text-navy" data-i18n="whyTitle">Moderne Arbeitsweise, persönlicher Kontakt</h2>
         <p class="mt-4 text-[18px] text-slate2 leading-relaxed max-w-prose" data-i18n="whySub">Ich bin Révész Márton. Ich nutze KI für Routinearbeit – damit ich mehr Zeit für das habe, was zählt: Ihren Betrieb und Ihre Wünsche.</p>
       </div>
@@ -579,12 +513,10 @@
   </div>
 </section>
 
-<!-- FAQ -->
 <section id="faq" class="py-20 md:py-28 bg-white scroll-mt-16">
   <div class="max-w-3xl mx-auto px-4">
     <div class="reveal text-center">
       <img src="assets/narancs-ul.webp" alt="" aria-hidden="true" class="mascot-float mx-auto w-20 mb-4" style="filter: drop-shadow(0 12px 14px rgba(15,23,42,.22))">
-      <p class="max-md:hidden text-[14px] font-medium text-cta uppercase tracking-wider" data-i18n="faqKicker">FAQ</p>
       <h2 class="mt-3 text-[32px] md:text-[48px] leading-tight font-bold text-navy" data-i18n="faqTitle">Häufige Fragen</h2>
     </div>
     <div class="mt-12 space-y-2">
@@ -598,11 +530,8 @@
   </div>
 </section>
 
-<!-- CTA band -->
 <section id="ctaBand" class="relative z-[2] overflow-hidden bg-navy">
   <img src="assets/szurke-orul.webp" alt="" aria-hidden="true" class="reveal mascot mascot-jump hidden md:block left-[6%] bottom-0 w-36 lg:w-44">
-  <div class="max-md:hidden glow w-[400px] h-[400px] bg-cta -bottom-40 right-0" aria-hidden="true"></div>
-  <div class="max-md:hidden glow w-[300px] h-[300px] bg-violet2 -top-32 left-10" style="animation-delay:-9s" aria-hidden="true"></div>
   <div class="relative max-w-4xl mx-auto px-4 py-20 md:py-24 text-center">
     <h2 class="text-[32px] md:text-[48px] leading-tight font-bold text-white" data-i18n="ctaBandTitle">Sehen Sie Ihre neue Website, bevor Sie sich entscheiden.</h2>
     <p class="mt-4 text-[18px] text-slate-300 max-w-prose mx-auto" data-i18n="ctaBandSub">Schreiben Sie mir ein paar Zeilen über Ihren Betrieb – ich melde mich persönlich.</p>
@@ -613,11 +542,9 @@
   </div>
 </section>
 
-<!-- Contact -->
 <section id="kontakt" class="py-20 md:py-28 bg-white scroll-mt-16">
   <div class="max-w-6xl mx-auto px-4">
     <div class="reveal">
-      <p class="max-md:hidden text-[14px] font-medium text-cta uppercase tracking-wider" data-i18n="contactKicker">Kontakt</p>
       <h2 class="mt-3 text-[32px] md:text-[48px] leading-tight font-bold text-navy md:whitespace-nowrap" data-i18n="contactTitle">Erzählen Sie mir von Ihrem Betrieb</h2>
     </div>
     <div class="mt-10 grid lg:grid-cols-2 gap-6 lg:gap-8 items-stretch">
@@ -684,7 +611,6 @@
   <div class="border-t border-white/10"><p class="max-w-6xl mx-auto px-4 py-5 text-[13px] text-slate-400">© <span id="year"></span> TekingXtra · Révész Márton</p></div>
 </footer>
 
-<!-- Jogi ablakok (Impresszum, Adatvédelem, ÁSZF) -->
 <dialog id="dlg-impressum" class="legal-dlg" aria-labelledby="dlg-impressum-t">
   <div class="legal-head"><h2 id="dlg-impressum-t" class="font-heading" data-i18n="impressum">Impressum</h2><button type="button" class="legal-x" aria-label="Schließen">&times;</button></div>
   <div class="legal-body">
@@ -700,7 +626,7 @@
         <li><b>Telefon:</b> <a href="tel:+36702348601">+36 70 234 8601</a></li>
       </ul>
       <h3>Tárhelyszolgáltató</h3>
-      <p>Netlify, Inc., 101 2nd Street, San Francisco, CA 94105, USA · <a href="mailto:privacy@netlify.com">privacy@netlify.com</a> · <a href="https://www.netlify.com" target="_blank" rel="noopener">netlify.com</a></p>
+      <p>GitHub, Inc. (GitHub Pages), 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, USA · <a href="https://github.com" target="_blank" rel="noopener">github.com</a><br>Domain / DNS: Netlify, Inc., 101 2nd Street, San Francisco, CA 94105, USA</p>
       <h3>Felelősség a tartalomért</h3>
       <p>A weboldal tartalmát gondosan állítom össze. A külső oldalak (pl. Facebook, Instagram, TikTok) tartalmáért azok üzemeltetői felelnek.</p>
       <h3>Szerzői jog</h3>
@@ -718,7 +644,7 @@
         <li><b>Telefon:</b> <a href="tel:+36702348601">+36 70 234 8601</a></li>
       </ul>
       <h3>Hosting</h3>
-      <p>Netlify, Inc., 101 2nd Street, San Francisco, CA 94105, USA · <a href="mailto:privacy@netlify.com">privacy@netlify.com</a> · <a href="https://www.netlify.com" target="_blank" rel="noopener">netlify.com</a></p>
+      <p>GitHub, Inc. (GitHub Pages), 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, USA · <a href="https://github.com" target="_blank" rel="noopener">github.com</a><br>Domain / DNS: Netlify, Inc., 101 2nd Street, San Francisco, CA 94105, USA</p>
       <h3>Haftung für Inhalte und Links</h3>
       <p>Die Inhalte dieser Website wurden sorgfältig erstellt. Für die Inhalte externer Seiten (z. B. Facebook, Instagram, TikTok) sind ausschließlich deren Betreiber verantwortlich.</p>
       <h3>Urheberrecht</h3>
@@ -736,7 +662,7 @@
         <li><b>Phone:</b> <a href="tel:+36702348601">+36 70 234 8601</a></li>
       </ul>
       <h3>Hosting provider</h3>
-      <p>Netlify, Inc., 101 2nd Street, San Francisco, CA 94105, USA · <a href="mailto:privacy@netlify.com">privacy@netlify.com</a> · <a href="https://www.netlify.com" target="_blank" rel="noopener">netlify.com</a></p>
+      <p>GitHub, Inc. (GitHub Pages), 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, USA · <a href="https://github.com" target="_blank" rel="noopener">github.com</a><br>Domain / DNS: Netlify, Inc., 101 2nd Street, San Francisco, CA 94105, USA</p>
       <h3>Liability for content and links</h3>
       <p>The content of this website has been prepared with care. The operators of external sites (e.g. Facebook, Instagram, TikTok) are solely responsible for their content.</p>
       <h3>Copyright</h3>
@@ -753,7 +679,7 @@
       <h3>1. Adatkezelő</h3>
       <p>Révész Márton (TekingXtra), 2045 Törökbálint, Józsefhegyi utca 8., <a href="mailto:reveszmarc@gmail.com">reveszmarc@gmail.com</a>, +36 70 234 8601.</p>
       <h3>2. A weboldal látogatása</h3>
-      <p>Az oldal <b>nem használ sütiket (cookie-kat), analitikát vagy követőkódot</b>; a böngésződben csak a választott nyelvet jegyzi meg (helyi tárolás – ez nem süti, és nem szolgál követésre). A megjelenítéshez a böngésződ kapcsolódik a tárhelyszolgáltatóhoz (szervernapló: IP-cím, időpont, böngészőtípus – biztonsági célból, rövid ideig), a Google Fonts betűtípus-szolgáltatáshoz (Google Ireland Ltd.) és a Tailwind CSS szolgáltatáshoz (cdn.tailwindcss.com). Ezek a szolgáltatók láthatják az IP-címedet. Jogalap: jogos érdek (GDPR 6. cikk (1) f) – a weboldal biztonságos megjelenítése.</p>
+      <p>Az oldal <b>nem használ sütiket (cookie-kat), analitikát vagy követőkódot</b>; a böngésződben csak a választott nyelvet jegyzi meg (helyi tárolás – ez nem süti, és nem szolgál követésre). A megjelenítéshez a böngésződ kapcsolódik a tárhelyszolgáltatóhoz (szervernapló: IP-cím, időpont, böngészőtípus – biztonsági célból, rövid ideig) és a Google Fonts betűtípus-szolgáltatáshoz (Google Ireland Ltd.). Ezek a szolgáltatók láthatják az IP-címedet. Jogalap: jogos érdek (GDPR 6. cikk (1) f) – a weboldal biztonságos megjelenítése.</p>
       <h3>3. Kapcsolatfelvétel és demóigénylés</h3>
       <p>Ha e-mailben vagy telefonon megkeresel, kezelem a neved, e-mail-címed, telefonszámod, a vállalkozásod adatait, az üzeneted tartalmát és az átküldött anyagokat (pl. logó, fotók). Cél: a kérdéseid megválaszolása, ingyenes demó és árajánlat készítése. Jogalap: szerződéskötést megelőző lépések (GDPR 6. cikk (1) b), illetve jogos érdek (f). Megőrzés: ha nem jön létre megbízás, legfeljebb 1 évig; megbízás esetén a szerződés idejére, a számviteli bizonylatokat a törvényi előírás szerint 8 évig.</p>
       <h3>4. Ingyenes demó készítése</h3>
@@ -761,17 +687,17 @@
       <h3>5. E-mailek feldolgozása mesterséges intelligenciával</h3>
       <p>A beérkező e-maileket automatizált eszközzel (n8n, valamint az Anthropic Claude MI-szolgáltatása) rendszerezem, és válaszvázlatokat készítek velük. Minden választ személyesen nézek át és küldök el – automatizált döntéshozatal nem történik.</p>
       <h3>6. Adatfeldolgozók és adattovábbítás</h3>
-      <p>Google (Gmail, Google Drive – Google Ireland Ltd.), Anthropic (MI-feldolgozás), valamint a tárhelyszolgáltató (Netlify, Inc., USA). Egyes szolgáltatók az EU-n kívül (pl. USA) is kezelhetnek adatokat; ilyenkor az adattovábbítás megfelelő garanciák (pl. EU–USA adatvédelmi keretrendszer, általános szerződési feltételek) alapján történik. Az adataidat nem adom el, és reklámcélra nem adom tovább.</p>
+      <p>Google (Gmail, Google Drive – Google Ireland Ltd.), Anthropic (MI-feldolgozás), valamint a tárhelyszolgáltató (GitHub, Inc., USA; a domain és a DNS: Netlify, Inc., USA). Egyes szolgáltatók az EU-n kívül (pl. USA) is kezelhetnek adatokat; ilyenkor az adattovábbítás megfelelő garanciák (pl. EU–USA adatvédelmi keretrendszer, általános szerződési feltételek) alapján történik. Az adataidat nem adom el, és reklámcélra nem adom tovább.</p>
       <h3>7. A jogaid</h3>
       <p>Kérhetsz tájékoztatást és hozzáférést, helyesbítést, törlést, az adatkezelés korlátozását, adathordozhatóságot, és tiltakozhatsz a jogos érdeken alapuló adatkezelés ellen. Írj a <a href="mailto:reveszmarc@gmail.com">reveszmarc@gmail.com</a> címre – legkésőbb egy hónapon belül válaszolok. Panasszal fordulhatsz a Nemzeti Adatvédelmi és Információszabadság Hatósághoz (NAIH, 1055 Budapest, Falk Miksa utca 9–11., <a href="https://www.naih.hu" target="_blank" rel="noopener">naih.hu</a>), a lakóhelyed szerinti adatvédelmi hatósághoz vagy bírósághoz.</p>
-      <p class="legal-date">Hatályos: 2026. október 18.</p>
+      <p class="legal-date">Hatályos: 2026. október 25.</p>
     </div>
     <div data-ll="de">
       <p class="legal-lead">Datenschutzerklärung – kurz und verständlich, was mit Ihren Daten geschieht.</p>
       <h3>1. Verantwortlicher</h3>
       <p>Márton Révész (TekingXtra), 2045 Törökbálint, Józsefhegyi utca 8., Ungarn, <a href="mailto:reveszmarc@gmail.com">reveszmarc@gmail.com</a>, +36 70 234 8601.</p>
       <h3>2. Besuch der Website</h3>
-      <p>Diese Website verwendet <b>keine Cookies, keine Analyse- und keine Tracking-Tools</b>; in Ihrem Browser wird lediglich die gewählte Sprache gespeichert (lokaler Speicher – kein Cookie, kein Tracking). Für die Darstellung verbindet sich Ihr Browser mit dem Hosting-Anbieter (Server-Logfiles: IP-Adresse, Zeitpunkt, Browsertyp – aus Sicherheitsgründen, kurzzeitig), mit Google Fonts (Google Ireland Ltd.) und mit Tailwind CSS (cdn.tailwindcss.com). Diese Anbieter können Ihre IP-Adresse sehen. Rechtsgrundlage: berechtigtes Interesse (Art. 6 Abs. 1 lit. f DSGVO) an einer sicheren Darstellung der Website.</p>
+      <p>Diese Website verwendet <b>keine Cookies, keine Analyse- und keine Tracking-Tools</b>; in Ihrem Browser wird lediglich die gewählte Sprache gespeichert (lokaler Speicher – kein Cookie, kein Tracking). Für die Darstellung verbindet sich Ihr Browser mit dem Hosting-Anbieter (Server-Logfiles: IP-Adresse, Zeitpunkt, Browsertyp – aus Sicherheitsgründen, kurzzeitig) und mit Google Fonts (Google Ireland Ltd.). Diese Anbieter können Ihre IP-Adresse sehen. Rechtsgrundlage: berechtigtes Interesse (Art. 6 Abs. 1 lit. f DSGVO) an einer sicheren Darstellung der Website.</p>
       <h3>3. Kontaktaufnahme und Demo-Anfrage</h3>
       <p>Wenn Sie mich per E-Mail oder Telefon kontaktieren, verarbeite ich Ihren Namen, Ihre E-Mail-Adresse, Telefonnummer, Angaben zu Ihrem Betrieb, den Inhalt Ihrer Nachricht und zugesandte Unterlagen (z. B. Logo, Fotos). Zweck: Beantwortung Ihrer Anfrage, Erstellung einer kostenlosen Demo und eines Angebots. Rechtsgrundlage: vorvertragliche Maßnahmen (Art. 6 Abs. 1 lit. b DSGVO) bzw. berechtigtes Interesse (lit. f). Speicherdauer: ohne Auftrag höchstens 1 Jahr; bei einem Auftrag für die Vertragsdauer, Buchhaltungsbelege gemäß gesetzlicher Pflicht 8 Jahre.</p>
       <h3>4. Erstellung einer kostenlosen Demo</h3>
@@ -779,17 +705,17 @@
       <h3>5. E-Mail-Verarbeitung mit künstlicher Intelligenz</h3>
       <p>Eingehende E-Mails ordne ich mit automatisierten Werkzeugen (n8n sowie dem KI-Dienst Claude von Anthropic) und lasse mir Antwortentwürfe erstellen. Jede Antwort prüfe und versende ich persönlich – eine automatisierte Entscheidungsfindung findet nicht statt.</p>
       <h3>6. Auftragsverarbeiter und Datenübermittlung</h3>
-      <p>Google (Gmail, Google Drive – Google Ireland Ltd.), Anthropic (KI-Verarbeitung) sowie der Hosting-Anbieter (Netlify, Inc., USA). Einige Anbieter verarbeiten Daten auch außerhalb der EU (z. B. USA); die Übermittlung erfolgt auf Grundlage geeigneter Garantien (z. B. EU-US Data Privacy Framework, Standardvertragsklauseln). Ich verkaufe Ihre Daten nicht und gebe sie nicht zu Werbezwecken weiter.</p>
+      <p>Google (Gmail, Google Drive – Google Ireland Ltd.), Anthropic (KI-Verarbeitung) sowie der Hosting-Anbieter (GitHub, Inc., USA; Domain und DNS: Netlify, Inc., USA). Einige Anbieter verarbeiten Daten auch außerhalb der EU (z. B. USA); die Übermittlung erfolgt auf Grundlage geeigneter Garantien (z. B. EU-US Data Privacy Framework, Standardvertragsklauseln). Ich verkaufe Ihre Daten nicht und gebe sie nicht zu Werbezwecken weiter.</p>
       <h3>7. Ihre Rechte</h3>
       <p>Sie haben das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung, Datenübertragbarkeit sowie Widerspruch gegen Verarbeitungen auf Grundlage berechtigter Interessen. Schreiben Sie an <a href="mailto:reveszmarc@gmail.com">reveszmarc@gmail.com</a> – ich antworte spätestens innerhalb eines Monats. Sie können sich zudem bei einer Datenschutz-Aufsichtsbehörde beschweren, z. B. bei der ungarischen Behörde NAIH (<a href="https://www.naih.hu" target="_blank" rel="noopener">naih.hu</a>), beim Eidgenössischen Datenschutz- und Öffentlichkeitsbeauftragten (EDÖB) in der Schweiz oder bei der Behörde Ihres Wohnorts.</p>
-      <p class="legal-date">Stand: 18. Oktober 2026 · Bei Abweichungen gilt die ungarische Fassung.</p>
+      <p class="legal-date">Stand: 25. Oktober 2026 · Bei Abweichungen gilt die ungarische Fassung.</p>
     </div>
     <div data-ll="en">
       <p class="legal-lead">Privacy policy – a short, plain explanation of what happens to your data.</p>
       <h3>1. Controller</h3>
       <p>Márton Révész (TekingXtra), 2045 Törökbálint, Józsefhegyi utca 8., Hungary, <a href="mailto:reveszmarc@gmail.com">reveszmarc@gmail.com</a>, +36 70 234 8601.</p>
       <h3>2. Visiting this website</h3>
-      <p>This website uses <b>no cookies, analytics or tracking</b>; it only remembers your chosen language in your browser (local storage – not a cookie, no tracking). To display the page, your browser connects to the hosting provider (server logs: IP address, time, browser type – for security, kept briefly), to Google Fonts (Google Ireland Ltd.) and to Tailwind CSS (cdn.tailwindcss.com). These providers can see your IP address. Legal basis: legitimate interest (Art. 6(1)(f) GDPR) in displaying the website securely.</p>
+      <p>This website uses <b>no cookies, analytics or tracking</b>; it only remembers your chosen language in your browser (local storage – not a cookie, no tracking). To display the page, your browser connects to the hosting provider (server logs: IP address, time, browser type – for security, kept briefly) and to Google Fonts (Google Ireland Ltd.). These providers can see your IP address. Legal basis: legitimate interest (Art. 6(1)(f) GDPR) in displaying the website securely.</p>
       <h3>3. Contact and demo requests</h3>
       <p>If you contact me by email or phone, I process your name, email address, phone number, details about your business, the content of your message and any materials you send (e.g. logo, photos). Purpose: answering your enquiry, preparing a free demo and a quote. Legal basis: steps prior to entering a contract (Art. 6(1)(b) GDPR) or legitimate interest (f). Retention: without an order at most 1 year; with an order for the term of the contract, accounting records for 8 years as required by law.</p>
       <h3>4. Preparing a free demo</h3>
@@ -797,10 +723,10 @@
       <h3>5. Email processing with artificial intelligence</h3>
       <p>I sort incoming emails with automated tools (n8n and Anthropic's Claude AI service) and use them to prepare reply drafts. I review and send every reply personally – no automated decision-making takes place.</p>
       <h3>6. Processors and data transfers</h3>
-      <p>Google (Gmail, Google Drive – Google Ireland Ltd.), Anthropic (AI processing) and the hosting provider (Netlify, Inc., USA). Some providers also process data outside the EU (e.g. USA); such transfers rely on appropriate safeguards (e.g. EU-US Data Privacy Framework, standard contractual clauses). I do not sell your data or pass it on for advertising.</p>
+      <p>Google (Gmail, Google Drive – Google Ireland Ltd.), Anthropic (AI processing) and the hosting provider (GitHub, Inc., USA; domain and DNS: Netlify, Inc., USA). Some providers also process data outside the EU (e.g. USA); such transfers rely on appropriate safeguards (e.g. EU-US Data Privacy Framework, standard contractual clauses). I do not sell your data or pass it on for advertising.</p>
       <h3>7. Your rights</h3>
       <p>You have the right to access, rectification, erasure, restriction of processing, data portability and to object to processing based on legitimate interests. Write to <a href="mailto:reveszmarc@gmail.com">reveszmarc@gmail.com</a> – I will reply within one month at the latest. You may also lodge a complaint with a data protection authority, e.g. the Hungarian NAIH (<a href="https://www.naih.hu" target="_blank" rel="noopener">naih.hu</a>) or the authority where you live.</p>
-      <p class="legal-date">Effective: 18 October 2026 · In case of discrepancies, the Hungarian version prevails.</p>
+      <p class="legal-date">Effective: 25 October 2026 · In case of discrepancies, the Hungarian version prevails.</p>
     </div>
   </div>
 </dialog>
@@ -903,7 +829,7 @@ const T = {
   aboutSummary: { de: 'Mehr über mich', hu: 'Ismerj meg jobban', en: 'More about me' },
   aboutHello: { de: 'Hallo, ich bin Marci!', hu: 'Szia, Marci vagyok!', en: 'Hi, I’m Marci!' },
   aboutRole: { de: 'Webentwickler · 18 Jahre', hu: 'Webfejlesztő · 18 éves', en: 'Web developer · 18 years old' },
-  aboutP: { de: 'Zurzeit lebe ich in Ungarn, sehe meine Zukunft aber im Ausland. Deshalb sind mir jetzt vor allem neue Kontakte wichtig – und mit möglichst vielen Unternehmen zusammenzuarbeiten.', hu: 'Jelenleg Magyarországon élek, de a jövőmet külföldön képzelem el, ezért most számomra a legfontosabb a kapcsolatépítés és az, hogy minél több vállalkozással dolgozzak együtt.', en: 'I currently live in Hungary, but I see my future abroad – so right now what matters most to me is building connections and working with as many businesses as possible.' },
+  aboutP: { de: 'Zurzeit lebe ich in Ungarn, sehe meine Zukunft aber im Ausland. Deshalb sind mir jetzt vor allem neue Kontakte wichtig – und mit möglichst vielen Unternehmen zusammenzuarbeiten.', hu: 'Jelenleg Magyarországon élek, de a jövőmet külföldön képzelem el, ezért most számomra a legfontosabb a kapcsolatépítés és az, hogy minél több vállalkozással dolgozzak együtt.', en: 'I currently live in Hungary, but I see my future abroad, so right now what matters most to me is building connections and working with as many businesses as possible.' },
   aboutStudyT: { de: 'Ausbildung', hu: 'Tanulmányaim', en: 'Education' },
   aboutLangT: { de: 'Sprachen', hu: 'Nyelvek', en: 'Languages' },
   aboutLang: { de: 'Ich spreche Ungarisch, Englisch und Deutsch.', hu: 'Magyarul, angolul és németül is beszélek.', en: 'I speak Hungarian, English and German.' },
@@ -917,7 +843,7 @@ const T = {
   need3: { de: 'Bestehende Website oder Facebook / Instagram (falls vorhanden)', hu: 'Meglévő weboldal vagy Facebook / Instagram (ha van)', en: 'Existing website or Facebook / Instagram (if any)' },
   need4: { de: 'Logo und ein paar Fotos (falls vorhanden)', hu: 'Logó és néhány fotó (ha van)', en: 'Logo and a few photos (if any)' },
   need5: { de: 'In welcher Sprache die Website sein soll', hu: 'Milyen nyelven legyen az oldal', en: 'Which language(s) the site should be in' },
-  needNote: { de: 'Fehlt etwas? Kein Problem – ich markiere es im Entwurf.', hu: 'Valami hiányzik? Nem gond – a vázlatban jelölöm.', en: 'Something missing? No problem – I’ll mark it in the draft.' },
+  needNote: { de: 'Fehlt etwas? Kein Problem – ich markiere es im Entwurf.', hu: 'Valami hiányzik? Nem gond – a vázlatban jelölöm.', en: 'Something missing? No problem. I’ll mark it in the draft.' },
   brandMissing: { de: '[Markenname]', hu: '[Márkanév]', en: '[Brand name]' },
   navServices: { de: 'Leistungen', hu: 'Szolgáltatások', en: 'Services' },
   navProcess: { de: 'Ablauf', hu: 'Így dolgozom', en: 'Process' },
@@ -929,7 +855,7 @@ const T = {
   ctaHow: { de: 'So arbeite ich', hu: 'Így dolgozom', en: 'How I work' },
   heroBadge: { de: 'Weltweit', hu: 'Bárhol a világon', en: 'Anywhere in the world' },
   heroTitle: { de: 'Websites, die Kunden bringen. <span class="grad-text">Gratis-Demo inklusive.</span>', hu: 'Weboldal, ami ügyfelet hoz. <span class="grad-text">Ingyenes demóval.</span>', en: 'Websites that win customers. <span class="grad-text">Free demo included.</span>' },
-  heroSub: { de: 'Websites &amp; Social Media für KMU – erst sehen, dann entscheiden.', hu: 'Weboldal &amp; közösségi média kisvállalkozásoknak – előbb látod, aztán döntesz.', en: 'Websites &amp; social media for small businesses – see first, then decide.' },
+  heroSub: { de: 'Websites &amp; Social Media für KMU – erst sehen, dann entscheiden.', hu: 'Weboldal &amp; közösségi média kisvállalkozásoknak – előbb látod, aztán döntesz.', en: 'Websites &amp; social media for small businesses. See it first, then decide.' },
   heroCheck1: { de: 'Deutsch · Ungarisch · Englisch', hu: 'Magyar · német · angol', en: 'German · Hungarian · English' },
   heroCheck2: { de: 'Persönlicher Ansprechpartner', hu: 'Személyes kapcsolattartó', en: 'One personal contact' },
   heroCheck3: { de: 'Angebot in CHF, EUR oder HUF', hu: 'Ajánlat CHF-ben, EUR-ban vagy HUF-ban', en: 'Quotes in CHF, EUR or HUF' },
@@ -948,7 +874,7 @@ const T = {
   s2d: { de: 'Beiträge und regelmässige Präsenz.', hu: 'Posztok és rendszeres jelenlét.', en: 'Posts and a steady presence.' },
   s3badge: { de: 'Der erste Schritt', hu: 'Az első lépés', en: 'The first step' },
   s3t: { de: 'Kostenlose Demo', hu: 'Ingyenes demó', en: 'Free demo' },
-  s3d: { de: 'Ihre Website als Entwurf – vor jeder Entscheidung.', hu: 'A weboldalad vázlatként – még döntés előtt.', en: 'Your website as a draft – before you decide.' },
+  s3d: { de: 'Ihre Website als Entwurf – vor jeder Entscheidung.', hu: 'A weboldalad vázlatként – még döntés előtt.', en: 'Your website as a draft, before you decide.' },
   forKicker: { de: 'Für', hu: 'Nekik dolgozom', en: 'For' },
   forSalon: { de: 'Coiffeure &amp; Beauty', hu: 'Fodrászok &amp; szépségszalonok', en: 'Hair &amp; beauty salons' },
   forCafe: { de: 'Cafés &amp; Restaurants', hu: 'Kávézók &amp; éttermek', en: 'Cafés &amp; restaurants' },
@@ -959,7 +885,7 @@ const T = {
   p1t: { de: 'Kontakt', hu: 'Megkeresés', en: 'Get in touch' },
   p1d: { de: 'Kurz schreiben oder anrufen.', hu: 'Írj vagy hívj.', en: 'Write or call.' },
   p2t: { de: 'Gratis-Demo', hu: 'Ingyenes demó', en: 'Free demo' },
-  p2d: { de: 'Erster Entwurf – kostenlos.', hu: 'Első vázlat – ingyen.', en: 'First draft – free.' },
+  p2d: { de: 'Erster Entwurf – kostenlos.', hu: 'Első vázlat – ingyen.', en: 'First draft, free.' },
   p3t: { de: 'Feinschliff', hu: 'Finomítás', en: 'Refine' },
   p3d: { de: 'Gemeinsam feinjustieren.', hu: 'Közösen csiszoljuk.', en: 'We fine-tune together.' },
   p4t: { de: 'Online gehen', hu: 'Élesítés', en: 'Go live' },
@@ -968,7 +894,7 @@ const T = {
   photoMissingHint: { de: 'Ein persönliches Foto schafft Vertrauen.', hu: 'Egy személyes fotó bizalmat ébreszt.', en: 'A personal photo builds trust.' },
   whyKicker: { de: 'Warum ich?', hu: 'Miért én?', en: 'Why me?' },
   whyTitle: { de: 'Moderne Arbeitsweise, persönlicher Kontakt', hu: 'Modern munkamódszer, személyes kapcsolat', en: 'Modern workflow, personal contact' },
-  whySub: { de: 'KI für Routine – mehr Zeit für Sie.', hu: 'AI a rutinra – több idő rád.', en: 'AI for routine – more time for you.' },
+  whySub: { de: 'KI für Routine – mehr Zeit für Sie.', hu: 'AI a rutinra – több idő rád.', en: 'AI does the routine work. You get more of my time.' },
   w1t: { de: 'Drei Sprachen', hu: 'Három nyelv', en: 'Three languages' },
   w1d: { de: 'DE · HU · EN', hu: 'HU · DE · EN', en: 'DE · HU · EN' },
   w2t: { de: 'Schnell', hu: 'Gyors', en: 'Fast' },
@@ -992,11 +918,11 @@ const T = {
   faqKicker: { de: 'FAQ', hu: 'GYIK', en: 'FAQ' },
   faqTitle: { de: 'Häufige Fragen', hu: 'Gyakori kérdések', en: 'Frequently asked questions' },
   q1: { de: 'Was kostet eine Website?', hu: 'Mennyibe kerül egy weboldal?', en: 'How much does a website cost?' },
-  a1: { de: 'Eine Website gibt es ab 250 €. Der genaue Preis hängt vom Umfang ab – nach einem kurzen Gespräch erhalten Sie ein individuelles Angebot in CHF, EUR oder HUF.', hu: 'Egy weboldal 250 eurótól indul. A pontos ár a terjedelemtől függ – egy rövid egyeztetés után egyedi ajánlatot kapsz, CHF-ben, EUR-ban vagy HUF-ban.', en: 'A website starts at €250. The exact price depends on the scope – after a short conversation you receive an individual quote in CHF, EUR or HUF.' },
+  a1: { de: 'Eine Website gibt es ab 250 €. Der genaue Preis hängt vom Umfang ab – nach einem kurzen Gespräch erhalten Sie ein individuelles Angebot in CHF, EUR oder HUF.', hu: 'Egy weboldal 250 eurótól indul. A pontos ár a terjedelemtől függ – egy rövid egyeztetés után egyedi ajánlatot kapsz, CHF-ben, EUR-ban vagy HUF-ban.', en: 'A website starts at €250. The exact price depends on the scope. After a short conversation you receive an individual quote in CHF, EUR or HUF.' },
   q2: { de: 'Ist die Demo wirklich kostenlos?', hu: 'Tényleg ingyenes a demó?', en: 'Is the demo really free?' },
   a2: { de: 'Ja. Die Demo zeigt Ihnen, wie Ihre Website aussehen könnte. Danach entscheiden Sie in Ruhe, ob Sie weitermachen möchten.', hu: 'Igen. A demó megmutatja, hogyan nézhetne ki a weboldalad. Utána nyugodtan eldöntheted, szeretnéd-e folytatni.', en: 'Yes. The demo shows you what your website could look like. Afterwards you decide in your own time whether to continue.' },
   q3: { de: 'Was brauchen Sie von mir für den Start?', hu: 'Mire van szükség az induláshoz?', en: 'What do you need from me to start?' },
-  a3: { de: 'Den Namen Ihres Betriebs, was Sie anbieten und wie man Sie erreicht. Vorhandene Texte, Fotos oder ein Logo helfen – was fehlt, markiere ich im Entwurf.', hu: 'A vállalkozás nevére, arra, hogy mit kínálsz, és hogyan érhetnek el. Meglévő szövegek, fotók vagy logó sokat segítenek – ami hiányzik, azt a vázlatban jelölöm.', en: 'Your business name, what you offer and how people can reach you. Existing texts, photos or a logo help – anything missing is marked in the draft.' },
+  a3: { de: 'Den Namen Ihres Betriebs, was Sie anbieten und wie man Sie erreicht. Vorhandene Texte, Fotos oder ein Logo helfen – was fehlt, markiere ich im Entwurf.', hu: 'A vállalkozás nevére, arra, hogy mit kínálsz, és hogyan érhetnek el. Meglévő szövegek, fotók vagy logó sokat segítenek – ami hiányzik, azt a vázlatban jelölöm.', en: 'Your business name, what you offer and how people can reach you. Existing texts, photos or a logo help. Anything missing is marked in the draft.' },
   q4: { de: 'Wofür nutzen Sie KI?', hu: 'Mire használsz mesterséges intelligenciát?', en: 'What do you use AI for?' },
   a4: {
     de: 'Für wiederkehrende Aufgaben, zum Beispiel erste Entwürfe und die Organisation der Korrespondenz. Gestaltung, Abstimmung und Ihr Ansprechpartner bleiben persönlich: ich.',
@@ -1004,12 +930,12 @@ const T = {
     en: 'For repetitive tasks such as first drafts and organising correspondence. Design, coordination and your point of contact stay personal: me.'
   },
   q5: { de: 'Kann meine Website mehrsprachig sein?', hu: 'Lehet többnyelvű a weboldalam?', en: 'Can my website be multilingual?' },
-  a5: { de: 'Ja. Ich arbeite auf Deutsch, Ungarisch und Englisch – Ihre Website kann in einer oder mehreren dieser Sprachen erscheinen.', hu: 'Igen. Magyarul, németül és angolul dolgozom – a weboldalad ezek közül egy vagy több nyelven is megjelenhet.', en: 'Yes. I work in German, Hungarian and English – your website can appear in one or more of these languages.' },
+  a5: { de: 'Ja. Ich arbeite auf Deutsch, Ungarisch und Englisch – Ihre Website kann in einer oder mehreren dieser Sprachen erscheinen.', hu: 'Igen. Magyarul, németül és angolul dolgozom – a weboldalad ezek közül egy vagy több nyelven is megjelenhet.', en: 'Yes. I work in German, Hungarian and English, and your website can appear in one or more of these languages.' },
   q6: { de: 'Betreuen Sie auch Facebook und Instagram?', hu: 'Facebook- és Instagram-oldalt is kezelsz?', en: 'Do you also manage Facebook and Instagram?' },
   a6: {
     de: 'Ja. Ich erstelle Beiträge und sorge für eine regelmässige Präsenz – auf Wunsch zusätzlich zur Website.',
     hu: 'Igen. Posztokat készítek, és gondoskodom a rendszeres jelenlétről – kérésre a weboldal mellett is.',
-    en: 'Yes. I create posts and keep a regular presence – alongside your website if you wish.'
+    en: 'Yes. I create posts and keep you regularly present, alongside your website if you wish.'
   },
   ctaBandTitle: { de: 'Sehen Sie Ihre neue Website, bevor Sie sich entscheiden.', hu: 'Lásd az új weboldaladat, mielőtt döntenél.', en: 'See your new website before you decide.' },
   ctaBandSub: { de: 'Ein paar Zeilen genügen.', hu: 'Elég pár sor.', en: 'A few lines are enough.' },
@@ -1051,9 +977,7 @@ function setLang(lang) {
   try { localStorage.setItem('rm-lang', lang); } catch (e) {}
 }
 document.querySelectorAll('.lang-btn').forEach(b => b.addEventListener('click', () => setLang(b.dataset.lang)));
-// a videó egyszer, eredeti sebességgel (~6 mp) fut le, és az utolsó képkockán megáll (nincs ismétlés, nincs akadás)
 document.querySelectorAll('.cta-video').forEach((v) => { const slow = () => { if (v.duration) v.playbackRate = 1; }; v.addEventListener('loadedmetadata', slow); slow(); });
-// GYIK: magasság-animáció nyitáskor/záráskor
 (() => {
   const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
   document.querySelectorAll('details.reveal').forEach((d) => {
@@ -1079,7 +1003,6 @@ document.querySelectorAll('.cta-video').forEach((v) => { const slow = () => { if
     });
   });
 })();
-// „Ingyenes demót kérek” -> Gmail levélíró, előre kitöltött kérdésekkel (az oldal nyelvén)
 const DEMO_MAIL = {
   de: { su: 'Anfrage: kostenlose Demo-Website', body: 'Hallo Márton\n\nich möchte gerne eine kostenlose Demo-Website.\n\nName des Betriebs: \nWas wir anbieten: \nOrt / Land: \nBestehende Website oder Facebook / Instagram (falls vorhanden): \nSprache(n) der Website: \nTelefon (optional): \n\nLogo und Fotos hänge ich – falls vorhanden – an diese E-Mail an.\n\nFreundliche Grüsse\n' },
   hu: { su: 'Ingyenes demó kérése', body: 'Szia Márton!\n\nIngyenes demó weboldalt szeretnék kérni.\n\nA vállalkozás neve: \nMivel foglalkozunk: \nVáros / ország: \nMeglévő weboldal vagy Facebook / Instagram (ha van): \nMilyen nyelven legyen az oldal: \nTelefonszám (nem kötelező): \n\nA logót és a fotókat – ha vannak – ehhez a levélhez csatolom.\n\nÜdvözlettel:\n' },
@@ -1101,7 +1024,6 @@ function updateDemoLinks(lang) {
 const _setLangOrig = setLang;
 setLang = function (lang) { _setLangOrig(lang); updateDemoLinks(lang); };
 
-// Szél-motívumok: enyhe parallax görgetéskor
 (() => {
   if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
   const els = [...document.querySelectorAll('.side-deco .sd-diamond, .side-deco .sd-mono, .side-deco .sd-line')];
@@ -1115,7 +1037,6 @@ setLang = function (lang) { _setLangOrig(lang); updateDemoLinks(lang); };
     });
   }, { passive: true });
 })();
-// Jogi ablakok: megnyitás, bezárás, nyelv
 document.querySelectorAll('[data-legal]').forEach(a => a.addEventListener('click', e => { e.preventDefault(); const d = document.getElementById('dlg-' + a.dataset.legal); d.showModal(); d.querySelector('.legal-body').scrollTop = 0; }));
 document.querySelectorAll('.legal-dlg').forEach(d => {
   d.querySelector('.legal-x').addEventListener('click', () => d.close());
@@ -1123,10 +1044,8 @@ document.querySelectorAll('.legal-dlg').forEach(d => {
 });
 const _setLangLegal = setLang;
 setLang = function (lang) { _setLangLegal(lang); document.querySelectorAll('.legal-body [data-ll]').forEach(el => el.classList.toggle('on', el.dataset.ll === lang)); document.querySelectorAll('.legal-x').forEach(b => b.setAttribute('aria-label', { de: 'Schließen', hu: 'Bezárás', en: 'Close' }[lang])); };
-// Nyelv: 1) ?lang=de|hu|en a linkben  2) a látogató korábbi választása  3) a böngésző nyelve  4) angol
 const LANGS = ['de', 'hu', 'en'];
 
-// Hero cím szavanként (minden nyelvváltás után újra), lépcsőzetes megjelenés, húzható lépések kiemelése
 (() => {
   const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
   const splitHero = () => {
@@ -1151,12 +1070,10 @@ const LANGS = ['de', 'hu', 'en'];
   };
   const _setLangAnim = setLang;
   setLang = function (lang) { _setLangAnim(lang); splitHero(); };
-  // testvér .reveal elemek késleltetése (70 ms lépcső)
   document.querySelectorAll('.reveal').forEach(el => {
     const sibs = [...el.parentElement.children].filter(c => c.classList.contains('reveal'));
     const i = sibs.indexOf(el); if (i > 0) el.style.setProperty('--d', Math.min(i, 5) * 70 + 'ms');
   });
-  // húzható lépések: a középen lévő kártya kiemelve
   const ol = document.querySelector('.m-steps');
   if (ol && 'IntersectionObserver' in window) {
     const io = new IntersectionObserver(es => es.forEach(e => { if (!matchMedia('(max-width: 767px)').matches) return; e.target.classList.toggle('on', e.intersectionRatio > .6); }),
@@ -1165,7 +1082,6 @@ const LANGS = ['de', 'hu', 'en'];
   }
 })();
 
-// Mobil háttér-motívumok: szakaszonként más elrendezés, belépéskor beúsznak, görgetésre enyhe parallax
 (() => {
   const dia = (cls, x, y, s, delay, dark) => '<svg class="md-dia ' + cls + '" style="' + x + ';top:' + y + ';width:' + s + 'px;height:' + s + 'px;animation-delay:' + delay + 's" viewBox="0 0 20 20"><path d="M10 1l9 9-9 9-9-9z" fill="none" stroke="' + (dark ? '#93C5FD' : '#2563EB') + '" stroke-width="1.3"/></svg>';
   const line = (x, y, dark) => { const c = dark ? '#93C5FD' : '#2563EB'; return '<svg class="md-line" style="' + x + ';top:' + y + '" viewBox="0 0 12 200" preserveAspectRatio="none"><path d="M6 6v188" stroke="' + c + '" stroke-width="1.2" fill="none"/><path d="M6 0l4 4-4 4-4-4z M6 192l4 4-4 4-4-4z" fill="' + c + '"/></svg>'; };
@@ -1204,7 +1120,6 @@ const LANGS = ['de', 'hu', 'en'];
   }, { passive: true });
 })();
 
-// Több mozgás: címek, felpattanó elemek, gombcsík, hero-görgetés
 (() => {
   if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
   document.querySelectorAll('section h2').forEach(h2 => { if (h2.closest('.reveal')) h2.classList.add('h-rise'); });
@@ -1214,7 +1129,6 @@ const LANGS = ['de', 'hu', 'en'];
     el.classList.add('reveal', 'pop'); el.style.setProperty('--d', Math.min(i, 6) * 80 + 'ms');
   }));
   document.querySelectorAll('a.bg-cta, .m-cta').forEach(a => a.classList.add('shine'));
-  // kezdő képernyő: görgetéskor a videó ráközelít, a szöveg finoman elúszik
   const hero = document.querySelector('main > section'), vid = hero && hero.querySelector('video'), txt = hero && hero.querySelector('h1') && hero.querySelector('h1').parentElement;
   if (hero && vid && txt) {
     let t = false;
@@ -1231,15 +1145,14 @@ const LANGS = ['de', 'hu', 'en'];
   }
 })();
 
-// ===== FX kapcsolók – 1 = be, 0 = ki (Márton választ, mi maradjon) =====
 const FX = {
   pinSteps: 1,   // 1) „4 lépés” ott marad görgetés közben, a lépések egymás után kigyúlnak
-  textShine: 1,  // 2) fénycsík a kiemelt szövegeken („Ingyenes demóval.”, „Lásd az új weboldaladat…”)
+  textShine: 0,  // 2) fénycsík a kiemelt szövegeken („Ingyenes demóval.”, „Lásd az új weboldaladat…”)
   stickyCta: 1,  // 3) mobilon alul lebegő, csillogó demó-gomb
   progress: 1,   // 4) haladásjelző sáv a fejléc alján
   marquee: 1,    // 5) mozgó szalag a szolgáltatások után
   spotlight: 1,  // 6) fény a kártyákon (egér / koppintás)
-  ring: 1,       // 7) körbefutó fény az „Ingyenes demó” dobozokon
+  ring: 0,       // 7) körbefutó fény az „Ingyenes demó” dobozokon
 };
 (() => {
   const root = document.documentElement;
@@ -1252,7 +1165,6 @@ const FX = {
   const onScroll = () => { if (ticking) return; ticking = true; requestAnimationFrame(() => { ticks.forEach(fn => fn()); ticking = false; }); };
   addEventListener('scroll', onScroll, { passive: true }); addEventListener('resize', onScroll);
 
-  // 1) pinSteps
   if (FX.pinSteps && !reduce) {
     const sec = document.getElementById('ablauf'), ol = sec && sec.querySelector('.m-steps');
     if (ol) {
@@ -1275,7 +1187,6 @@ const FX = {
       });
     }
   }
-  // 3) stickyCta
   if (FX.stickyCta) {
     const a = document.createElement('a'); a.href = '#kontakt'; a.className = 'fx-pill shine';
     a.innerHTML = '<span data-i18n="ctaDemo">Gratis-Demo anfordern</span><svg class="m-cta-arrow w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>';
@@ -1287,13 +1198,11 @@ const FX = {
       a.classList.toggle('show', past && !covered && !root.classList.contains('menu-open'));
     });
   }
-  // 4) progress
   if (FX.progress) {
     const p = document.createElement('div'); p.className = 'fx-prog'; p.setAttribute('aria-hidden', 'true'); p.innerHTML = '<i></i>';
     document.getElementById('top').appendChild(p);
     ticks.push(() => { const max = document.documentElement.scrollHeight - innerHeight; p.firstChild.style.transform = 'scaleX(' + (max > 0 ? scrollY / max : 0).toFixed(4) + ')'; });
   }
-  // 5) marquee
   if (FX.marquee) {
     const after = document.getElementById('leistungen');
     if (after) {
@@ -1314,7 +1223,6 @@ const FX = {
       }
     }
   }
-  // 6) spotlight
   if (FX.spotlight) {
     document.querySelectorAll('#leistungen article, #kontakt .auto-rows-fr > *, .m-steps > li, #faq details').forEach(el => {
       el.classList.add('fx-spot');
@@ -1323,7 +1231,6 @@ const FX = {
       el.addEventListener('pointerdown', (e) => { set(e); el.classList.add('tap'); setTimeout(() => el.classList.remove('tap'), 650); });
     });
   }
-  // 7) ring
   if (FX.ring) {
     const demoCard = document.querySelector('#leistungen article:last-child');
     const needBox = document.querySelector('#kontakt [data-i18n="needTitle"]');
