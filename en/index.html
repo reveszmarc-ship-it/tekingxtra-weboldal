@@ -1,0 +1,1196 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TekingXtra – Websites &amp; social media for small businesses</title>
+<link rel="canonical" href="https://tekingxtra.com/en/">
+<link rel="alternate" hreflang="de" href="https://tekingxtra.com/">
+<link rel="alternate" hreflang="hu" href="https://tekingxtra.com/hu/">
+<link rel="alternate" hreflang="en" href="https://tekingxtra.com/en/">
+<link rel="alternate" hreflang="es" href="https://tekingxtra.com/es/">
+<link rel="alternate" hreflang="hr" href="https://tekingxtra.com/hr/">
+<link rel="alternate" hreflang="x-default" href="https://tekingxtra.com/">
+<meta property="og:url" content="https://tekingxtra.com/en/">
+<meta property="og:locale" content="en_GB">
+<meta property="og:title" content="TekingXtra – Websites &amp; social media for small businesses">
+<meta property="og:description" content="Modern websites and Facebook &amp; Instagram management for small businesses and clubs worldwide – with a free demo.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://tekingxtra.com/assets/tekingxtra-logo.png">
+<link rel="icon" type="image/png" href="/assets/tekingxtra-logo.png">
+<meta name="description" content="Modern websites and Facebook &amp; Instagram management for small businesses and clubs worldwide – with a free demo.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/site.css">
+<style>
+  body { font-family: 'Schibsted Grotesk', sans-serif; }
+  h1, h2, h3, .font-heading { font-family: 'Schibsted Grotesk', sans-serif; letter-spacing: -0.01em; }
+  :focus-visible { outline: 2px solid #0369A1; outline-offset: 2px; border-radius: 6px; }
+  .missing { border: 1.5px dashed #D97706; background: #FFFBEB; color: #92400E; border-radius: 6px; padding: 0 .4em; font-weight: 500; white-space: normal; }
+  .missing-block { border: 2px dashed #D97706; background: repeating-linear-gradient(135deg,#FFFBEB 0 12px,#FEF3C7 12px 24px); color: #92400E; }
+  .grad-text { color: #2563EB; }
+  .bg-navy .grad-text { color: #60A5FA; }
+  .glow { position:absolute; border-radius:9999px; filter: blur(70px); opacity:.35; animation: drift 18s ease-in-out infinite alternate; pointer-events:none; }
+  @keyframes drift { from { transform: translate(0,0) scale(1);} to { transform: translate(40px,-30px) scale(1.12);} }
+  .reveal { opacity: 0; transform: translateY(16px); transition: opacity .6s ease, transform .6s ease; }
+  .reveal.in { opacity: 1; transform: none; }
+  details summary::-webkit-details-marker { display:none; }
+  details[open] .chev { transform: rotate(180deg); }
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+    .reveal { opacity: 1; transform: none; }
+    .cta-video { display: none; }
+  }
+  .cta-video { animation: vdrift 6s ease-in-out 1 forwards; transform-origin: 60% 50%; }
+  @keyframes vdrift { from { transform: scale(1.08) translate3d(-3%, 1%, 0); } to { transform: scale(1.22) translate3d(3%, -2%, 0); } }
+  
+  details.reveal { overflow: hidden; border-left: 3px solid transparent; padding-left: 0; transition: border-color .3s ease, padding-left .3s ease, background-color .3s ease; border-radius: 6px; }
+  details.reveal[open] { border-left-color: #0369A1; padding-left: 14px; background-color: rgba(3,105,161,.04); }
+  details.reveal > p { opacity: 0; transform: translateY(-6px); transition: opacity .35s ease .05s, transform .35s cubic-bezier(.2,.8,.2,1) .05s; }
+  details.reveal[open] > p { opacity: 1; transform: none; }
+  details .chev { transition: transform .35s cubic-bezier(.34,1.56,.64,1) !important; }
+  
+  .mascot { position: absolute; pointer-events: none; user-select: none; filter: drop-shadow(0 18px 22px rgba(15,23,42,.28)); z-index: 5; }
+  .mascot-float { animation: mfloat 4.5s ease-in-out infinite; }
+  @keyframes mfloat { 0%,100% { transform: translateY(0) rotate(-1deg); } 50% { transform: translateY(-10px) rotate(1.5deg); } }
+  .mascot-peek { transform: translateY(30%) rotate(8deg); opacity: 0; transition: transform .6s cubic-bezier(.34,1.56,.64,1), opacity .4s ease; }
+  .in .mascot-peek, .in.mascot-peek { transform: translateY(0) rotate(0); opacity: 1; }
+  .group:hover .mascot-wave { animation: mwave .9s ease-in-out 2; transform-origin: 70% 90%; }
+  @keyframes mwave { 0%,100% { transform: rotate(0); } 25% { transform: rotate(-7deg); } 75% { transform: rotate(6deg); } }
+  .mascot-jump.in, .in .mascot-jump { animation: mjump 1.1s cubic-bezier(.34,1.56,.64,1) .2s 1 both; }
+  @keyframes mjump { 0% { transform: translateY(40px) scale(.9); opacity: 0; } 55% { transform: translateY(-18px) scale(1.04); opacity: 1; } 100% { transform: translateY(0) scale(1); opacity: 1; } }
+  @media (prefers-reduced-motion: reduce) { .mascot, .mascot * { animation: none !important; transition: none !important; opacity: 1 !important; transform: none !important; } }
+  
+  .footer-cat { transform-origin: 60% 95%; animation: fcat 6s ease-in-out infinite; }
+  @keyframes fcat { 0%,100% { transform: translateY(0) rotate(0); } 12% { transform: translateY(-6px) rotate(-6deg); } 18% { transform: translateY(-6px) rotate(5deg); } 24% { transform: translateY(-6px) rotate(-5deg); } 30% { transform: translateY(0) rotate(0); } 60% { transform: translateY(-10px) rotate(1deg); } }
+  @media (prefers-reduced-motion: reduce) { .footer-cat { animation: none; } }
+  
+  .side-deco { display: none; position: fixed; top: 0; bottom: 0; width: calc((100vw - 72rem) / 2 - 24px); pointer-events: none; z-index: 1; overflow: hidden; }
+  .side-left { left: 0; } .side-right { right: 0; }
+  @media (min-width: 1400px) { .side-deco { display: block; } }
+  .side-deco > * { position: absolute; will-change: transform; }
+  .sd-dots { inset: 0; background-image: radial-gradient(rgba(37,99,235,.22) 1px, transparent 1.4px); background-size: 22px 22px; -webkit-mask-image: linear-gradient(to bottom, transparent, #000 20%, #000 80%, transparent); mask-image: linear-gradient(to bottom, transparent, #000 20%, #000 80%, transparent); opacity: .55; }
+  .side-left .sd-dots { -webkit-mask-image: linear-gradient(90deg, #000, transparent 85%); mask-image: linear-gradient(90deg, #000, transparent 85%); }
+  .side-right .sd-dots { -webkit-mask-image: linear-gradient(270deg, #000, transparent 85%); mask-image: linear-gradient(270deg, #000, transparent 85%); }
+  .sd-orb { width: 260px; height: 260px; border-radius: 9999px; filter: blur(60px); opacity: .22; animation: sdOrb 22s ease-in-out infinite alternate; }
+  .sd-orb-a { background: #2563EB; top: 12%; left: -80px; }
+  .sd-orb-b { background: #2563EB; bottom: 8%; right: -90px; animation-duration: 28s; animation-delay: -9s; }
+  .side-right .sd-orb-a { left: auto; right: -80px; } .side-right .sd-orb-b { right: auto; left: -90px; }
+  @keyframes sdOrb { from { transform: translate(0,0) scale(1); } to { transform: translate(40px, 80px) scale(1.15); } }
+  .sd-line { top: 18%; height: 64%; width: 12px; opacity: .45; stroke-dasharray: 600; stroke-dashoffset: 600; animation: sdDraw 3.5s ease-out .6s forwards, sdPulse 6s ease-in-out 4s infinite; }
+  .side-left .sd-line { right: 28%; } .side-right .sd-line { left: 28%; }
+  .sd-line path:first-child { stroke-dasharray: 600; stroke-dashoffset: 600; animation: sdDraw 3.5s ease-out .6s forwards; }
+  @keyframes sdDraw { to { stroke-dashoffset: 0; } }
+  @keyframes sdPulse { 0%,100% { opacity: .45; } 50% { opacity: .2; } }
+  .sd-diamond { opacity: .5; }
+  .sd-spin { animation: sdSpin 18s linear infinite; } .sd-rev { animation-direction: reverse; animation-duration: 26s; }
+  .sd-float { animation: sdFloat 7s ease-in-out infinite; }
+  @keyframes sdSpin { to { transform: rotate(360deg); } }
+  @keyframes sdFloat { 0%,100% { transform: translateY(0) rotate(0); } 50% { transform: translateY(-18px) rotate(45deg); } }
+  .sd-mono { bottom: 6%; font-family: 'Playfair Display', Georgia, serif; font-weight: 700; font-size: 140px; line-height: 1; color: transparent; -webkit-text-stroke: 1px rgba(37,99,235,.22); }
+  .side-left .sd-mono { left: 18%; } .side-right .sd-mono { right: 18%; }
+  @media (prefers-reduced-motion: reduce) { .side-deco * { animation: none !important; stroke-dashoffset: 0 !important; } }
+  html, body { overflow-x: clip; }
+  
+  .legal-dlg { width: min(760px, calc(100vw - 32px)); max-height: calc(100dvh - 48px); padding: 0; border: 0; border-radius: 20px; box-shadow: 0 30px 80px rgba(2,6,23,.35); overflow: hidden; color: #334155; background: #fff; }
+  .legal-dlg[open] { display: flex; flex-direction: column; animation: dlgIn .35s cubic-bezier(.16,1,.3,1); }
+  .legal-dlg::backdrop { background: rgba(15,23,42,.72); }
+  @keyframes dlgIn { from { opacity: 0; transform: translateY(16px) scale(.98); } to { opacity: 1; transform: none; } }
+  html:has(.legal-dlg[open]) { overflow: hidden; }
+  .legal-head { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 18px 24px; border-bottom: 1px solid #E2E8F0; }
+  .legal-head h2 { font-size: 22px; font-weight: 700; color: #0F172A; }
+  .legal-x { width: 40px; height: 40px; border-radius: 9999px; font-size: 26px; line-height: 1; color: #334155; transition: background .2s, transform .2s; cursor: pointer; }
+  .legal-x:hover { background: #F1F5F9; transform: rotate(90deg); }
+  .legal-body { overflow-y: auto; padding: 8px 24px 28px; font-size: 15px; line-height: 1.65; }
+  .legal-body [data-ll] { display: none; } .legal-body [data-ll].on { display: block; }
+  .legal-body h3 { margin: 22px 0 6px; font-size: 16px; font-weight: 600; color: #0F172A; }
+  .legal-body p, .legal-body li { margin: 6px 0; }
+  .legal-body ul { padding-left: 0; list-style: none; }
+  .legal-body a { color: #0369A1; text-decoration: underline; text-underline-offset: 2px; }
+  .legal-lead { margin-top: 18px !important; font-size: 16px; color: #0F172A; font-weight: 500; }
+  .legal-date { margin-top: 24px !important; font-size: 13px; color: #64748B; }
+  
+  .m-cta { transition: transform .18s cubic-bezier(.2,.8,.2,1); }
+  .m-cta-arrow { animation: nudge 1.8s cubic-bezier(.2,.8,.2,1) infinite; }
+  @keyframes nudge { 0%, 60%, 100% { transform: translateX(0); } 30% { transform: translateX(5px); } }
+  .m-hero-cat { animation: catIn .9s cubic-bezier(.2,1.4,.4,1) .5s both, floaty 4s ease-in-out 1.4s infinite; }
+  @keyframes catIn { from { opacity: 0; transform: translateY(40px) rotate(-12deg) scale(.6); } to { opacity: 1; transform: none; } }
+  @keyframes floaty { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
+  
+  a, button, summary { -webkit-tap-highlight-color: transparent; }
+  a:active, button:active, summary:active { transform: scale(.97); }
+  
+  .hw { display: inline-block; opacity: 0; transform: translateY(.45em); animation: wordUp .7s cubic-bezier(.2,.8,.2,1) forwards; }
+  @keyframes wordUp { to { opacity: 1; transform: none; } }
+  
+  .reveal { transition-delay: var(--d, 0ms); }
+  @media (max-width: 767px) {
+    header#top { border-bottom-color: transparent !important; }
+    
+    .m-services { gap: 44px; margin-top: 40px; }
+    .m-services article { border: 0 !important; background: transparent !important; padding: 0 !important; box-shadow: none !important; }
+    .m-services article > div:first-of-type { display: none; }
+    .m-services article h3 { margin-top: 0; font-size: 30px; line-height: 1.1; letter-spacing: -.02em; }
+    .m-services article p { font-size: 17px; }
+    .m-services article.reveal { transform: translateX(-28px); }
+    .m-services article.reveal.in { transform: none; }
+    .m-services article:last-child { background: #0F172A !important; padding: 34px 24px 28px !important; border-radius: 24px; margin: 8px -4px 0; }
+    .m-services article:last-child h3 { color: #fff; }
+    .m-services article:last-child p { color: #CBD5E1; }
+    .m-services article:last-child > span.absolute { top: -14px; left: 24px; }
+    
+    .m-steps { display: flex !important; overflow-x: auto; scroll-snap-type: x mandatory; gap: 12px; margin: 32px -16px 0; padding: 4px 16px 16px; scrollbar-width: none; }
+    .m-steps::-webkit-scrollbar { display: none; }
+    .m-steps > li { flex: 0 0 76%; scroll-snap-align: start; border: 0 !important; padding: 28px 24px !important; min-height: 190px;
+      transition: transform .45s cubic-bezier(.2,.8,.2,1), opacity .45s ease, background-color .45s ease !important; }
+    .m-steps > li > span:first-child { display: none; }
+    .m-steps > li h3 { margin-top: 0; font-size: 24px; letter-spacing: -.01em; }
+    .m-steps > li p { font-size: 16px; }
+    .m-steps > li.reveal.in:not(.on) { transform: scale(.93); opacity: .55; }
+    .m-steps > li.on { background: #0F172A !important; }
+    .m-steps > li.on h3 { color: #fff; } .m-steps > li.on p { color: #CBD5E1; }
+    
+    .m-why > div > div:first-child { display: none; }
+    .m-why h3 { font-size: 22px; }
+    #warum figure .relative.overflow-hidden { box-shadow: none; }
+    
+    .m-flat, #kontakt .rounded-2xl.border { border-color: transparent !important; background-color: #F1F5F9 !important; }
+    .m-flat summary > span > img { width: 44px; height: 44px; }
+    #kontakt .auto-rows-fr { grid-auto-rows: auto; height: auto; }
+    #kontakt .auto-rows-fr > * { padding: 20px !important; }
+    #kontakt .auto-rows-fr p.mt-4 { margin-top: 10px; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .hw { opacity: 1; transform: none; animation: none; }
+    .m-cta-arrow, .m-hero-cat { animation: none; }
+    .m-steps > li.reveal.in:not(.on) { transform: none; opacity: 1; }
+  }
+  
+  .m-deco { display: none; }
+  @media (max-width: 767px) {
+    .m-deco-host { position: relative; overflow: hidden; }
+    .m-deco-host > :not(.m-deco) { position: relative; z-index: 1; }
+    .m-deco { display: block; position: absolute; inset: 0; z-index: 0; pointer-events: none; }
+    .m-deco > * { position: absolute; will-change: transform; }
+    .md-mono { font-family: 'Playfair Display', Georgia, serif; font-weight: 700; font-size: 230px; line-height: 1; color: transparent;
+      -webkit-text-stroke: 1.2px rgba(37,99,235,.16); animation: mdBreath 9s ease-in-out infinite; }
+    .m-deco.dark .md-mono { -webkit-text-stroke-color: rgba(147,197,253,.16); }
+    .md-dots { width: 150px; height: 150px; background-image: radial-gradient(rgba(37,99,235,.28) 1.2px, transparent 1.6px); background-size: 16px 16px;
+      -webkit-mask-image: radial-gradient(circle, #000 35%, transparent 72%); mask-image: radial-gradient(circle, #000 35%, transparent 72%);
+      animation: mdDrift 14s ease-in-out infinite alternate; }
+    .m-deco.dark .md-dots { background-image: radial-gradient(rgba(147,197,253,.3) 1.2px, transparent 1.6px); }
+    .md-dia { opacity: .55; }
+    .md-line { width: 12px; height: 180px; opacity: .45; }
+    .md-line path:first-child { stroke-dasharray: 200; stroke-dashoffset: 200; }
+    .m-deco.on .md-line path:first-child { animation: sdDraw 2.4s cubic-bezier(.2,.8,.2,1) .2s forwards; }
+    .md-orb { width: 200px; height: 200px; border-radius: 9999px; background: #2563EB; opacity: .10; filter: blur(50px); animation: sdOrb 20s ease-in-out infinite alternate; }
+    .m-deco.dark .md-orb { opacity: .22; }
+    
+    .m-deco > * { opacity: 0; transition: opacity 1.2s ease; }
+    .m-deco.on > * { opacity: 1; }
+    .m-deco.on > .md-dia { opacity: .55; }
+    .m-deco.on > .md-line { opacity: .45; }
+    .m-deco.on > .md-orb { opacity: .10; } .m-deco.dark.on > .md-orb { opacity: .22; }
+  }
+  @keyframes mdBreath { 0%,100% { scale: 1; rotate: -3deg; } 50% { scale: 1.07; rotate: 3deg; } }
+  @keyframes mdDrift { from { transform: translate(0,0) rotate(0); } to { transform: translate(34px,-26px) rotate(8deg); } }
+  @media (prefers-reduced-motion: reduce) { .m-deco * { animation: none !important; } .md-line path:first-child { stroke-dashoffset: 0; } }
+  
+  .reveal .h-rise { clip-path: inset(0 0 100% 0); transform: translateY(.35em); transition: clip-path .9s cubic-bezier(.2,.8,.2,1) .08s, transform .9s cubic-bezier(.2,.8,.2,1) .08s; }
+  .reveal.in .h-rise { clip-path: inset(-20% -5% -20% -5%); transform: none; }
+  
+  .pop.reveal { transform: translateY(12px) scale(.86); transition: opacity .5s ease, transform .6s cubic-bezier(.2,1.5,.4,1); transition-delay: var(--d, 0ms); }
+  .pop.reveal.in { transform: none; }
+  
+  .reveal.in > svg.text-cta:first-child, .reveal.in > div > svg.text-cta { animation: nod .7s cubic-bezier(.2,.8,.2,1) .35s both; }
+  @keyframes nod { 0% { transform: rotate(0) scale(1); } 35% { transform: rotate(-14deg) scale(1.18); } 70% { transform: rotate(8deg) scale(1.05); } 100% { transform: none; } }
+  
+  .shine { position: relative; overflow: hidden; isolation: isolate; }
+  .shine::after { content: ''; position: absolute; top: 0; bottom: 0; left: -60%; width: 40%; z-index: -1; pointer-events: none;
+    background: linear-gradient(105deg, transparent, rgba(255,255,255,.45), transparent); transform: skewX(-18deg); animation: shine 5.5s ease-in-out 2s infinite; }
+  .m-cta.shine::after { background: linear-gradient(105deg, transparent, rgba(37,99,235,.18), transparent); }
+  @keyframes shine { 0%, 70% { left: -60%; } 100% { left: 130%; } }
+  
+  .mascot-float { animation: mfloat 4.5s ease-in-out infinite, sway 7s ease-in-out infinite; }
+  @keyframes sway { 0%,100% { rotate: -2.5deg; } 50% { rotate: 2.5deg; } }
+  @media (prefers-reduced-motion: reduce) {
+    .reveal .h-rise, .pop.reveal { clip-path: none; transform: none; transition: none; }
+    .shine::after, .reveal.in > svg.text-cta:first-child, .reveal.in > div > svg.text-cta { animation: none; }
+    .mascot-float { animation: none; }
+  }
+  
+  .burger { display: block; position: relative; width: 24px; height: 18px; }
+  .burger i { position: absolute; left: 0; width: 24px; height: 2px; border-radius: 2px; background: #0F172A;
+    transition: transform .45s cubic-bezier(.7,0,.2,1), opacity .25s ease, top .45s cubic-bezier(.7,0,.2,1), width .3s ease; }
+  .burger i:nth-child(1) { top: 0; } .burger i:nth-child(2) { top: 8px; width: 16px; } .burger i:nth-child(3) { top: 16px; }
+  #menuBtn:hover .burger i:nth-child(2) { width: 24px; }
+  #menuBtn.open .burger i:nth-child(1) { top: 8px; transform: rotate(45deg); }
+  #menuBtn.open .burger i:nth-child(2) { opacity: 0; transform: translateX(10px); }
+  #menuBtn.open .burger i:nth-child(3) { top: 8px; transform: rotate(-45deg); }
+  .mnav { position: absolute; left: 0; right: 0; top: 100%; height: calc(100dvh - var(--hh, 64px)); overflow-y: auto; background: #0F172A;
+    clip-path: circle(0px at calc(100% - 36px) -32px); visibility: hidden; transition: clip-path .7s cubic-bezier(.7,0,.2,1), visibility 0s linear .7s; }
+  .mnav.open { clip-path: circle(160% at calc(100% - 36px) -32px); visibility: visible; transition: clip-path .75s cubic-bezier(.7,0,.2,1), visibility 0s; }
+  .mnav-in { position: relative; z-index: 1; }
+  .mnav a { opacity: 0; transform: translateY(26px); transition: opacity .45s ease, transform .6s cubic-bezier(.2,.8,.2,1), color .2s ease; }
+  .mnav a:not(.bg-cta) { color: #fff; font-family: 'Schibsted Grotesk', system-ui, sans-serif; font-size: 34px; font-weight: 600; letter-spacing: -.02em; line-height: 1.15; padding: 10px 0; }
+  .mnav a:not(.bg-cta):active, .mnav a:not(.bg-cta):hover { color: #60A5FA; }
+  .mnav a.bg-cta { margin-top: 28px; font-size: 17px; padding: 16px 20px; border-radius: 9999px; background: #fff; color: #0F172A; }
+  .mnav.open a { opacity: 1; transform: none; }
+  .mnav.open a:nth-child(1) { transition-delay: .18s; } .mnav.open a:nth-child(2) { transition-delay: .24s; } .mnav.open a:nth-child(3) { transition-delay: .30s; }
+  .mnav.open a:nth-child(4) { transition-delay: .36s; } .mnav.open a:nth-child(5) { transition-delay: .42s; } .mnav.open a:nth-child(6) { transition-delay: .48s; }
+  .mnav.open a:nth-child(7) { transition-delay: .54s; }
+  .mnav-mono { position: absolute; right: -40px; bottom: -40px; font-family: 'Playfair Display', Georgia, serif; font-weight: 700; font-size: 300px; line-height: 1;
+    color: transparent; -webkit-text-stroke: 1.2px rgba(147,197,253,.18); opacity: 0; transform: translateY(40px) rotate(-6deg); transition: opacity .8s ease .3s, transform 1.1s cubic-bezier(.2,.8,.2,1) .3s; pointer-events: none; }
+  .mnav.open .mnav-mono { opacity: 1; transform: none; animation: mdBreath 9s ease-in-out 1.4s infinite; }
+  .mnav-dia { position: absolute; left: 24px; bottom: 120px; width: 22px; height: 22px; border: 1.3px solid rgba(147,197,253,.5); transform: rotate(45deg); opacity: 0; transition: opacity .6s ease .5s; pointer-events: none; }
+  .mnav.open .mnav-dia { opacity: 1; animation: sdSpin 14s linear infinite; }
+  html.menu-open { overflow: hidden; }
+  html.menu-open #top { background: #fff; }
+  @media (prefers-reduced-motion: reduce) { .mnav, .mnav a, .burger i { transition: none !important; } .mnav.open .mnav-mono, .mnav.open .mnav-dia { animation: none; } }
+  
+  @property --ang { syntax: '<angle>'; inherits: false; initial-value: 0deg; }
+  
+  @media (min-width: 768px) { html.fx-pinSteps #ablauf { height: 230vh; overflow: clip; }
+    html.fx-pinSteps #ablauf > .max-w-6xl { position: sticky; top: calc(var(--hh, 64px) + 28px); }
+    html.fx-pinSteps .m-steps > li { transition: transform .55s cubic-bezier(.2,.8,.2,1), background-color .55s ease, opacity .55s ease !important; }
+    html.fx-pinSteps .m-steps > li.on { background: #0F172A; transform: translateY(-10px); }
+    html.fx-pinSteps .m-steps > li.on h3 { color: #fff; } html.fx-pinSteps .m-steps > li.on p { color: #CBD5E1; } html.fx-pinSteps .m-steps > li.on .grad-text { color: #60A5FA; } }
+  .fx-steps-bar { display: none; }
+  @media (max-width: 767px) { html.fx-pinSteps .fx-steps-bar { display: none !important; } }
+  html.fx-pinSteps .fx-steps-bar { display: block; height: 4px; border-radius: 9999px; background: #E2E8F0; margin-top: 22px; overflow: hidden; }
+  html.fx-pinSteps .fx-steps-bar > i { display: block; height: 100%; width: 0; border-radius: inherit; background: #2563EB; position: relative; overflow: hidden; }
+  html.fx-pinSteps .fx-steps-bar > i::after { content: ''; position: absolute; inset: 0; width: 40%; background: linear-gradient(90deg, transparent, rgba(255,255,255,.8), transparent); animation: barGlint 1.6s linear infinite; }
+  @keyframes barGlint { from { transform: translateX(-100%); } to { transform: translateX(300%); } }
+  
+  .fx-pill { display: none; }
+  @media (max-width: 767px) {
+    html.fx-stickyCta .fx-pill { display: inline-flex; position: fixed; left: 50%; bottom: 18px; z-index: 30; align-items: center; gap: 8px; white-space: nowrap;
+      background: #0F172A; color: #fff; font-weight: 600; font-size: 15px; padding: 14px 22px; border-radius: 9999px; box-shadow: 0 12px 30px -10px rgba(15,23,42,.6);
+      transform: translate(-50%, 140%); transition: transform .55s cubic-bezier(.2,1.2,.3,1); }
+    html.fx-stickyCta .fx-pill.show { transform: translate(-50%, 0); }
+    html.fx-stickyCta .fx-pill.shine::after { background: linear-gradient(105deg, transparent, rgba(255,255,255,.35), transparent); }
+  }
+  
+  .fx-prog { display: none; }
+  html.fx-progress .fx-prog { display: block; position: absolute; left: 0; right: 0; bottom: -1px; height: 3px; pointer-events: none; }
+  html.fx-progress .fx-prog > i { display: block; height: 100%; width: 100%; transform-origin: 0 50%; transform: scaleX(0); background: #2563EB; }
+  html.fx-progress .fx-prog > i::after { content: ''; position: absolute; top: 0; bottom: 0; width: 60px; right: 0; background: radial-gradient(closest-side, rgba(255,255,255,.95), transparent); }
+  
+  .fx-band { display: none; }
+  html.fx-marquee .fx-band { display: block; position: relative; z-index: 2; overflow: hidden; background: #0F172A; padding: 22px 0; }
+  .fx-track { display: flex; width: max-content; animation: marq 38s linear infinite; }
+  .fx-track span { display: inline-flex; align-items: center; gap: 28px; padding-right: 28px; color: #fff; font-family: 'Schibsted Grotesk', system-ui, sans-serif; font-weight: 600; font-size: 30px; letter-spacing: -.01em; white-space: nowrap; }
+  .fx-track span:nth-child(even) { color: transparent; -webkit-text-stroke: 1.2px #60A5FA; }
+  .fx-track svg { width: 16px; height: 16px; flex: none; }
+  @keyframes marq { to { transform: translateX(-50%); } }
+  @media (min-width: 768px) { .fx-track span { font-size: 44px; } html.fx-marquee .fx-band { padding: 30px 0; } }
+  
+  html.fx-spotlight .fx-spot { position: relative; }
+  html.fx-spotlight .fx-spot::after { content: ''; position: absolute; inset: 0; border-radius: inherit; pointer-events: none; opacity: 0; transition: opacity .35s ease;
+    background: radial-gradient(260px circle at var(--mx, 50%) var(--my, 50%), rgba(37,99,235,.14), transparent 70%); }
+  html.fx-spotlight .fx-spot:hover::after, html.fx-spotlight .fx-spot.tap::after { opacity: 1; }
+  @media (prefers-reduced-motion: reduce) {
+    html.fx-pinSteps #ablauf { height: auto; } html.fx-pinSteps #ablauf > .max-w-6xl { position: relative; top: 0; }
+    .fx-track, html.fx-ring .fx-ringed::before, html.fx-textShine #ctaBand h2 { animation: none !important; }
+  }
+  .lang-btn .fx-flag { transition: transform .25s cubic-bezier(.2,1.4,.4,1); }
+  .lang-btn:hover .fx-flag { transform: scale(1.12) rotate(-4deg); }
+  .lang-btn.bg-navy .fx-flag { box-shadow: 0 0 0 1.5px #fff; }
+  @media (max-width: 639px) { .lang-btn { padding: 5px 4px !important; } .lang-btn .fx-flag { width: 20px; height: 14px; } }
+  
+  .m-services article { border: 0 !important; background: transparent !important; box-shadow: none !important; padding: 0 !important; }
+  .m-services article > div:first-of-type { display: none; }
+  .m-services article h3 { margin-top: 0; letter-spacing: -.02em; line-height: 1.1; font-size: clamp(26px, 2.6vw, 34px); }
+  .m-services article:last-child { background: #0F172A !important; border-radius: 24px; padding: 34px 28px 30px !important; }
+  .m-services article:last-child h3 { color: #fff; } .m-services article:last-child p { color: #CBD5E1; }
+  .m-services article:last-child > span.absolute { top: -14px; left: 28px; }
+  .m-steps > li { border: 0 !important; }
+  .m-steps > li > span:first-child { display: none; }
+  .m-why > div > div:first-child { display: none; }
+  #kontakt .auto-rows-fr > * > svg:first-child { display: none; }
+  #kontakt .auto-rows-fr > * > p:first-of-type { margin-top: 0; }
+  .m-flat, #kontakt .rounded-2xl.border { border-color: transparent !important; background-color: #F1F5F9 !important; }
+  .sd-orb, .md-orb { display: none !important; }
+  .hero-cat-big { filter: drop-shadow(0 24px 30px rgba(0,0,0,.35)); animation: catIn .9s cubic-bezier(.2,1.4,.4,1) .4s both, floaty 4.5s ease-in-out 1.4s infinite; }
+  @media (prefers-reduced-motion: reduce) { .hero-cat-big { animation: none; } }
+  .cta-video { filter: grayscale(1) sepia(1) hue-rotate(178deg) saturate(2.4) brightness(.9); } 
+  header#top nav a, header#top a.bg-cta { white-space: nowrap; }
+  @media (min-width: 1024px) and (max-width: 1279px) {  header#top nav { gap: 18px; font-size: 14px; } .lang-btn span { display: none; } }
+  
+  .legal-note { margin: 16px 0 0; padding: 10px 14px; border-radius: 10px; background: #F1F5F9; font-size: 14px; color: #0F172A; }
+  @media (min-width: 640px) and (max-width: 1439px) { .lang-btn span { display: none; } }
+  @media (max-width: 639px) {
+    .lang-wrap { position: relative; width: 38px; height: 34px; }
+    .lang-btn.bg-navy { order: -1; }
+    #langGroup { position: absolute; right: 0; top: 0; flex-direction: column; gap: 2px; background: #fff; z-index: 60; }
+    #langGroup .lang-btn { padding: 6px 7px !important; }
+    #langGroup .lang-btn:not(.bg-navy) { display: none; }
+    .lang-wrap.open #langGroup { box-shadow: 0 14px 30px -10px rgba(15,23,42,.35); }
+    .lang-wrap.open #langGroup .lang-btn { display: inline-flex; animation: langIn .25s cubic-bezier(.2,.8,.2,1) both; }
+    .lang-wrap.open #langGroup .lang-btn:nth-child(2) { animation-delay: .03s; } .lang-wrap.open #langGroup .lang-btn:nth-child(3) { animation-delay: .06s; }
+    .lang-wrap.open #langGroup .lang-btn:nth-child(4) { animation-delay: .09s; } .lang-wrap.open #langGroup .lang-btn:nth-child(5) { animation-delay: .12s; }
+  }
+  @keyframes langIn { from { opacity: 0; transform: translateY(-6px); } to { opacity: 1; transform: none; } }
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"ProfessionalService","name":"TekingXtra","url":"https://tekingxtra.com/","logo":"https://tekingxtra.com/assets/tekingxtra-logo.png","image":"https://tekingxtra.com/assets/tekingxtra-logo.png","description":"Websites und Social Media für kleine Unternehmen, mit kostenloser Demo.","founder":{"@type":"Person","name":"Márton Révész"},"email":"reveszmarc@gmail.com","telephone":"+36 70 234 8601","address":{"@type":"PostalAddress","streetAddress":"Józsefhegyi utca 8.","postalCode":"2045","addressLocality":"Törökbálint","addressCountry":"HU"},"areaServed":"Worldwide","availableLanguage":["de","hu","en","es","hr"],"priceRange":"ab 250 €","sameAs":["https://www.facebook.com/tekingxtra","https://www.instagram.com/tekingxtra_hu/","https://www.tiktok.com/@tekingxtra_hu"]}
+</script></head>
+<body class="bg-paper text-ink antialiased">
+<div class="side-deco side-left" aria-hidden="true">
+  <div class="sd-dots"></div>
+  <div class="sd-orb sd-orb-a"></div>
+  <div class="sd-orb sd-orb-b"></div>
+  <svg class="sd-line" viewBox="0 0 12 600" preserveAspectRatio="none"><path d="M6 6v588" stroke="#2563EB" stroke-width="1.2" fill="none"/><path d="M6 0l4 4-4 4-4-4z M6 592l4 4-4 4-4-4z" fill="#2563EB"/></svg>
+  <svg class="sd-diamond sd-spin" style="left:62%;top:18%;width:22px;height:22px;animation-delay:0s" viewBox="0 0 20 20"><path d="M10 1l9 9-9 9-9-9z" fill="none" stroke="#2563EB" stroke-width="1.2"/></svg>
+  <svg class="sd-diamond sd-float" style="left:28%;top:46%;width:14px;height:14px;animation-delay:-2s" viewBox="0 0 20 20"><path d="M10 1l9 9-9 9-9-9z" fill="none" stroke="#2563EB" stroke-width="1.2"/></svg>
+  <svg class="sd-diamond sd-spin sd-rev" style="left:70%;top:72%;width:30px;height:30px;animation-delay:-5s" viewBox="0 0 20 20"><path d="M10 1l9 9-9 9-9-9z" fill="none" stroke="#2563EB" stroke-width="1.2"/></svg>
+  <svg class="sd-diamond sd-float" style="left:40%;top:88%;width:10px;height:10px;animation-delay:-1s" viewBox="0 0 20 20"><path d="M10 1l9 9-9 9-9-9z" fill="none" stroke="#2563EB" stroke-width="1.2"/></svg>
+  <span class="sd-mono">T</span>
+</div>
+<div class="side-deco side-right" aria-hidden="true">
+  <div class="sd-dots"></div>
+  <div class="sd-orb sd-orb-a"></div>
+  <div class="sd-orb sd-orb-b"></div>
+  <svg class="sd-line" viewBox="0 0 12 600" preserveAspectRatio="none"><path d="M6 6v588" stroke="#2563EB" stroke-width="1.2" fill="none"/><path d="M6 0l4 4-4 4-4-4z M6 592l4 4-4 4-4-4z" fill="#2563EB"/></svg>
+  <svg class="sd-diamond sd-spin" style="left:22%;top:18%;width:22px;height:22px;animation-delay:0s" viewBox="0 0 20 20"><path d="M10 1l9 9-9 9-9-9z" fill="none" stroke="#2563EB" stroke-width="1.2"/></svg>
+  <svg class="sd-diamond sd-float" style="left:64%;top:46%;width:14px;height:14px;animation-delay:-2s" viewBox="0 0 20 20"><path d="M10 1l9 9-9 9-9-9z" fill="none" stroke="#2563EB" stroke-width="1.2"/></svg>
+  <svg class="sd-diamond sd-spin sd-rev" style="left:30%;top:72%;width:30px;height:30px;animation-delay:-5s" viewBox="0 0 20 20"><path d="M10 1l9 9-9 9-9-9z" fill="none" stroke="#2563EB" stroke-width="1.2"/></svg>
+  <svg class="sd-diamond sd-float" style="left:56%;top:88%;width:10px;height:10px;animation-delay:-1s" viewBox="0 0 20 20"><path d="M10 1l9 9-9 9-9-9z" fill="none" stroke="#2563EB" stroke-width="1.2"/></svg>
+  <span class="sd-mono">X</span>
+</div>
+
+<header id="top" class="sticky top-0 z-40 bg-white border-b border-transparent">
+  <div class="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between gap-4">
+    <a href="#top" class="flex items-center gap-2.5 cursor-pointer group" aria-label="TekingXtra – Home">
+      <span class="transition-transform duration-300 group-hover:-rotate-3 group-hover:scale-105"><svg class="w-11 h-8 shrink-0" viewBox="0 0 64 44" aria-hidden="true">
+          <text x="15" y="36" text-anchor="middle" font-family="'Playfair Display', Georgia, serif" font-weight="700" font-size="40" fill="#0B1F45">T</text>
+          <line x1="32" y1="4" x2="32" y2="40" stroke="#2563EB" stroke-width="1.4"/>
+          <path d="M32 1.5l1.6 1.6L32 4.7l-1.6-1.6z M32 39.3l1.6 1.6L32 42.5l-1.6-1.6z" fill="#2563EB"/>
+          <text x="49" y="36" text-anchor="middle" font-family="'Playfair Display', Georgia, serif" font-weight="700" font-size="40" fill="#2563EB">X</text>
+        </svg></span>
+      <span class="leading-none">
+        <span class="block text-[15px] font-medium text-[#0B1F45] tracking-[0.32em]">TEKINGXTRA</span>
+        <span class="block mt-1 text-[10px] font-medium text-[#2563EB] tracking-[0.42em]">WEB · SOCIAL</span>
+      </span>
+    </a>
+    <nav class="hidden lg:flex items-center gap-6 text-[15px] text-slate2" aria-label="Main menu">
+      <a href="#leistungen" class="hover:text-cta transition-colors duration-200 cursor-pointer" data-i18n="navServices">Services</a>
+      <a href="#ablauf" class="hover:text-cta transition-colors duration-200 cursor-pointer" data-i18n="navProcess">Process</a>
+      <a href="#warum" class="hover:text-cta transition-colors duration-200 cursor-pointer" data-i18n="navWhy">Why me?</a>
+      <a href="#faq" class="hover:text-cta transition-colors duration-200 cursor-pointer" data-i18n="navFaq">FAQ</a>
+      <a href="#kontakt" class="hover:text-cta transition-colors duration-200 cursor-pointer" data-i18n="navContact">Contact</a>
+    </nav>
+    <div class="flex items-center gap-2">
+      <div class="lang-wrap"><div id="langGroup" class="flex rounded-lg border border-line p-0.5 text-[13px] font-medium" role="group" aria-label="Sprache / Nyelv / Language / Idioma / Jezik">
+        <a href="/" hreflang="de" lang="de" data-lang="de" aria-label="Deutsch" title="Deutsch" class="lang-btn text-slate2 hover:bg-slate-100 inline-flex items-center gap-1.5 px-2 py-1 rounded-md cursor-pointer transition-colors duration-200"><svg class="fx-flag w-5 h-[14px] shrink-0 rounded-[3px] ring-1 ring-black/10" aria-hidden="true" preserveAspectRatio="none" viewBox="0 0 5 3"><rect width="5" height="3" fill="#000"/><rect width="5" height="2" y="1" fill="#DD0000"/><rect width="5" height="1" y="2" fill="#FFCE00"/></svg><span class="max-sm:hidden">DE</span></a>
+        <a href="/hu/" hreflang="hu" lang="hu" data-lang="hu" aria-label="Magyar" title="Magyar" class="lang-btn text-slate2 hover:bg-slate-100 inline-flex items-center gap-1.5 px-2 py-1 rounded-md cursor-pointer transition-colors duration-200"><svg class="fx-flag w-5 h-[14px] shrink-0 rounded-[3px] ring-1 ring-black/10" aria-hidden="true" preserveAspectRatio="none" viewBox="0 0 6 3"><rect width="6" height="3" fill="#477050"/><rect width="6" height="2" fill="#FFFFFF"/><rect width="6" height="1" fill="#CE2939"/></svg><span class="max-sm:hidden">HU</span></a>
+        <a href="/en/" hreflang="en" lang="en" data-lang="en" aria-label="English" title="English" class="lang-btn bg-navy text-white inline-flex items-center gap-1.5 px-2 py-1 rounded-md cursor-pointer transition-colors duration-200" aria-current="page"><svg class="fx-flag w-5 h-[14px] shrink-0 rounded-[3px] ring-1 ring-black/10" aria-hidden="true" preserveAspectRatio="none" viewBox="0 0 60 30"><clipPath id="ukS"><path d="M0,0 v30 h60 v-30 z"/></clipPath><clipPath id="ukT"><path d="M30,15 h30 v15 z v15 h-30 z h-30 v-15 z v-15 h30 z"/></clipPath><g clip-path="url(#ukS)"><path d="M0,0 v30 h60 v-30 z" fill="#012169"/><path d="M0,0 L60,30 M60,0 L0,30" stroke="#fff" stroke-width="6"/><path d="M0,0 L60,30 M60,0 L0,30" clip-path="url(#ukT)" stroke="#C8102E" stroke-width="4"/><path d="M30,0 v30 M0,15 h60" stroke="#fff" stroke-width="10"/><path d="M30,0 v30 M0,15 h60" stroke="#C8102E" stroke-width="6"/></g></svg><span class="max-sm:hidden">EN</span></a>
+        <a href="/es/" hreflang="es" lang="es" data-lang="es" aria-label="Español" title="Español" class="lang-btn text-slate2 hover:bg-slate-100 inline-flex items-center gap-1.5 px-2 py-1 rounded-md cursor-pointer transition-colors duration-200"><svg class="fx-flag w-5 h-[14px] shrink-0 rounded-[3px] ring-1 ring-black/10" aria-hidden="true" preserveAspectRatio="none" viewBox="0 0 3 2"><rect width="3" height="2" fill="#AA151B"/><rect width="3" height="1" y=".5" fill="#F1BF00"/></svg><span class="max-sm:hidden">ES</span></a>
+        <a href="/hr/" hreflang="hr" lang="hr" data-lang="hr" aria-label="Hrvatski" title="Hrvatski" class="lang-btn text-slate2 hover:bg-slate-100 inline-flex items-center gap-1.5 px-2 py-1 rounded-md cursor-pointer transition-colors duration-200"><svg class="fx-flag w-5 h-[14px] shrink-0 rounded-[3px] ring-1 ring-black/10" aria-hidden="true" preserveAspectRatio="none" viewBox="0 0 6 3"><rect width="6" height="3" fill="#171796"/><rect width="6" height="2" fill="#FFFFFF"/><rect width="6" height="1" fill="#FF0000"/><rect x="2.6" y=".62" width=".8" height=".8" fill="#FFFFFF"/><rect x="2.60" y="0.62" width=".16" height=".16" fill="#FF0000"/><rect x="2.92" y="0.62" width=".16" height=".16" fill="#FF0000"/><rect x="3.24" y="0.62" width=".16" height=".16" fill="#FF0000"/><rect x="2.76" y="0.78" width=".16" height=".16" fill="#FF0000"/><rect x="3.08" y="0.78" width=".16" height=".16" fill="#FF0000"/><rect x="2.60" y="0.94" width=".16" height=".16" fill="#FF0000"/><rect x="2.92" y="0.94" width=".16" height=".16" fill="#FF0000"/><rect x="3.24" y="0.94" width=".16" height=".16" fill="#FF0000"/><rect x="2.76" y="1.10" width=".16" height=".16" fill="#FF0000"/><rect x="3.08" y="1.10" width=".16" height=".16" fill="#FF0000"/><rect x="2.60" y="1.26" width=".16" height=".16" fill="#FF0000"/><rect x="2.92" y="1.26" width=".16" height=".16" fill="#FF0000"/><rect x="3.24" y="1.26" width=".16" height=".16" fill="#FF0000"/></svg><span class="max-sm:hidden">HR</span></a>
+      </div></div>
+      <a href="#kontakt" class="hidden md:inline-flex items-center gap-2 bg-cta hover:bg-cta-dark text-white text-[15px] font-medium px-4 py-2 rounded-lg transition-colors duration-200 cursor-pointer" data-i18n="ctaDemo">Get a free demo</a>
+      <button id="menuBtn" type="button" class="lg:hidden relative z-50 p-2 rounded-lg hover:bg-slate-100 cursor-pointer transition-colors duration-200" aria-expanded="false" aria-controls="mobileNav" aria-label="Menu">
+        <span class="burger" aria-hidden="true"><i></i><i></i><i></i></span>
+      </button>
+    </div>
+  </div>
+  <nav id="mobileNav" class="mnav lg:hidden" aria-label="Mobile menu">
+    <span class="mnav-mono" aria-hidden="true">X</span><span class="mnav-dia" aria-hidden="true"></span>
+    <div class="mnav-in max-w-6xl mx-auto px-6 pt-8 pb-10 flex flex-col">
+      <a href="#leistungen" class="py-2.5 cursor-pointer hover:text-cta" data-i18n="navServices">Services</a>
+      <a href="#ablauf" class="py-2.5 cursor-pointer hover:text-cta" data-i18n="navProcess">Process</a>
+      <a href="#warum" class="py-2.5 cursor-pointer hover:text-cta" data-i18n="navWhy">Why me?</a>
+      <a href="#faq" class="py-2.5 cursor-pointer hover:text-cta" data-i18n="navFaq">FAQ</a>
+      <a href="#kontakt" class="py-2.5 cursor-pointer hover:text-cta" data-i18n="navContact">Contact</a>
+      <a href="#kontakt" class="mt-2 mb-1 text-center bg-cta hover:bg-cta-dark text-white font-medium px-4 py-3 rounded-lg cursor-pointer" data-i18n="ctaDemo">Get a free demo</a>
+    </div>
+  </nav>
+</header>
+
+<main>
+
+<section class="relative z-[2] overflow-hidden bg-navy">
+  <video class="cta-video absolute inset-0 w-full h-full object-cover opacity-80" autoplay muted playsinline aria-hidden="true">
+    <source src="/assets/hero-video.mp4" type="video/mp4">
+  </video>
+  <div class="absolute inset-0 bg-gradient-to-b from-navy/85 via-navy/70 to-navy/85 md:bg-gradient-to-r md:from-navy/85 md:via-navy/50 md:to-navy/20" aria-hidden="true"></div>
+  <div class="relative max-w-6xl mx-auto px-4 pt-16 pb-20 md:pt-24 md:pb-28 grid lg:grid-cols-2 gap-14 items-center">
+    <div>
+      <h1 class="text-[40px] leading-[1.08] md:text-[56px] lg:text-[64px] font-bold text-white" data-i18n="heroTitle">Websites that win customers. <span class="grad-text">Free demo included.</span></h1>
+      <p class="mt-6 text-[18px] leading-relaxed text-slate-300 max-w-prose" data-i18n="heroSub" id="heroSub">Websites &amp; social media for small businesses. See it first, then decide.</p>
+      <div class="md:hidden mt-9 flex items-end justify-between gap-3">
+        <a href="#kontakt" class="m-cta inline-flex items-center gap-2 whitespace-nowrap bg-white text-navy font-semibold text-[15px] px-5 py-4 rounded-full cursor-pointer"><span data-i18n="ctaDemo">Get a free demo</span><svg class="m-cta-arrow w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <img src="/assets/narancs-orul.webp" alt="" aria-hidden="true" class="m-hero-cat w-24 -mb-4 shrink-0">
+      </div>
+    </div>
+
+    <div class="relative max-md:hidden flex justify-center lg:justify-end" aria-hidden="true">
+      <img src="/assets/narancs-orul.webp" alt="" class="hero-cat-big w-64 lg:w-80">
+    </div>
+  </div>
+</section>
+
+<section id="leistungen" class="py-20 md:py-28 bg-white scroll-mt-16">
+  <div class="max-w-6xl mx-auto px-4">
+    <div class="max-w-2xl reveal">
+      <h2 class="mt-3 text-[32px] md:text-[48px] leading-tight font-bold text-navy" data-i18n="servicesTitle">Everything for your online presence</h2>
+      <p class="mt-4 text-[18px] text-slate2 leading-relaxed" data-i18n="servicesSub">For salons, cafés, trades and associations.</p>
+    </div>
+    <div class="m-services mt-14 grid md:grid-cols-3 gap-6">
+      <article class="reveal group rounded-2xl border border-line bg-white p-8 transition-all duration-200 hover:-translate-y-1 hover:border-cta/40 hover:shadow-lg">
+        <div class="w-12 h-12 rounded-xl bg-cta-soft text-cta grid place-items-center"><svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="4" width="20" height="14" rx="2"/><path d="M8 21h8M12 18v3"/></svg></div>
+        <h3 class="mt-6 text-[24px] font-semibold text-navy" data-i18n="s1t">Website design</h3>
+        <p class="mt-3 text-slate2 leading-relaxed" data-i18n="s1d">Modern, fast, mobile-friendly. From €250.</p>
+      </article>
+      <article class="reveal group rounded-2xl border border-line bg-white p-8 transition-all duration-200 hover:-translate-y-1 hover:border-cta/40 hover:shadow-lg">
+        <div class="w-12 h-12 rounded-xl bg-cta-soft text-cta grid place-items-center"><svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.5 6.5h.01"/></svg></div>
+        <h3 class="mt-6 text-[24px] font-semibold text-navy" data-i18n="s2t">Facebook &amp; Instagram</h3>
+        <p class="mt-3 text-slate2 leading-relaxed" data-i18n="s2d">Posts and a steady presence.</p>
+      </article>
+      <article class="reveal group relative rounded-2xl border-2 border-cta bg-white p-8 transition-all duration-200 hover:-translate-y-1 hover:shadow-lg">
+        <span class="mascot mascot-peek hidden sm:block -top-[104px] right-4 w-24" aria-hidden="true"><img src="/assets/szurke-integet.webp" alt="" class="mascot-wave w-full"></span>
+        <span class="absolute -top-3 left-8 bg-cta text-white text-[12px] font-medium px-3 py-1 rounded-full" data-i18n="s3badge">The first step</span>
+        <div class="w-12 h-12 rounded-xl bg-cta text-white grid place-items-center"><svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l1.9 5.8L20 10l-6.1 1.2L12 17l-1.9-5.8L4 10l6.1-1.2z"/><path d="M19 17v4M17 19h4"/></svg></div>
+        <h3 class="mt-6 text-[24px] font-semibold text-navy" data-i18n="s3t">Free demo</h3>
+        <p class="mt-3 text-slate2 leading-relaxed" data-i18n="s3d">Your website as a draft, before you decide.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="ablauf" class="py-20 md:py-28 bg-paper scroll-mt-16 relative overflow-hidden">
+  <div class="max-w-6xl mx-auto px-4 relative">
+    <img src="/assets/szurke-pacsi.webp" alt="" aria-hidden="true" class="reveal mascot mascot-peek hidden md:block right-8 -top-12 w-20 lg:w-24">
+    <div class="max-w-2xl reveal">
+      <h2 class="mt-3 text-[32px] md:text-[48px] leading-tight font-bold text-navy" data-i18n="processTitle">Online in 4 steps</h2>
+    </div>
+    <ol class="m-steps mt-10 sm:mt-14 grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6">
+      <li class="reveal rounded-2xl bg-white border border-line p-5 sm:p-7">
+        <h3 class="mt-3 sm:mt-4 text-[17px] sm:text-[20px] font-semibold text-navy" data-i18n="p1t">Get in touch</h3>
+        <p class="mt-2 text-slate2 leading-relaxed" data-i18n="p1d">Write or call.</p>
+      </li>
+      <li class="reveal rounded-2xl bg-white border border-line p-5 sm:p-7">
+        <h3 class="mt-3 sm:mt-4 text-[17px] sm:text-[20px] font-semibold text-navy" data-i18n="p2t">Free demo</h3>
+        <p class="mt-2 text-slate2 leading-relaxed" data-i18n="p2d">First draft, free.</p>
+      </li>
+      <li class="reveal rounded-2xl bg-white border border-line p-5 sm:p-7">
+        <h3 class="mt-3 sm:mt-4 text-[17px] sm:text-[20px] font-semibold text-navy" data-i18n="p3t">Refine</h3>
+        <p class="mt-2 text-slate2 leading-relaxed" data-i18n="p3d">We fine-tune together.</p>
+      </li>
+      <li class="reveal rounded-2xl bg-white border border-line p-5 sm:p-7">
+        <h3 class="mt-3 sm:mt-4 text-[17px] sm:text-[20px] font-semibold text-navy" data-i18n="p4t">Go live</h3>
+        <p class="mt-2 text-slate2 leading-relaxed" data-i18n="p4d">Your site goes live.</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<section id="warum" class="py-20 md:py-28 bg-white scroll-mt-16">
+  <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-5 gap-10 lg:gap-14 items-center">
+    <div class="md:col-span-2 reveal">
+      <figure class="group relative max-w-[230px] sm:max-w-[300px] mx-auto md:mx-0">
+        <div class="relative overflow-hidden rounded-3xl">
+          <img src="/assets/marton.jpg" alt="Révész Márton" loading="lazy" class="block w-full h-auto transition-transform duration-700 ease-out group-hover:scale-[1.04]">
+        </div>
+        <figcaption class="absolute -bottom-4 left-6 bg-white rounded-xl px-4 py-2 shadow-lg text-[14px] font-semibold text-navy transition-transform duration-300 group-hover:-translate-y-1">Révész Márton</figcaption>
+      </figure>
+    </div>
+    <div class="md:col-span-3">
+      <div class="reveal">
+        <h2 class="mt-3 text-[32px] md:text-[48px] leading-tight font-bold text-navy" data-i18n="whyTitle">Modern workflow, personal contact</h2>
+        <p class="mt-4 text-[18px] text-slate2 leading-relaxed max-w-prose" data-i18n="whySub">AI does the routine work. You get more of my time.</p>
+      </div>
+      <div class="m-why mt-10 grid sm:grid-cols-2 gap-x-8 gap-y-8">
+        <div class="reveal flex gap-4">
+          <div class="w-11 h-11 shrink-0 rounded-xl bg-cta-soft text-cta grid place-items-center"><svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 8l6 6M4 14l6-6 2-3M2 5h12M7 2h1M22 22l-5-10-5 10M14 18h6"/></svg></div>
+          <div><h3 class="text-[18px] font-semibold text-navy" data-i18n="w1t">Three languages</h3><p class="mt-1 text-slate2 leading-relaxed" data-i18n="w1d">DE · HU · EN</p></div>
+        </div>
+        <div class="reveal flex gap-4">
+          <div class="w-11 h-11 shrink-0 rounded-xl bg-cta-soft text-cta grid place-items-center"><svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2L3 14h9l-1 8 10-12h-9z"/></svg></div>
+          <div><h3 class="text-[18px] font-semibold text-navy" data-i18n="w2t">Fast</h3><p class="mt-1 text-slate2 leading-relaxed" data-i18n="w2d">A concrete draft, early.</p></div>
+        </div>
+      </div>
+      <details class="m-flat reveal group mt-10 rounded-2xl border border-line bg-white px-6 py-5">
+        <summary class="flex justify-between items-center gap-4 cursor-pointer list-none text-[18px] font-semibold text-navy hover:text-cta transition-colors duration-200"><span class="flex items-center gap-3"><img src="/assets/szurke-integet.webp" alt="" aria-hidden="true" class="w-10 h-10 object-contain mascot-wave"><span data-i18n="aboutSummary">More about me</span></span><svg class="chev w-5 h-5 shrink-0 transition-transform duration-200" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary>
+        <div class="mt-4 text-slate2 leading-relaxed max-w-prose">
+          <p class="text-[20px] font-semibold text-navy" data-i18n="aboutHello">Hi, I’m Marci!</p>
+          <p class="text-[14px] font-medium text-cta" data-i18n="aboutRole">Web developer · 18 years old</p>
+          <p class="mt-4" data-i18n="aboutP">I currently live in Hungary, but I see my future abroad, so right now what matters most to me is building connections and working with as many businesses as possible.</p>
+          <p class="mt-5 text-[16px] font-semibold text-navy" data-i18n="aboutStudyT">Education</p>
+          <p class="mt-1" data-i18n="aboutSchools">Bálint Márton School, Törökbálint · Illyés Gyula Grammar School, Budaörs</p>
+          <p class="mt-5 text-[16px] font-semibold text-navy" data-i18n="aboutLangT">Languages</p>
+          <p class="mt-1" data-i18n="aboutLang">I speak Hungarian, English and German.</p>
+          <ul class="mt-3 flex flex-wrap gap-2 text-[13px]">
+            <li class="rounded-full bg-cta-soft text-navy px-3 py-1" data-i18n="aboutC1">English B2 certificate</li>
+            <li class="rounded-full bg-cta-soft text-navy px-3 py-1" data-i18n="aboutC2">German B2 certificate</li>
+            <li class="rounded-full bg-cta-soft text-navy px-3 py-1" data-i18n="aboutC3">Winner of the national German language competition (C1 level)</li>
+          </ul>
+          <p class="mt-5 font-medium text-navy" data-i18n="aboutBye">I’d love to get to know you and your business.</p>
+        </div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section id="faq" class="py-20 md:py-28 bg-white scroll-mt-16">
+  <div class="max-w-3xl mx-auto px-4">
+    <div class="reveal text-center">
+      <img src="/assets/narancs-ul.webp" alt="" aria-hidden="true" class="mascot-float mx-auto w-20 mb-4" style="filter: drop-shadow(0 12px 14px rgba(15,23,42,.22))">
+      <h2 class="mt-3 text-[32px] md:text-[48px] leading-tight font-bold text-navy" data-i18n="faqTitle">Frequently asked questions</h2>
+    </div>
+    <div class="mt-12 space-y-2">
+      <details class="reveal group py-5"><summary class="flex justify-between items-center gap-4 cursor-pointer list-none text-[18px] font-semibold text-navy hover:text-cta transition-colors duration-200"><span data-i18n="q1">How much does a website cost?</span><svg class="chev w-5 h-5 shrink-0 transition-transform duration-200" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><p class="mt-3 text-slate2 leading-relaxed max-w-prose" data-i18n="a1">A website starts at €250. The exact price depends on the scope. After a short conversation you receive an individual quote in CHF, EUR or HUF.</p></details>
+      <details class="reveal group py-5"><summary class="flex justify-between items-center gap-4 cursor-pointer list-none text-[18px] font-semibold text-navy hover:text-cta transition-colors duration-200"><span data-i18n="q2">Is the demo really free?</span><svg class="chev w-5 h-5 shrink-0 transition-transform duration-200" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><p class="mt-3 text-slate2 leading-relaxed max-w-prose" data-i18n="a2">Yes. The demo shows you what your website could look like. Afterwards you decide in your own time whether to continue.</p></details>
+      <details class="reveal group py-5"><summary class="flex justify-between items-center gap-4 cursor-pointer list-none text-[18px] font-semibold text-navy hover:text-cta transition-colors duration-200"><span data-i18n="q3">What do you need from me to start?</span><svg class="chev w-5 h-5 shrink-0 transition-transform duration-200" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><p class="mt-3 text-slate2 leading-relaxed max-w-prose" data-i18n="a3">Your business name, what you offer and how people can reach you. Existing texts, photos or a logo help. Anything missing is marked in the draft.</p></details>
+      <details class="reveal group py-5"><summary class="flex justify-between items-center gap-4 cursor-pointer list-none text-[18px] font-semibold text-navy hover:text-cta transition-colors duration-200"><span data-i18n="q4">What do you use AI for?</span><svg class="chev w-5 h-5 shrink-0 transition-transform duration-200" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><p class="mt-3 text-slate2 leading-relaxed max-w-prose" data-i18n="a4">For repetitive tasks such as first drafts and organising correspondence. Design, coordination and your point of contact stay personal: me.</p></details>
+      <details class="reveal group py-5"><summary class="flex justify-between items-center gap-4 cursor-pointer list-none text-[18px] font-semibold text-navy hover:text-cta transition-colors duration-200"><span data-i18n="q5">Can my website be multilingual?</span><svg class="chev w-5 h-5 shrink-0 transition-transform duration-200" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><p class="mt-3 text-slate2 leading-relaxed max-w-prose" data-i18n="a5">Yes. I work in German, Hungarian and English, and your website can appear in one or more of these languages.</p></details>
+      <details class="reveal group py-5"><summary class="flex justify-between items-center gap-4 cursor-pointer list-none text-[18px] font-semibold text-navy hover:text-cta transition-colors duration-200"><span data-i18n="q6">Do you also manage Facebook and Instagram?</span><svg class="chev w-5 h-5 shrink-0 transition-transform duration-200" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><p class="mt-3 text-slate2 leading-relaxed max-w-prose" data-i18n="a6">Yes. I create posts and keep you regularly present, alongside your website if you wish.</p></details>
+    </div>
+  </div>
+</section>
+
+<section id="ctaBand" class="relative z-[2] overflow-hidden bg-navy">
+  <img src="/assets/szurke-orul.webp" alt="" aria-hidden="true" class="reveal mascot mascot-jump hidden md:block left-[6%] bottom-0 w-36 lg:w-44">
+  <div class="relative max-w-4xl mx-auto px-4 py-20 md:py-24 text-center">
+    <h2 class="text-[32px] md:text-[48px] leading-tight font-bold text-white" data-i18n="ctaBandTitle">See your new website before you decide.</h2>
+    <p class="mt-4 text-[18px] text-slate-300 max-w-prose mx-auto" data-i18n="ctaBandSub">A few lines are enough.</p>
+    <div class="mt-9 flex flex-col sm:flex-row gap-3 justify-center">
+      <a href="#kontakt" class="inline-flex justify-center items-center gap-2 bg-white text-navy hover:bg-cta-soft font-medium px-6 py-3.5 rounded-xl transition-colors duration-200 cursor-pointer"><span data-i18n="ctaWrite">Write to me</span><svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M6 13l6 6 6-6"/></svg></a>
+      <a href="tel:+36702348601" class="inline-flex justify-center items-center gap-2 border border-white/30 text-white hover:bg-white/10 font-medium px-6 py-3.5 rounded-xl transition-colors duration-200 cursor-pointer"><svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1 19.5 19.5 0 01-6-6A19.8 19.8 0 012.1 4.2 2 2 0 014.1 2h3a2 2 0 012 1.7c.1.9.4 1.8.7 2.7a2 2 0 01-.5 2.1L8 9.8a16 16 0 006 6l1.3-1.3a2 2 0 012.1-.4c.9.3 1.8.6 2.7.7a2 2 0 011.7 2z"/></svg>+36 70 234 8601</a>
+    </div>
+  </div>
+</section>
+
+<section id="kontakt" class="py-20 md:py-28 bg-white scroll-mt-16">
+  <div class="max-w-6xl mx-auto px-4">
+    <div class="reveal">
+      <h2 class="mt-3 text-[32px] md:text-[48px] leading-tight font-bold text-navy md:whitespace-nowrap" data-i18n="contactTitle">Tell me about your business</h2>
+    </div>
+    <div class="mt-10 grid lg:grid-cols-2 gap-6 lg:gap-8 items-stretch">
+    <div class="reveal flex">
+      <div class="flex flex-col w-full rounded-2xl border border-line bg-paper p-6 md:p-7">
+        <h3 class="text-[18px] font-semibold text-navy" data-i18n="needTitle">What I need for your demo</h3>
+        <ul class="mt-4 space-y-3 text-[15px] text-slate2">
+          <li class="flex items-start gap-3"><span class="mt-0.5 w-6 h-6 shrink-0 rounded-full bg-cta-soft text-cta grid place-items-center"><svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 13l4 4L19 7"/></svg></span><span data-i18n="need1">Your business name and what you offer</span></li>
+          <li class="flex items-start gap-3"><span class="mt-0.5 w-6 h-6 shrink-0 rounded-full bg-cta-soft text-cta grid place-items-center"><svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 13l4 4L19 7"/></svg></span><span data-i18n="need2">City / country</span></li>
+          <li class="flex items-start gap-3"><span class="mt-0.5 w-6 h-6 shrink-0 rounded-full bg-cta-soft text-cta grid place-items-center"><svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 13l4 4L19 7"/></svg></span><span data-i18n="need3">Existing website or Facebook / Instagram (if any)</span></li>
+          <li class="flex items-start gap-3"><span class="mt-0.5 w-6 h-6 shrink-0 rounded-full bg-cta-soft text-cta grid place-items-center"><svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 13l4 4L19 7"/></svg></span><span data-i18n="need4">Logo and a few photos (if any)</span></li>
+          <li class="flex items-start gap-3"><span class="mt-0.5 w-6 h-6 shrink-0 rounded-full bg-cta-soft text-cta grid place-items-center"><svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 13l4 4L19 7"/></svg></span><span data-i18n="need5">Which language(s) the site should be in</span></li>
+        </ul>
+        <p class="mt-4 mb-6 text-[13px] text-slate-600" data-i18n="needNote">Something missing? No problem. I’ll mark it in the draft.</p>
+        <a href="mailto:reveszmarc@gmail.com" class="mt-auto self-start inline-flex items-center gap-2 bg-cta hover:bg-cta-dark text-white font-medium px-6 py-3.5 rounded-xl transition-all duration-200 hover:-translate-y-0.5 cursor-pointer"><svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 7l-10 6L2 7"/></svg><span data-i18n="ctaDemo">Get a free demo</span></a>
+      </div>
+    </div>
+    <div class="reveal grid grid-cols-2 gap-3 sm:gap-4 auto-rows-fr h-full">
+      <a href="mailto:reveszmarc@gmail.com" class="col-span-2 sm:col-span-1 group rounded-2xl border border-line bg-white p-5 sm:p-6 transition-all duration-200 hover:border-cta hover:-translate-y-0.5 hover:shadow-md cursor-pointer">
+        <svg class="w-6 h-6 text-cta" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 7l-10 6L2 7"/></svg>
+        <p class="mt-4 text-[14px] text-slate2" data-i18n="cEmail">Email</p>
+        <p class="font-medium text-navy group-hover:text-cta break-all">reveszmarc@gmail.com</p>
+      </a>
+      <a href="tel:+36702348601" class="group rounded-2xl border border-line bg-white p-5 sm:p-6 transition-all duration-200 hover:border-cta hover:-translate-y-0.5 hover:shadow-md cursor-pointer">
+        <svg class="w-6 h-6 text-cta" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1 19.5 19.5 0 01-6-6A19.8 19.8 0 012.1 4.2 2 2 0 014.1 2h3a2 2 0 012 1.7c.1.9.4 1.8.7 2.7a2 2 0 01-.5 2.1L8 9.8a16 16 0 006 6l1.3-1.3a2 2 0 012.1-.4c.9.3 1.8.6 2.7.7a2 2 0 011.7 2z"/></svg>
+        <p class="mt-4 text-[14px] text-slate2" data-i18n="cPhone">Phone</p>
+        <p class="font-medium text-navy group-hover:text-cta whitespace-nowrap text-[15px] sm:text-base">+36 70 234 8601</p>
+      </a>
+      <div class="group rounded-2xl border border-line bg-white p-5 sm:p-6 transition-all duration-200 hover:border-cta hover:-translate-y-0.5 hover:shadow-md">
+        <svg class="w-6 h-6 text-cta" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22s-8-4.5-8-11.8A8 8 0 0112 2a8 8 0 018 8.2C20 17.5 12 22 12 22z"/><circle cx="12" cy="10" r="3"/></svg>
+        <p class="mt-4 text-[14px] text-slate2" data-i18n="cArea">Working in</p>
+        <p class="font-medium text-navy" data-i18n="cAreaVal">Anywhere in the world</p>
+      </div>
+      <div class="col-span-2 sm:col-span-1 group rounded-2xl border border-line bg-white p-5 sm:p-6 transition-all duration-200 hover:border-cta hover:-translate-y-0.5 hover:shadow-md">
+        <svg class="w-6 h-6 text-cta" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"/></svg>
+        <p class="mt-4 text-[14px] text-slate2" data-i18n="cSocial">Social media</p>
+        <div class="mt-2 flex items-center gap-2"><a href="https://www.facebook.com/tekingxtra" target="_blank" rel="noopener" aria-label="TekingXtra – Facebook" title="Facebook" class="w-10 h-10 rounded-xl grid place-items-center bg-cta-soft text-navy hover:bg-[#1877F2] hover:text-white hover:-translate-y-1 hover:shadow-lg transition-all duration-200 cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-cta"><svg class="w-5 h-5" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 8h3V4h-3a4 4 0 00-4 4v3H7v4h3v7h4v-7h3l1-4h-4V8.5c0-.3.2-.5.5-.5z" fill="currentColor"/></svg></a><a href="https://www.instagram.com/tekingxtra_hu/" target="_blank" rel="noopener" aria-label="TekingXtra – Instagram" title="Instagram" class="w-10 h-10 rounded-xl grid place-items-center bg-cta-soft text-navy hover:bg-gradient-to-tr hover:from-[#F58529] hover:via-[#DD2A7B] hover:to-[#8134AF] hover:text-white hover:-translate-y-1 hover:shadow-lg transition-all duration-200 cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-cta"><svg class="w-5 h-5" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor"/></svg></a><a href="https://www.tiktok.com/@tekingxtra_hu" target="_blank" rel="noopener" aria-label="TekingXtra – TikTok" title="TikTok" class="w-10 h-10 rounded-xl grid place-items-center bg-cta-soft text-navy hover:bg-black hover:text-white hover:-translate-y-1 hover:shadow-lg transition-all duration-200 cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-cta"><svg class="w-5 h-5" viewBox="0 0 24 24" aria-hidden="true"><path d="M16.5 3c.4 2.2 1.8 3.7 4 4v3.2c-1.5 0-2.9-.5-4-1.2v6.3A5.8 5.8 0 1110.7 9.5v3.3a2.6 2.6 0 102.4 2.6V3h3.4z" fill="currentColor"/></svg></a></div>
+        <p class="mt-2 text-[13px] text-slate2">@tekingxtra_hu</p>
+      </div>
+    </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="relative z-[2] bg-navy text-slate-300">
+  <div class="max-w-6xl mx-auto px-4 py-12 grid md:grid-cols-3 gap-8 text-[14px]">
+    <div>
+      <p class="flex items-center gap-2 text-white"><span class="text-[16px] font-medium tracking-[0.32em]">TEKINGXTRA</span></p>
+      <p class="mt-2" data-i18n="footerTag">Websites &amp; social media for small businesses and associations.</p>
+    </div>
+    <div>
+      <p class="text-white font-medium" data-i18n="footerLegal">Legal</p>
+      <ul class="mt-2 space-y-1.5">
+        <li><a href="#impressum" data-legal="impressum" class="hover:text-white cursor-pointer transition-colors duration-200" data-i18n="impressum">Legal notice</a></li>
+        <li><a href="#privacy" data-legal="privacy" class="hover:text-white cursor-pointer transition-colors duration-200" data-i18n="privacy">Privacy</a></li>
+        <li><a href="#terms" data-legal="terms" class="hover:text-white cursor-pointer transition-colors duration-200" data-i18n="terms">Terms</a></li>
+      </ul>
+    </div>
+    <div class="relative flex justify-center md:justify-end items-end min-h-[120px] md:min-h-[150px]" aria-hidden="true">
+      <img src="/assets/szurke-integet.webp" alt="" class="footer-cat w-24 md:w-32" style="filter: drop-shadow(0 14px 18px rgba(0,0,0,.45))">
+    </div>
+  </div>
+  <div class="border-t border-white/10"><p class="max-w-6xl mx-auto px-4 py-5 text-[13px] text-slate-400">© <span id="year"></span> TekingXtra · Révész Márton</p></div>
+</footer>
+
+<dialog id="dlg-impressum" class="legal-dlg" aria-labelledby="dlg-impressum-t">
+  <div class="legal-head"><h2 id="dlg-impressum-t" class="font-heading" data-i18n="impressum">Legal notice</h2><button type="button" class="legal-x" aria-label="Close">&times;</button></div>
+  <div class="legal-body">
+    
+    <div data-ll="en" class="on">
+      <h3>Website operator</h3>
+      <ul>
+        <li><b>Name:</b> Márton Révész e.v. (sole trader, Hungary)</li>
+        <li><b>Brand:</b> TekingXtra</li>
+        <li><b>Address:</b> 2045 Törökbálint, Józsefhegyi utca 8., Hungary</li>
+        <li><b>Registration number:</b> 62928922 (Hungarian register of sole traders)</li>
+        <li><b>Tax number:</b> 92455216-1-33</li>
+        <li><b>Email:</b> <a href="mailto:reveszmarc@gmail.com">reveszmarc@gmail.com</a></li>
+        <li><b>Phone:</b> <a href="tel:+36702348601">+36 70 234 8601</a></li>
+      </ul>
+      <h3>Hosting provider</h3>
+      <p>GitHub, Inc. (GitHub Pages), 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, USA · <a href="https://github.com" target="_blank" rel="noopener">github.com</a><br>Domain / DNS: Netlify, Inc., 101 2nd Street, San Francisco, CA 94105, USA</p>
+      <h3>Liability for content and links</h3>
+      <p>The content of this website has been prepared with care. The operators of external sites (e.g. Facebook, Instagram, TikTok) are solely responsible for their content.</p>
+      <h3>Copyright</h3>
+      <p>The texts, images and graphics on this website (including the TekingXtra logo and the cat illustrations) are protected by copyright and may not be used without permission.</p>
+    </div>
+    
+  </div>
+</dialog>
+
+<dialog id="dlg-privacy" class="legal-dlg" aria-labelledby="dlg-privacy-t">
+  <div class="legal-head"><h2 id="dlg-privacy-t" class="font-heading" data-i18n="privacy">Privacy</h2><button type="button" class="legal-x" aria-label="Close">&times;</button></div>
+  <div class="legal-body">
+    
+    <div data-ll="en" class="on">
+      <p class="legal-lead">Privacy policy – a short, plain explanation of what happens to your data.</p>
+      <h3>1. Controller</h3>
+      <p>Márton Révész (TekingXtra), 2045 Törökbálint, Józsefhegyi utca 8., Hungary, <a href="mailto:reveszmarc@gmail.com">reveszmarc@gmail.com</a>, +36 70 234 8601.</p>
+      <h3>2. Visiting this website</h3>
+      <p>This website uses <b>no cookies, analytics or tracking</b>; it only remembers your chosen language in your browser (local storage – not a cookie, no tracking). To display the page, your browser connects to the hosting provider (server logs: IP address, time, browser type – for security, kept briefly) and to Google Fonts (Google Ireland Ltd.). These providers can see your IP address. Legal basis: legitimate interest (Art. 6(1)(f) GDPR) in displaying the website securely.</p>
+      <h3>3. Contact and demo requests</h3>
+      <p>If you contact me by email or phone, I process your name, email address, phone number, details about your business, the content of your message and any materials you send (e.g. logo, photos). Purpose: answering your enquiry, preparing a free demo and a quote. Legal basis: steps prior to entering a contract (Art. 6(1)(b) GDPR) or legitimate interest (f). Retention: without an order at most 1 year; with an order for the term of the contract, accounting records for 8 years as required by law.</p>
+      <h3>4. Preparing a free demo</h3>
+      <p>For a demo I may use publicly available information about your business (e.g. existing website, social media, public reviews). The demo is not published; it is only sent to the business concerned. Legal basis: legitimate interest (Art. 6(1)(f) GDPR). You can ask me at any time not to contact you again, and I will delete your data.</p>
+      <h3>5. Email processing with artificial intelligence</h3>
+      <p>I sort incoming emails with automated tools (n8n and Anthropic's Claude AI service) and use them to prepare reply drafts. I review and send every reply personally – no automated decision-making takes place.</p>
+      <h3>6. Processors and data transfers</h3>
+      <p>Google (Gmail, Google Drive – Google Ireland Ltd.), Anthropic (AI processing) and the hosting provider (GitHub, Inc., USA; domain and DNS: Netlify, Inc., USA). Some providers also process data outside the EU (e.g. USA); such transfers rely on appropriate safeguards (e.g. EU-US Data Privacy Framework, standard contractual clauses). I do not sell your data or pass it on for advertising.</p>
+      <h3>7. Your rights</h3>
+      <p>You have the right to access, rectification, erasure, restriction of processing, data portability and to object to processing based on legitimate interests. Write to <a href="mailto:reveszmarc@gmail.com">reveszmarc@gmail.com</a> – I will reply within one month at the latest. You may also lodge a complaint with a data protection authority, e.g. the Hungarian NAIH (<a href="https://www.naih.hu" target="_blank" rel="noopener">naih.hu</a>) or the authority where you live.</p>
+      <p class="legal-date">Effective: 25 October 2026 · In case of discrepancies, the Hungarian version prevails.</p>
+    </div>
+    
+  </div>
+</dialog>
+
+<dialog id="dlg-terms" class="legal-dlg" aria-labelledby="dlg-terms-t">
+  <div class="legal-head"><h2 id="dlg-terms-t" class="font-heading" data-i18n="terms">Terms</h2><button type="button" class="legal-x" aria-label="Close">&times;</button></div>
+  <div class="legal-body">
+    
+    <div data-ll="en" class="on">
+      <p class="legal-lead">General Terms and Conditions</p>
+      <h3>1. Provider</h3>
+      <p>Márton Révész (TekingXtra) – details in the legal notice.</p>
+      <h3>2. Scope</h3>
+      <p>These terms apply to all TekingXtra services (website design, social media management and related consulting). Anything agreed in an individual quote or contract takes precedence. My services are aimed primarily at businesses and associations; for contracts with consumers, mandatory consumer protection rules also apply.</p>
+      <h3>3. Free demo</h3>
+      <p>The demo is free and non-binding. The demo and its content remain the provider's intellectual property until an order is placed and may not be published or used without one.</p>
+      <h3>4. Orders</h3>
+      <p>A contract is formed when the individual quote is accepted in writing (by email). The quote states the scope, price, deadline and number of included revision rounds.</p>
+      <h3>5. Prices and payment</h3>
+      <p>Prices are as stated in the individual quote. The provider is VAT-exempt as a small business under Hungarian law, so no VAT is shown on invoices. The payment schedule (e.g. deposit, monthly fee) is set out in the individual quote. Payment is made by bank transfer against invoice within the period stated on it.</p>
+      <h3>6. Cooperation</h3>
+      <p>The client provides the necessary materials (texts, logo, photos, access details) and warrants that they are entitled to use them. Late delivery of materials extends the deadline accordingly.</p>
+      <h3>7. Delivery and changes</h3>
+      <p>Change requests beyond the agreed revision rounds are charged separately. The work is deemed accepted if the client reports no defects within 8 days of delivery.</p>
+      <h3>8. Usage rights and portfolio</h3>
+      <p>Upon full payment the client receives an unrestricted right to use the finished website and materials; until then all rights remain with the provider. The provider may show the work in their portfolio unless the client objects in writing.</p>
+      <h3>9. Third-party services</h3>
+      <p>Hosting, domains and social media platforms (e.g. Meta, TikTok) are subject to their own prices and terms. The provider gives no guarantee for their outages or rule changes, or for specific reach, follower numbers or sales.</p>
+      <h3>10. Liability</h3>
+      <p>To the extent permitted by law, the provider's liability is limited to the fee for the order concerned.</p>
+      <h3>11. Termination</h3>
+      <p>Monthly services can be cancelled in writing (by email) with 30 days' notice. If a project is stopped, work already completed must be paid for.</p>
+      <h3>12. Complaints and governing law</h3>
+      <p>Please send complaints to <a href="mailto:reveszmarc@gmail.com">reveszmarc@gmail.com</a>; I will reply within 30 days. Hungarian law applies, in particular the Hungarian Civil Code (Act V of 2013). In case of disputes, the parties will first seek an amicable solution.</p>
+      <p class="legal-date">Effective: 18 October 2026 · In case of discrepancies, the Hungarian version prevails.</p>
+    </div>
+    
+  </div>
+</dialog>
+
+<script>
+const T = {
+  ctaWrite: { de: 'Schreiben Sie mir', hu: 'Írj nekem', en: 'Write to me' },
+  cDirectKicker: { de: 'Direkt', hu: 'Közvetlenül', en: 'Directly' },
+  cDirect: { de: 'Direkt erreichbar', hu: 'Közvetlenül elérhető vagyok', en: 'Reach me directly' },
+  aboutSummary: { de: 'Mehr über mich', hu: 'Ismerj meg jobban', en: 'More about me' },
+  aboutHello: { de: 'Hallo, ich bin Marci!', hu: 'Szia, Marci vagyok!', en: 'Hi, I’m Marci!' },
+  aboutRole: { de: 'Webentwickler · 18 Jahre', hu: 'Webfejlesztő · 18 éves', en: 'Web developer · 18 years old' },
+  aboutP: { de: 'Zurzeit lebe ich in Ungarn, sehe meine Zukunft aber im Ausland. Deshalb sind mir jetzt vor allem neue Kontakte wichtig – und mit möglichst vielen Unternehmen zusammenzuarbeiten.', hu: 'Jelenleg Magyarországon élek, de a jövőmet külföldön képzelem el, ezért most számomra a legfontosabb a kapcsolatépítés és az, hogy minél több vállalkozással dolgozzak együtt.', en: 'I currently live in Hungary, but I see my future abroad, so right now what matters most to me is building connections and working with as many businesses as possible.' },
+  aboutStudyT: { de: 'Ausbildung', hu: 'Tanulmányaim', en: 'Education' },
+  aboutLangT: { de: 'Sprachen', hu: 'Nyelvek', en: 'Languages' },
+  aboutLang: { de: 'Ich spreche Ungarisch, Englisch und Deutsch.', hu: 'Magyarul, angolul és németül is beszélek.', en: 'I speak Hungarian, English and German.' },
+  aboutC1: { de: 'Englisch B2 Sprachdiplom', hu: 'angol B2 nyelvvizsga', en: 'English B2 certificate' },
+  aboutC2: { de: 'Deutsch B2 Sprachdiplom', hu: 'német B2 nyelvvizsga', en: 'German B2 certificate' },
+  aboutC3: { de: 'Sieger des nationalen Deutschwettbewerbs (C1-Niveau)', hu: 'országos német nyelvi verseny győztese (C1 szint)', en: 'Winner of the national German language competition (C1 level)' },
+  aboutBye: { de: 'Ich freue mich, Sie und Ihr Unternehmen kennenzulernen.', hu: 'Szívesen megismerkedem veled és a vállalkozásoddal.', en: 'I’d love to get to know you and your business.' },
+  needTitle: { de: 'Was ich für Ihre Demo brauche', hu: 'Mire van szükségem a demóhoz?', en: 'What I need for your demo' },
+  need1: { de: 'Name Ihres Betriebs und was Sie anbieten', hu: 'A vállalkozás neve és hogy mivel foglalkozik', en: 'Your business name and what you offer' },
+  need2: { de: 'Ort / Land', hu: 'Város / ország', en: 'City / country' },
+  need3: { de: 'Bestehende Website oder Facebook / Instagram (falls vorhanden)', hu: 'Meglévő weboldal vagy Facebook / Instagram (ha van)', en: 'Existing website or Facebook / Instagram (if any)' },
+  need4: { de: 'Logo und ein paar Fotos (falls vorhanden)', hu: 'Logó és néhány fotó (ha van)', en: 'Logo and a few photos (if any)' },
+  need5: { de: 'In welcher Sprache die Website sein soll', hu: 'Milyen nyelven legyen az oldal', en: 'Which language(s) the site should be in' },
+  needNote: { de: 'Fehlt etwas? Kein Problem – ich markiere es im Entwurf.', hu: 'Valami hiányzik? Nem gond – a vázlatban jelölöm.', en: 'Something missing? No problem. I’ll mark it in the draft.' },
+  brandMissing: { de: '[Markenname]', hu: '[Márkanév]', en: '[Brand name]' },
+  navServices: { de: 'Leistungen', hu: 'Szolgáltatások', en: 'Services' },
+  navProcess: { de: 'Ablauf', hu: 'Így dolgozom', en: 'Process' },
+  navWhy: { de: 'Warum ich?', hu: 'Miért én?', en: 'Why me?' },
+  navRefs: { de: 'Referenzen', hu: 'Referenciák', en: 'Work' },
+  navFaq: { de: 'FAQ', hu: 'GYIK', en: 'FAQ' },
+  navContact: { de: 'Kontakt', hu: 'Kapcsolat', en: 'Contact' },
+  ctaDemo: { de: 'Gratis-Demo anfordern', hu: 'Ingyenes demót kérek', en: 'Get a free demo' },
+  ctaHow: { de: 'So arbeite ich', hu: 'Így dolgozom', en: 'How I work' },
+  heroBadge: { de: 'Weltweit', hu: 'Bárhol a világon', en: 'Anywhere in the world' },
+  heroTitle: { de: 'Websites, die Kunden bringen. <span class="grad-text">Gratis-Demo inklusive.</span>', hu: 'Weboldal, ami ügyfelet hoz. <span class="grad-text">Ingyenes demóval.</span>', en: 'Websites that win customers. <span class="grad-text">Free demo included.</span>' },
+  heroSub: { de: 'Websites &amp; Social Media für KMU – erst sehen, dann entscheiden.', hu: 'Weboldal &amp; közösségi média kisvállalkozásoknak – előbb látod, aztán döntesz.', en: 'Websites &amp; social media for small businesses. See it first, then decide.' },
+  heroCheck1: { de: 'Deutsch · Ungarisch · Englisch', hu: 'Magyar · német · angol', en: 'German · Hungarian · English' },
+  heroCheck2: { de: 'Persönlicher Ansprechpartner', hu: 'Személyes kapcsolattartó', en: 'One personal contact' },
+  heroCheck3: { de: 'Angebot in CHF, EUR oder HUF', hu: 'Ajánlat CHF-ben, EUR-ban vagy HUF-ban', en: 'Quotes in CHF, EUR or HUF' },
+  chipDemo: { de: 'Ihre Demo ist bereit', hu: 'Elkészült a demód', en: 'Your demo is ready' },
+  trust1: { de: 'Sprachen: DE · HU · EN', hu: 'nyelv: HU · DE · EN', en: 'languages: DE · HU · EN' },
+  trust2: { de: 'für Ihre erste Demo', hu: 'az első demóért', en: 'for your first demo' },
+  trust3: { de: 'für Betriebe in beiden Ländern', hu: 'vállalkozásoknak mindkét országban', en: 'for businesses in both countries' },
+  trust4: { de: 'direkter Kontakt, kein Callcenter', hu: 'közvetlen kapcsolat, nincs ügyfélszolgálati sor', en: 'direct contact, no call centre' },
+  servicesKicker: { de: 'Leistungen', hu: 'Szolgáltatások', en: 'Services' },
+  servicesTitle: { de: 'Alles für Ihren Online-Auftritt', hu: 'Minden az online jelenléthez', en: 'Everything for your online presence' },
+  servicesSub: { de: 'Für Coiffeure, Cafés, Handwerk und Vereine.', hu: 'Fodrászoknak, kávézóknak, kézműveseknek és egyesületeknek.', en: 'For salons, cafés, trades and associations.' },
+  s1t: { de: 'Website-Erstellung', hu: 'Weboldal-készítés', en: 'Website design' },
+  s1d: { de: 'Modern, schnell, mobilfreundlich. Ab 250 €.', hu: 'Modern, gyors, mobilbarát. 250 €-tól.', en: 'Modern, fast, mobile-friendly. From €250.' },
+  aboutSchools: { de: 'Bálint-Márton-Schule Törökbálint · Illyés-Gyula-Gymnasium Budaörs', hu: 'Törökbálinti Bálint Márton Iskola · Budaörsi Illyés Gyula Gimnázium', en: 'Bálint Márton School, Törökbálint · Illyés Gyula Grammar School, Budaörs' },
+  s2t: { de: 'Facebook &amp; Instagram', hu: 'Facebook &amp; Instagram', en: 'Facebook &amp; Instagram' },
+  s2d: { de: 'Beiträge und regelmässige Präsenz.', hu: 'Posztok és rendszeres jelenlét.', en: 'Posts and a steady presence.' },
+  s3badge: { de: 'Der erste Schritt', hu: 'Az első lépés', en: 'The first step' },
+  s3t: { de: 'Kostenlose Demo', hu: 'Ingyenes demó', en: 'Free demo' },
+  s3d: { de: 'Ihre Website als Entwurf – vor jeder Entscheidung.', hu: 'A weboldalad vázlatként – még döntés előtt.', en: 'Your website as a draft, before you decide.' },
+  forKicker: { de: 'Für', hu: 'Nekik dolgozom', en: 'For' },
+  forSalon: { de: 'Coiffeure &amp; Beauty', hu: 'Fodrászok &amp; szépségszalonok', en: 'Hair &amp; beauty salons' },
+  forCafe: { de: 'Cafés &amp; Restaurants', hu: 'Kávézók &amp; éttermek', en: 'Cafés &amp; restaurants' },
+  forShop: { de: 'Handwerk &amp; Gewerbe', hu: 'Kézművesek &amp; szakipar', en: 'Trades &amp; craftspeople' },
+  aiNote: { de: 'Symbolbilder (KI-generiert)', hu: 'Illusztráció (AI-generált)', en: 'Illustrations (AI-generated)' },
+  processKicker: { de: 'Ablauf', hu: 'Így dolgozom', en: 'Process' },
+  processTitle: { de: 'In 4 Schritten online', hu: '4 lépésben online', en: 'Online in 4 steps' },
+  p1t: { de: 'Kontakt', hu: 'Megkeresés', en: 'Get in touch' },
+  p1d: { de: 'Kurz schreiben oder anrufen.', hu: 'Írj vagy hívj.', en: 'Write or call.' },
+  p2t: { de: 'Gratis-Demo', hu: 'Ingyenes demó', en: 'Free demo' },
+  p2d: { de: 'Erster Entwurf – kostenlos.', hu: 'Első vázlat – ingyen.', en: 'First draft, free.' },
+  p3t: { de: 'Feinschliff', hu: 'Finomítás', en: 'Refine' },
+  p3d: { de: 'Gemeinsam feinjustieren.', hu: 'Közösen csiszoljuk.', en: 'We fine-tune together.' },
+  p4t: { de: 'Online gehen', hu: 'Élesítés', en: 'Go live' },
+  p4d: { de: 'Ihre Website ist live.', hu: 'Élesben az oldalad.', en: 'Your site goes live.' },
+  photoMissing: { de: '[Foto von Márton]', hu: '[Fotó Mártonról]', en: '[Photo of Márton]' },
+  photoMissingHint: { de: 'Ein persönliches Foto schafft Vertrauen.', hu: 'Egy személyes fotó bizalmat ébreszt.', en: 'A personal photo builds trust.' },
+  whyKicker: { de: 'Warum ich?', hu: 'Miért én?', en: 'Why me?' },
+  whyTitle: { de: 'Moderne Arbeitsweise, persönlicher Kontakt', hu: 'Modern munkamódszer, személyes kapcsolat', en: 'Modern workflow, personal contact' },
+  whySub: { de: 'KI für Routine – mehr Zeit für Sie.', hu: 'AI a rutinra – több idő rád.', en: 'AI does the routine work. You get more of my time.' },
+  w1t: { de: 'Drei Sprachen', hu: 'Három nyelv', en: 'Three languages' },
+  w1d: { de: 'DE · HU · EN', hu: 'HU · DE · EN', en: 'DE · HU · EN' },
+  w2t: { de: 'Schnell', hu: 'Gyors', en: 'Fast' },
+  w2d: { de: 'Früh ein konkreter Entwurf.', hu: 'Hamar konkrét vázlat.', en: 'A concrete draft, early.' },
+  w3t: { de: 'Fair kalkuliert', hu: 'Kedvező ár', en: 'Fairly priced' },
+  w3d: { de: 'Individuelles Angebot in Ihrer Währung.', hu: 'Egyedi ajánlat a saját pénznemedben.', en: 'Individual quote in your currency.' },
+  w4t: { de: 'Persönlich', hu: 'Személyes', en: 'Personal' },
+  w4d: { de: 'Immer direkt mit mir.', hu: 'Mindig közvetlenül velem.', en: 'Always directly with me.' },
+  refsKicker: { de: 'Referenzen', hu: 'Referenciák', en: 'Work' },
+  refsTitle: { de: 'Ausgewählte Arbeiten', hu: 'Válogatott munkák', en: 'Selected work' },
+  refsSub: { de: 'Bald hier.', hu: 'Hamarosan.', en: 'Coming soon.' },
+  refPh: { de: '[Screenshot Referenz]', hu: '[Referencia-képernyőkép]', en: '[Project screenshot]' },
+  refName: { de: '[Kunde / Branche]', hu: '[Ügyfél / iparág]', en: '[Client / industry]' },
+  refType1: { de: 'Website', hu: 'Weboldal', en: 'Website' },
+  refType2: { de: 'Social Media', hu: 'Közösségi média', en: 'Social media' },
+  reviewPh: {
+    de: '[Kundenstimmen – werden ergänzt, sobald echte Rückmeldungen vorliegen]',
+    hu: '[Ügyfélvélemények – akkor kerülnek ide, ha már vannak valódi visszajelzések]',
+    en: '[Client testimonials – added once real feedback is available]'
+  },
+  faqKicker: { de: 'FAQ', hu: 'GYIK', en: 'FAQ' },
+  faqTitle: { de: 'Häufige Fragen', hu: 'Gyakori kérdések', en: 'Frequently asked questions' },
+  q1: { de: 'Was kostet eine Website?', hu: 'Mennyibe kerül egy weboldal?', en: 'How much does a website cost?' },
+  a1: { de: 'Eine Website gibt es ab 250 €. Der genaue Preis hängt vom Umfang ab – nach einem kurzen Gespräch erhalten Sie ein individuelles Angebot in CHF, EUR oder HUF.', hu: 'Egy weboldal 250 eurótól indul. A pontos ár a terjedelemtől függ – egy rövid egyeztetés után egyedi ajánlatot kapsz, CHF-ben, EUR-ban vagy HUF-ban.', en: 'A website starts at €250. The exact price depends on the scope. After a short conversation you receive an individual quote in CHF, EUR or HUF.' },
+  q2: { de: 'Ist die Demo wirklich kostenlos?', hu: 'Tényleg ingyenes a demó?', en: 'Is the demo really free?' },
+  a2: { de: 'Ja. Die Demo zeigt Ihnen, wie Ihre Website aussehen könnte. Danach entscheiden Sie in Ruhe, ob Sie weitermachen möchten.', hu: 'Igen. A demó megmutatja, hogyan nézhetne ki a weboldalad. Utána nyugodtan eldöntheted, szeretnéd-e folytatni.', en: 'Yes. The demo shows you what your website could look like. Afterwards you decide in your own time whether to continue.' },
+  q3: { de: 'Was brauchen Sie von mir für den Start?', hu: 'Mire van szükség az induláshoz?', en: 'What do you need from me to start?' },
+  a3: { de: 'Den Namen Ihres Betriebs, was Sie anbieten und wie man Sie erreicht. Vorhandene Texte, Fotos oder ein Logo helfen – was fehlt, markiere ich im Entwurf.', hu: 'A vállalkozás nevére, arra, hogy mit kínálsz, és hogyan érhetnek el. Meglévő szövegek, fotók vagy logó sokat segítenek – ami hiányzik, azt a vázlatban jelölöm.', en: 'Your business name, what you offer and how people can reach you. Existing texts, photos or a logo help. Anything missing is marked in the draft.' },
+  q4: { de: 'Wofür nutzen Sie KI?', hu: 'Mire használsz mesterséges intelligenciát?', en: 'What do you use AI for?' },
+  a4: {
+    de: 'Für wiederkehrende Aufgaben, zum Beispiel erste Entwürfe und die Organisation der Korrespondenz. Gestaltung, Abstimmung und Ihr Ansprechpartner bleiben persönlich: ich.',
+    hu: 'Az ismétlődő feladatokhoz, például az első vázlatokhoz és a levelezés szervezéséhez. A tervezés, az egyeztetés és a kapcsolattartás személyes marad: velem beszélsz.',
+    en: 'For repetitive tasks such as first drafts and organising correspondence. Design, coordination and your point of contact stay personal: me.'
+  },
+  q5: { de: 'Kann meine Website mehrsprachig sein?', hu: 'Lehet többnyelvű a weboldalam?', en: 'Can my website be multilingual?' },
+  a5: { de: 'Ja. Ich arbeite auf Deutsch, Ungarisch und Englisch – Ihre Website kann in einer oder mehreren dieser Sprachen erscheinen.', hu: 'Igen. Magyarul, németül és angolul dolgozom – a weboldalad ezek közül egy vagy több nyelven is megjelenhet.', en: 'Yes. I work in German, Hungarian and English, and your website can appear in one or more of these languages.' },
+  q6: { de: 'Betreuen Sie auch Facebook und Instagram?', hu: 'Facebook- és Instagram-oldalt is kezelsz?', en: 'Do you also manage Facebook and Instagram?' },
+  a6: {
+    de: 'Ja. Ich erstelle Beiträge und sorge für eine regelmässige Präsenz – auf Wunsch zusätzlich zur Website.',
+    hu: 'Igen. Posztokat készítek, és gondoskodom a rendszeres jelenlétről – kérésre a weboldal mellett is.',
+    en: 'Yes. I create posts and keep you regularly present, alongside your website if you wish.'
+  },
+  ctaBandTitle: { de: 'Sehen Sie Ihre neue Website, bevor Sie sich entscheiden.', hu: 'Lásd az új weboldaladat, mielőtt döntenél.', en: 'See your new website before you decide.' },
+  ctaBandSub: { de: 'Ein paar Zeilen genügen.', hu: 'Elég pár sor.', en: 'A few lines are enough.' },
+  contactKicker: { de: 'Kontakt', hu: 'Kapcsolat', en: 'Contact' },
+  contactTitle: { de: 'Erzählen Sie mir von Ihrem Betrieb', hu: 'Mesélj a vállalkozásodról', en: 'Tell me about your business' },
+  contactSub: { de: 'Ich antworte auf DE, HU oder EN.', hu: 'Magyarul, németül vagy angolul válaszolok.', en: 'I reply in DE, HU or EN.' },
+  cEmail: { de: 'E-Mail', hu: 'E-mail', en: 'Email' },
+  cPhone: { de: 'Telefon', hu: 'Telefon', en: 'Phone' },
+  cArea: { de: 'Tätig in', hu: 'Működési terület', en: 'Working in' },
+  cAreaVal: { de: 'Weltweit', hu: 'Bárhol a világon', en: 'Anywhere in the world' },
+  addrMissing: { de: '[Adresse – falls gewünscht]', hu: '[Cím – ha szükséges]', en: '[Address – if required]' },
+  cSocial: { de: 'Social Media', hu: 'Közösségi média', en: 'Social media' },
+  footerTag: { de: 'Websites &amp; Social Media für kleine Unternehmen und Vereine.', hu: 'Weboldalak és közösségi média kisvállalkozásoknak és egyesületeknek.', en: 'Websites &amp; social media for small businesses and associations.' },
+  footerLegal: { de: 'Rechtliches', hu: 'Jogi információk', en: 'Legal' },
+  impressum: { de: 'Impressum', hu: 'Impresszum', en: 'Legal notice' },
+  privacy: { de: 'Datenschutz', hu: 'Adatvédelem', en: 'Privacy' },
+  terms: { de: 'AGB', hu: 'ÁSZF', en: 'Terms' },
+  uidMissing: { de: '[UID / Steuernummer]', hu: '[UID / adószám]', en: '[UID / tax number]' },
+  textMissing: { de: '[Text folgt]', hu: '[Szöveg később]', en: '[Text to follow]' },
+  footerDemo: { de: 'Demo-Version', hu: 'Demó verzió', en: 'Demo version' }
+};
+const T_ESHR = {"ctaWrite":{"es":"Escríbeme","hr":"Piši mi"},"aboutSummary":{"es":"Conóceme mejor","hr":"Upoznaj me bolje"},"aboutHello":{"es":"¡Hola, soy Marci!","hr":"Bok, ja sam Marci!"},"aboutRole":{"es":"Desarrollador web · 18 años","hr":"Web developer · 18 godina"},"aboutP":{"es":"Ahora vivo en Hungría, pero veo mi futuro en el extranjero, así que lo que más me importa ahora es crear contactos y trabajar con el mayor número posible de negocios.","hr":"Trenutno živim u Mađarskoj, ali svoju budućnost vidim u inozemstvu, zato mi je sada najvažnije stvarati kontakte i surađivati s što više tvrtki."},"aboutStudyT":{"es":"Estudios","hr":"Školovanje"},"aboutLangT":{"es":"Idiomas","hr":"Jezici"},"aboutLang":{"es":"Hablo húngaro, inglés y alemán.","hr":"Govorim mađarski, engleski i njemački."},"aboutC1":{"es":"Certificado de inglés B2","hr":"Certifikat iz engleskog B2"},"aboutC2":{"es":"Certificado de alemán B2","hr":"Certifikat iz njemačkog B2"},"aboutC3":{"es":"Ganador del concurso nacional de alemán (nivel C1)","hr":"Pobjednik državnog natjecanja iz njemačkog (razina C1)"},"aboutBye":{"es":"Me encantará conocerte a ti y a tu negocio.","hr":"Veselim se upoznati tebe i tvoju tvrtku."},"aboutSchools":{"es":"Escuela Bálint Márton, Törökbálint · Instituto Illyés Gyula, Budaörs","hr":"Škola Bálint Márton, Törökbálint · Gimnazija Illyés Gyula, Budaörs"},"needTitle":{"es":"Qué necesito para tu demo","hr":"Što mi treba za tvoj demo"},"need1":{"es":"El nombre de tu negocio y a qué te dedicas","hr":"Naziv tvoje tvrtke i čime se baviš"},"need2":{"es":"Ciudad / país","hr":"Grad / država"},"need3":{"es":"Web actual o Facebook / Instagram (si los tienes)","hr":"Postojeća web stranica ili Facebook / Instagram (ako postoje)"},"need4":{"es":"Logo y algunas fotos (si los tienes)","hr":"Logo i nekoliko fotografija (ako postoje)"},"need5":{"es":"En qué idioma(s) debe estar la web","hr":"Na kojem jeziku (ili jezicima) treba biti stranica"},"needNote":{"es":"¿Falta algo? No pasa nada. Lo marco en el borrador.","hr":"Nešto nedostaje? Nema problema. Označit ću to u nacrtu."},"demobar":{"es":"Demo: los campos con borde discontinuo <span class=\"missing\">[ … ]</span> se completarán más adelante.","hr":"Demo: polja s isprekidanim okvirom <span class=\"missing\">[ … ]</span> bit će dopunjena."},"navServices":{"es":"Servicios","hr":"Usluge"},"navProcess":{"es":"Cómo trabajo","hr":"Kako radim"},"navWhy":{"es":"¿Por qué yo?","hr":"Zašto ja?"},"navRefs":{"es":"Trabajos","hr":"Radovi"},"navFaq":{"es":"Preguntas","hr":"Pitanja"},"navContact":{"es":"Contacto","hr":"Kontakt"},"ctaDemo":{"es":"Pide tu demo gratis","hr":"Zatraži besplatni demo"},"heroBadge":{"es":"En cualquier parte del mundo","hr":"Bilo gdje u svijetu"},"heroTitle":{"es":"Una web que trae clientes. <span class=\"grad-text\">Con demo gratis.</span>","hr":"Web stranica koja donosi kupce. <span class=\"grad-text\">Uz besplatni demo.</span>"},"heroSub":{"es":"Webs y redes sociales para pequeños negocios. Primero lo ves, después decides.","hr":"Web stranice i društvene mreže za male tvrtke. Prvo vidiš, zatim odlučiš."},"servicesTitle":{"es":"Todo para tu presencia online","hr":"Sve za tvoju online prisutnost"},"servicesSub":{"es":"Para peluquerías, cafeterías, artesanos y asociaciones.","hr":"Za frizerske salone, kafiće, obrtnike i udruge."},"s1t":{"es":"Diseño web","hr":"Izrada web stranica"},"s1d":{"es":"Moderna, rápida, adaptada al móvil. Desde 250 €, precio final.","hr":"Moderna, brza, prilagođena mobitelu. Od 250 €, konačna cijena."},"s2t":{"es":"Facebook &amp; Instagram","hr":"Facebook &amp; Instagram"},"s2d":{"es":"Publicaciones y presencia constante.","hr":"Objave i redovita prisutnost."},"s3badge":{"es":"El primer paso","hr":"Prvi korak"},"s3t":{"es":"Demo gratis","hr":"Besplatni demo"},"s3d":{"es":"Tu web en borrador, antes de decidir.","hr":"Tvoja stranica kao nacrt, prije odluke."},"processTitle":{"es":"Online en 4 pasos","hr":"Online u 4 koraka"},"p1t":{"es":"Contacto","hr":"Javi se"},"p1d":{"es":"Escríbeme o llámame.","hr":"Piši mi ili nazovi."},"p2t":{"es":"Demo gratis","hr":"Besplatni demo"},"p2d":{"es":"Primer borrador, gratis.","hr":"Prvi nacrt, besplatno."},"p3t":{"es":"Ajustes","hr":"Dorada"},"p3d":{"es":"Lo pulimos juntos.","hr":"Zajedno je doradimo."},"p4t":{"es":"Publicación","hr":"Objava"},"p4d":{"es":"Tu web ya está online.","hr":"Tvoja stranica je online."},"whyTitle":{"es":"Método moderno, trato personal","hr":"Moderan način rada, osobni kontakt"},"whySub":{"es":"La IA hace el trabajo rutinario. Tú tienes más de mi tiempo.","hr":"UI obavlja rutinu. Ti dobivaš više mog vremena."},"w1t":{"es":"Tres idiomas","hr":"Tri jezika"},"w1d":{"es":"HU · DE · EN","hr":"HU · DE · EN"},"w2t":{"es":"Rápido","hr":"Brzo"},"w2d":{"es":"Un borrador concreto, pronto.","hr":"Konkretan nacrt, brzo."},"refsTitle":{"es":"Trabajos seleccionados","hr":"Odabrani radovi"},"refsSub":{"es":"Muy pronto.","hr":"Uskoro."},"refPh":{"es":"[Captura del proyecto]","hr":"[Snimka zaslona projekta]"},"refName":{"es":"[Cliente / sector]","hr":"[Klijent / djelatnost]"},"refType1":{"es":"Web","hr":"Web stranica"},"refType2":{"es":"Redes sociales","hr":"Društvene mreže"},"reviewPh":{"es":"[Opiniones de clientes: se añadirán cuando haya valoraciones reales]","hr":"[Recenzije klijenata: bit će dodane kada stignu stvarne povratne informacije]"},"faqTitle":{"es":"Preguntas frecuentes","hr":"Česta pitanja"},"q1":{"es":"¿Cuánto cuesta una web?","hr":"Koliko košta web stranica?"},"a1":{"es":"Una web empieza en 250 €. El precio exacto depende del alcance. Tras una breve conversación recibes un presupuesto personalizado en CHF, EUR o HUF.","hr":"Web stranica počinje od 250 €. Točna cijena ovisi o opsegu. Nakon kratkog razgovora dobivaš individualnu ponudu u CHF, EUR ili HUF."},"q2":{"es":"¿La demo es realmente gratis?","hr":"Je li demo stvarno besplatan?"},"a2":{"es":"Sí. La demo te muestra cómo podría ser tu web. Después decides con calma si quieres seguir.","hr":"Da. Demo ti pokazuje kako bi tvoja stranica mogla izgledati. Nakon toga u miru odlučuješ želiš li nastaviti."},"q3":{"es":"¿Qué necesitas para empezar?","hr":"Što ti treba za početak?"},"a3":{"es":"El nombre de tu negocio, qué ofreces y cómo pueden contactarte. Los textos, fotos o el logo que ya tengas ayudan. Lo que falte lo marco en el borrador.","hr":"Naziv tvoje tvrtke, što nudiš i kako te mogu kontaktirati. Postojeći tekstovi, fotografije ili logo pomažu. Što nedostaje, označim u nacrtu."},"q4":{"es":"¿Para qué usas la inteligencia artificial?","hr":"Za što koristiš umjetnu inteligenciju?"},"a4":{"es":"Para tareas repetitivas, como los primeros borradores y organizar el correo. El diseño, la coordinación y el contacto siguen siendo personales: conmigo.","hr":"Za ponavljajuće zadatke, poput prvih nacrta i organiziranja pošte. Dizajn, dogovor i kontakt ostaju osobni: sa mnom."},"q5":{"es":"¿Mi web puede estar en varios idiomas?","hr":"Može li moja stranica biti na više jezika?"},"a5":{"es":"Sí. Trabajo en alemán, húngaro e inglés, y tu web puede publicarse en uno o varios de estos idiomas.","hr":"Da. Radim na njemačkom, mađarskom i engleskom, a tvoja stranica može biti na jednom ili više tih jezika."},"q6":{"es":"¿También gestionas Facebook e Instagram?","hr":"Vodiš li i Facebook i Instagram?"},"a6":{"es":"Sí. Creo publicaciones y te mantengo presente con regularidad, también junto con tu web si quieres.","hr":"Da. Izrađujem objave i brinem se o tvojoj redovitoj prisutnosti, ako želiš i uz web stranicu."},"ctaBandTitle":{"es":"Mira tu nueva web antes de decidir.","hr":"Pogledaj svoju novu stranicu prije nego odlučiš."},"ctaBandSub":{"es":"Bastan unas líneas.","hr":"Dovoljno je nekoliko redaka."},"contactTitle":{"es":"Cuéntame sobre tu negocio","hr":"Ispričaj mi o svojoj tvrtki"},"cEmail":{"es":"Correo","hr":"E-pošta"},"cPhone":{"es":"Teléfono","hr":"Telefon"},"cArea":{"es":"Zona de trabajo","hr":"Područje rada"},"cAreaVal":{"es":"En cualquier parte del mundo","hr":"Bilo gdje u svijetu"},"cSocial":{"es":"Redes sociales","hr":"Društvene mreže"},"footerTag":{"es":"Webs y redes sociales para pequeños negocios y asociaciones.","hr":"Web stranice i društvene mreže za male tvrtke i udruge."},"footerLegal":{"es":"Legal","hr":"Pravne informacije"},"impressum":{"es":"Aviso legal","hr":"Impresum"},"privacy":{"es":"Privacidad","hr":"Privatnost"},"terms":{"es":"Condiciones","hr":"Uvjeti"},"footerDemo":{"es":"Versión demo","hr":"Demo verzija"}};
+for (const k in T_ESHR) Object.assign(T[k] = T[k] || {}, T_ESHR[k]);
+
+const TITLES = {
+  de: 'TekingXtra – Websites & Social Media für KMU',
+  hu: 'TekingXtra – Weboldal & közösségi média kisvállalkozásoknak',
+  en: 'TekingXtra – Websites & social media for small businesses',
+  es: 'TekingXtra – Webs y redes sociales para pequeños negocios',
+  hr: 'TekingXtra – Web stranice i društvene mreže za male tvrtke'
+};
+function setLang(lang) {
+  document.documentElement.lang = lang;
+  document.title = TITLES[lang];
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const e = T[el.dataset.i18n]; const v = e && (e[lang] || e.en); if (v) el.innerHTML = v;
+  });
+  document.querySelectorAll('.lang-btn').forEach(b => {
+    const on = b.dataset.lang === lang;
+    b.classList.toggle('bg-navy', on); b.classList.toggle('text-white', on);
+    b.classList.toggle('text-slate2', !on); b.classList.toggle('hover:bg-slate-100', !on);
+    b.setAttribute('aria-pressed', on);
+  });
+  try { localStorage.setItem('rm-lang', lang); } catch (e) {}
+}
+document.querySelectorAll('.lang-btn').forEach(b => b.addEventListener('click', (e) => { if (e.defaultPrevented) return; if (b.dataset.lang === document.documentElement.lang) { e.preventDefault(); return; } try { localStorage.setItem('rm-lang', b.dataset.lang); } catch (x) {} if (location.hash) b.href = b.getAttribute('href') + location.hash; }));
+document.querySelectorAll('.cta-video').forEach((v) => { const slow = () => { if (v.duration) v.playbackRate = 1; }; v.addEventListener('loadedmetadata', slow); slow(); });
+(() => {
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  document.querySelectorAll('details.reveal').forEach((d) => {
+    const s = d.querySelector('summary');
+    s.addEventListener('click', (e) => {
+      if (reduce) return;
+      e.preventDefault();
+      if (d.dataset.anim) return;
+      d.dataset.anim = '1';
+      const start = d.offsetHeight;
+      if (d.open) {
+        const end = s.offsetHeight + parseFloat(getComputedStyle(d).paddingTop) + parseFloat(getComputedStyle(d).paddingBottom);
+        d.classList.add('closing');
+        d.querySelector('p').style.opacity = '0';
+        d.animate({ height: [start + 'px', end + 'px'] }, { duration: 280, easing: 'ease-in' }).onfinish = () => { d.open = false; d.querySelector('p').style.opacity = ''; delete d.dataset.anim; };
+      } else {
+        d.style.height = start + 'px';
+        d.open = true;
+        const end = d.scrollHeight;
+        d.style.height = '';
+        d.animate({ height: [start + 'px', end + 'px'] }, { duration: 340, easing: 'cubic-bezier(.2,.8,.2,1)' }).onfinish = () => { delete d.dataset.anim; };
+      }
+    });
+  });
+})();
+const DEMO_MAIL = {
+  de: { su: 'Anfrage: kostenlose Demo-Website', body: 'Hallo Márton\n\nich möchte gerne eine kostenlose Demo-Website.\n\nName des Betriebs: \nWas wir anbieten: \nOrt / Land: \nBestehende Website oder Facebook / Instagram (falls vorhanden): \nSprache(n) der Website: \nTelefon (optional): \n\nLogo und Fotos hänge ich – falls vorhanden – an diese E-Mail an.\n\nFreundliche Grüsse\n' },
+  hu: { su: 'Ingyenes demó kérése', body: 'Szia Márton!\n\nIngyenes demó weboldalt szeretnék kérni.\n\nA vállalkozás neve: \nMivel foglalkozunk: \nVáros / ország: \nMeglévő weboldal vagy Facebook / Instagram (ha van): \nMilyen nyelven legyen az oldal: \nTelefonszám (nem kötelező): \n\nA logót és a fotókat – ha vannak – ehhez a levélhez csatolom.\n\nÜdvözlettel:\n' },
+  en: { su: 'Request: free demo website', body: 'Hi Márton,\n\nI would like a free demo website.\n\nBusiness name: \nWhat we offer: \nCity / country: \nExisting website or Facebook / Instagram (if any): \nLanguage(s) of the website: \nPhone (optional): \n\nI will attach our logo and photos (if we have them) to this email.\n\nBest regards,\n' },
+  es: { su: 'Solicitud: web de demostración gratis', body: 'Hola, Márton:\n\nMe gustaría una web de demostración gratis.\n\nNombre del negocio: \nA qué nos dedicamos: \nCiudad / país: \nWeb actual o Facebook / Instagram (si los hay): \nIdioma(s) de la web: \nTeléfono (opcional): \n\nAdjunto nuestro logo y fotos (si los tenemos) a este correo.\n\nUn saludo,\n' },
+  hr: { su: 'Upit: besplatna demo web stranica', body: 'Bok Márton,\n\nželio/željela bih besplatnu demo web stranicu.\n\nNaziv tvrtke: \nČime se bavimo: \nGrad / država: \nPostojeća web stranica ili Facebook / Instagram (ako postoje): \nJezik (jezici) stranice: \nTelefon (nije obavezno): \n\nLogo i fotografije (ako ih imamo) prilažem ovom e-mailu.\n\nLijep pozdrav,\n' },
+};
+function demoMailUrl(lang) {
+  const m = DEMO_MAIL[lang] || DEMO_MAIL.de;
+  return 'https://mail.google.com/mail/?view=cm&fs=1&to=reveszmarc@gmail.com&su=' + encodeURIComponent(m.su) + '&body=' + encodeURIComponent(m.body);
+}
+function updateDemoLinks(lang) {
+  document.querySelectorAll('[data-i18n="ctaDemo"]').forEach((el) => {
+    const a = el.closest('a');
+    if (!a) return;
+    a.href = '/elonezet/?lang=' + (['de', 'hu', 'en'].includes(lang) ? lang : 'en');
+    a.removeAttribute('target');
+    a.removeAttribute('rel');
+  });
+}
+const _setLangOrig = setLang;
+setLang = function (lang) { _setLangOrig(lang); updateDemoLinks(lang); };
+
+(() => {
+  if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  const els = [...document.querySelectorAll('.side-deco .sd-diamond, .side-deco .sd-mono, .side-deco .sd-line')];
+  let ticking = false;
+  addEventListener('scroll', () => {
+    if (ticking) return; ticking = true;
+    requestAnimationFrame(() => {
+      const y = scrollY;
+      els.forEach((el, i) => { el.style.translate = '0 ' + (-(y * (0.07 + (i % 4) * 0.04))).toFixed(1) + 'px'; });
+      ticking = false;
+    });
+  }, { passive: true });
+})();
+document.querySelectorAll('[data-legal]').forEach(a => a.addEventListener('click', e => { e.preventDefault(); const d = document.getElementById('dlg-' + a.dataset.legal); d.showModal(); d.querySelector('.legal-body').scrollTop = 0; }));
+document.querySelectorAll('.legal-dlg').forEach(d => {
+  d.querySelector('.legal-x').addEventListener('click', () => d.close());
+  d.addEventListener('click', e => { if (e.target === d) d.close(); });
+});
+const _setLangLegal = setLang;
+setLang = function (lang) { _setLangLegal(lang); document.querySelectorAll('.legal-body [data-ll]').forEach(el => el.classList.toggle('on', el.dataset.ll === lang)); document.querySelectorAll('.legal-x').forEach(b => b.setAttribute('aria-label', { de: 'Schließen', hu: 'Bezárás', en: 'Close', es: 'Cerrar', hr: 'Zatvori' }[lang])); };
+const LANGS = ['de', 'hu', 'en', 'es', 'hr'];
+
+(() => {
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const splitHero = () => {
+    if (reduce) return;
+    const h1 = document.querySelector('[data-i18n="heroTitle"]'); if (!h1) return;
+    let n = 0;
+    const walk = (node) => {
+      [...node.childNodes].forEach(c => {
+        if (c.nodeType === 3) {
+          const frag = document.createDocumentFragment();
+          c.textContent.split(/(\s+)/).forEach(w => {
+            if (!w) return;
+            if (/^\s+$/.test(w)) { frag.appendChild(document.createTextNode(w)); return; }
+            const s = document.createElement('span'); s.className = 'hw'; s.textContent = w;
+            s.style.animationDelay = (120 + n++ * 70) + 'ms'; frag.appendChild(s);
+          });
+          c.replaceWith(frag);
+        } else if (c.nodeType === 1) walk(c);
+      });
+    };
+    walk(h1);
+  };
+  const _setLangAnim = setLang;
+  setLang = function (lang) { _setLangAnim(lang); splitHero(); };
+  document.querySelectorAll('.reveal').forEach(el => {
+    const sibs = [...el.parentElement.children].filter(c => c.classList.contains('reveal'));
+    const i = sibs.indexOf(el); if (i > 0) el.style.setProperty('--d', Math.min(i, 5) * 70 + 'ms');
+  });
+  const ol = document.querySelector('.m-steps');
+  if (ol && 'IntersectionObserver' in window) {
+    const io = new IntersectionObserver(es => es.forEach(e => { if (!matchMedia('(max-width: 767px)').matches) return; e.target.classList.toggle('on', e.intersectionRatio > .6); }),
+      { root: ol, threshold: [0, .6, 1] });
+    ol.querySelectorAll(':scope > li').forEach(li => io.observe(li));
+  }
+})();
+
+(() => {
+  const dia = (cls, x, y, s, delay, dark) => '<svg class="md-dia ' + cls + '" style="' + x + ';top:' + y + ';width:' + s + 'px;height:' + s + 'px;animation-delay:' + delay + 's" viewBox="0 0 20 20"><path d="M10 1l9 9-9 9-9-9z" fill="none" stroke="' + (dark ? '#93C5FD' : '#2563EB') + '" stroke-width="1.3"/></svg>';
+  const line = (x, y, dark) => { const c = dark ? '#93C5FD' : '#2563EB'; return '<svg class="md-line" style="' + x + ';top:' + y + '" viewBox="0 0 12 200" preserveAspectRatio="none"><path d="M6 6v188" stroke="' + c + '" stroke-width="1.2" fill="none"/><path d="M6 0l4 4-4 4-4-4z M6 192l4 4-4 4-4-4z" fill="' + c + '"/></svg>'; };
+  const plans = [
+    ['#leistungen', false, '<span class="md-mono" style="right:-46px;top:20px">X</span><div class="md-dots" style="left:-40px;top:46%"></div>' + dia('sd-spin', 'right:28px', '38%', 22, 0) + dia('sd-float', 'left:14px', '70%', 14, -2) + line('right:14px', '62%') + '<div class="md-orb" style="right:-80px;bottom:-60px"></div>'],
+    ['#ablauf', false, '<span class="md-mono" style="left:-40px;top:-10px">T</span><div class="md-dots" style="right:-30px;top:8%"></div>' + dia('sd-spin sd-rev', 'right:24px', '22%', 26, -5) + dia('sd-float', 'left:40%', '88%', 12, -1) + '<div class="md-orb" style="left:-90px;bottom:-40px"></div>'],
+    ['#warum', false, '<span class="md-mono" style="right:-50px;top:44%">X</span><div class="md-dots" style="left:-50px;top:4%"></div>' + dia('sd-float', 'left:22px', '30%', 16, 0) + dia('sd-spin', 'right:30px', '6%', 20, -3) + line('left:10px', '58%')],
+    ['#faq', false, '<span class="md-mono" style="left:-46px;top:30%">T</span><div class="md-dots" style="right:-40px;top:60%"></div>' + dia('sd-spin sd-rev', 'right:20px', '12%', 22, -2) + dia('sd-float', 'left:30px', '80%', 14, -4) + '<div class="md-orb" style="right:-90px;top:-40px"></div>'],
+    ['#kontakt', false, '<span class="md-mono" style="right:-40px;top:-6px">X</span><div class="md-dots" style="left:-40px;top:52%"></div>' + dia('sd-float', 'right:26px', '48%', 16, -1) + line('right:12px', '70%')],
+    ['#ctaBand', true, '<span class="md-mono" style="left:-36px;top:-30px">T</span><span class="md-mono" style="right:-40px;bottom:-60px">X</span><div class="md-dots" style="right:10px;top:10px"></div>' + dia('sd-spin', 'left:24px', '72%', 20, 0, true) + dia('sd-float', 'right:40px', '40%', 14, -3, true) + '<div class="md-orb" style="left:30%;top:20%"></div>'],
+  ];
+  const decos = [];
+  plans.forEach(([sel, dark, html]) => {
+    const sec = document.querySelector(sel); if (!sec) return;
+    sec.classList.add('m-deco-host');
+    const d = document.createElement('div'); d.className = 'm-deco' + (dark ? ' dark' : ''); d.setAttribute('aria-hidden', 'true'); d.innerHTML = html;
+    sec.prepend(d); decos.push(d);
+  });
+  if ('IntersectionObserver' in window) {
+    const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('on'); io.unobserve(e.target); } }), { threshold: .15 });
+    decos.forEach(d => io.observe(d));
+  } else decos.forEach(d => d.classList.add('on'));
+  if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  const mq = matchMedia('(max-width: 767px)');
+  let ticking = false;
+  addEventListener('scroll', () => {
+    if (!mq.matches || ticking) return; ticking = true;
+    requestAnimationFrame(() => {
+      decos.forEach(d => {
+        const r = d.parentElement.getBoundingClientRect(); if (r.bottom < 0 || r.top > innerHeight) return;
+        const p = r.top / innerHeight;
+        [...d.children].forEach((el, i) => { el.style.translate = '0 ' + (p * (34 + (i % 4) * 24)).toFixed(1) + 'px'; });
+      });
+      ticking = false;
+    });
+  }, { passive: true });
+})();
+
+(() => {
+  if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  document.querySelectorAll('section h2').forEach(h2 => { if (h2.closest('.reveal')) h2.classList.add('h-rise'); });
+  const groups = ['#kontakt ul.space-y-3 > li', '#kontakt .auto-rows-fr > *', '#kontakt a[href*="facebook"], #kontakt a[href*="instagram"], #kontakt a[href*="tiktok"]', '#warum ul > li'];
+  groups.forEach(sel => document.querySelectorAll(sel).forEach((el, i) => {
+    if (el.classList.contains('reveal')) { el.classList.add('pop'); return; }
+    el.classList.add('reveal', 'pop'); el.style.setProperty('--d', Math.min(i, 6) * 80 + 'ms');
+  }));
+  document.querySelectorAll('a.bg-cta, .m-cta').forEach(a => a.classList.add('shine'));
+  const hero = document.querySelector('main > section'), vid = hero && hero.querySelector('video'), txt = hero && hero.querySelector('h1') && hero.querySelector('h1').parentElement;
+  if (hero && vid && txt) {
+    let t = false;
+    addEventListener('scroll', () => {
+      if (t) return; t = true;
+      requestAnimationFrame(() => {
+        const p = Math.min(Math.max(scrollY / hero.offsetHeight, 0), 1);
+        vid.style.transform = 'scale(' + (1 + p * .12).toFixed(3) + ')';
+        txt.style.transform = 'translateY(' + (p * 60).toFixed(1) + 'px)';
+        txt.style.opacity = (1 - p * .7).toFixed(2);
+        t = false;
+      });
+    }, { passive: true });
+  }
+})();
+
+const FX = {
+  pinSteps: 1,   // 1) „4 lépés” ott marad görgetés közben, a lépések egymás után kigyúlnak
+  textShine: 0,  // 2) fénycsík a kiemelt szövegeken („Ingyenes demóval.”, „Lásd az új weboldaladat…”)
+  stickyCta: 1,  // 3) mobilon alul lebegő, csillogó demó-gomb
+  progress: 1,   // 4) haladásjelző sáv a fejléc alján
+  marquee: 1,    // 5) mozgó szalag a szolgáltatások után
+  spotlight: 1,  // 6) fény a kártyákon (egér / koppintás)
+  ring: 0,       // 7) körbefutó fény az „Ingyenes demó” dobozokon
+};
+(() => {
+  const root = document.documentElement;
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  Object.keys(FX).forEach(k => { if (FX[k]) root.classList.add('fx-' + k); });
+  const hh = () => document.getElementById('top').getBoundingClientRect().height;
+  root.style.setProperty('--hh', hh() + 'px');
+  const ticks = [];
+  let ticking = false;
+  const onScroll = () => { if (ticking) return; ticking = true; requestAnimationFrame(() => { ticks.forEach(fn => fn()); ticking = false; }); };
+  addEventListener('scroll', onScroll, { passive: true }); addEventListener('resize', onScroll);
+
+  if (FX.pinSteps && !reduce) {
+    const sec = document.getElementById('ablauf'), ol = sec && sec.querySelector('.m-steps');
+    if (ol) {
+      const lis = [...ol.children];
+      const bar = document.createElement('div'); bar.className = 'fx-steps-bar'; bar.setAttribute('aria-hidden', 'true'); bar.innerHTML = '<i></i>'; ol.after(bar);
+      let last = -1;
+      const box = sec.querySelector('.max-w-6xl');
+      const center = () => { box.style.top = matchMedia('(max-width: 767px)').matches ? '' : Math.max(hh() + 28, (innerHeight - box.offsetHeight) / 2) + 'px'; }; // telefonon NINCS eltolás (különben lecsúszik)
+      center(); addEventListener('resize', center);
+      ticks.push(() => {
+        if (matchMedia('(max-width: 767px)').matches) return; // telefonon nincs rögzítés
+        const r = sec.getBoundingClientRect(), total = sec.offsetHeight - innerHeight;
+        const p = Math.min(Math.max(-r.top / Math.max(total, 1), 0), 1);
+        bar.firstChild.style.width = (p * 100).toFixed(1) + '%';
+        const idx = Math.min(lis.length - 1, Math.floor(p * lis.length * 0.999));
+        if (idx !== last && r.top < innerHeight && r.bottom > 0) {
+          last = idx; lis.forEach((li, i) => li.classList.toggle('on', i === idx));
+          if (ol.scrollWidth > ol.clientWidth) ol.scrollTo({ left: lis[idx].offsetLeft - lis[0].offsetLeft, behavior: 'smooth' });
+        }
+      });
+    }
+  }
+  if (FX.stickyCta) {
+    const a = document.createElement('a'); a.href = '#kontakt'; a.className = 'fx-pill shine';
+    a.innerHTML = '<span data-i18n="ctaDemo">Gratis-Demo anfordern</span><svg class="m-cta-arrow w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>';
+    document.body.appendChild(a);
+    const hero = document.querySelector('main > section'), hide = [document.getElementById('kontakt'), document.getElementById('ctaBand')].filter(Boolean);
+    ticks.push(() => {
+      const past = hero && hero.getBoundingClientRect().bottom < 0;
+      const covered = hide.some(s => { const r = s.getBoundingClientRect(); return r.top < innerHeight && r.bottom > 0; });
+      a.classList.toggle('show', past && !covered && !root.classList.contains('menu-open'));
+    });
+  }
+  if (FX.progress) {
+    const p = document.createElement('div'); p.className = 'fx-prog'; p.setAttribute('aria-hidden', 'true'); p.innerHTML = '<i></i>';
+    document.getElementById('top').appendChild(p);
+    ticks.push(() => { const max = document.documentElement.scrollHeight - innerHeight; p.firstChild.style.transform = 'scaleX(' + (max > 0 ? scrollY / max : 0).toFixed(4) + ')'; });
+  }
+  if (FX.marquee) {
+    const after = document.getElementById('leistungen');
+    if (after) {
+      const m = document.createElement('div'); m.className = 'fx-band'; m.setAttribute('aria-hidden', 'true'); m.innerHTML = '<div class="fx-track"></div>';
+      after.after(m);
+      const dia = '<svg viewBox="0 0 20 20"><path d="M10 1l9 9-9 9-9-9z" fill="#2563EB"/></svg>';
+      const build = (lang) => {
+        const words = ['s1t', 's2t', 's3t', 'heroBadge'].map(k => (T[k] && T[k][lang]) || '').concat(['HU · DE · EN']);
+        const one = words.map(w => '<span>' + w + dia + '</span>').join('');
+        m.firstChild.innerHTML = one + one + one + one;
+      };
+      const _sl = setLang; setLang = function (lang) { _sl(lang); build(lang); };
+      if (!reduce) {
+        let lastY = scrollY, rate = 1;
+        const anim = () => m.firstChild.getAnimations()[0];
+        ticks.push(() => { const v = scrollY - lastY; lastY = scrollY; rate = Math.min(6, 1 + Math.abs(v) / 6); /* mindig előre megy, sosem áll meg (Márton) */ const a = anim(); if (a) a.playbackRate = rate; });
+        setInterval(() => { const a = anim(); if (a && a.playbackRate > 1.05) a.playbackRate = a.playbackRate * 0.85 + 0.15; if (a && a.playState !== 'running') a.play(); }, 120);
+      }
+    }
+  }
+  if (FX.spotlight) {
+    document.querySelectorAll('#leistungen article, #kontakt .auto-rows-fr > *, .m-steps > li, #faq details').forEach(el => {
+      el.classList.add('fx-spot');
+      const set = (e) => { const r = el.getBoundingClientRect(); el.style.setProperty('--mx', (e.clientX - r.left) + 'px'); el.style.setProperty('--my', (e.clientY - r.top) + 'px'); };
+      el.addEventListener('pointermove', set);
+      el.addEventListener('pointerdown', (e) => { set(e); el.classList.add('tap'); setTimeout(() => el.classList.remove('tap'), 650); });
+    });
+  }
+  if (FX.ring) {
+    const demoCard = document.querySelector('#leistungen article:last-child');
+    const needBox = document.querySelector('#kontakt [data-i18n="needTitle"]');
+    [demoCard, needBox && needBox.closest('.rounded-2xl')].forEach(el => el && el.classList.add('fx-ringed'));
+  }
+  onScroll();
+})();
+
+(() => {
+  const wrap = document.querySelector('.lang-wrap'); if (!wrap) return;
+  const small = () => matchMedia('(max-width: 639px)').matches;
+  wrap.addEventListener('click', (e) => {
+    const b = e.target.closest('.lang-btn'); if (!b || !small()) return;
+    if (!wrap.classList.contains('open') && b.classList.contains('bg-navy')) { e.stopImmediatePropagation(); e.preventDefault(); wrap.classList.add('open'); return; }
+    wrap.classList.remove('open');
+  }, true);
+  document.addEventListener('click', (e) => { if (!wrap.contains(e.target)) wrap.classList.remove('open'); });
+})();
+const PAGE_LANG = 'en';
+const LANG_URL = {"de":"/","hu":"/hu/","en":"/en/","es":"/es/","hr":"/hr/"};
+(() => {
+  let q = null; try { q = new URLSearchParams(location.search).get('lang'); } catch (e) {}
+  if (LANGS.includes(q)) { if (q !== PAGE_LANG) { location.replace(LANG_URL[q] + location.hash); return; } history.replaceState(null, '', LANG_URL[q] + location.hash); return; }
+  if (PAGE_LANG !== 'de' || location.pathname !== '/' || /bot|crawl|spider|slurp|lighthouse|google|bing|yandex|duckduck/i.test(navigator.userAgent)) return;
+  let s = null; try { s = localStorage.getItem('rm-lang'); } catch (e) {}
+  if (!LANGS.includes(s)) {
+    s = null;
+    const prefs = (navigator.languages && navigator.languages.length ? navigator.languages : [navigator.language || '']);
+    for (const p of prefs) { const l = String(p).slice(0, 2).toLowerCase(); if (LANGS.includes(l)) { s = l; break; } }
+  }
+  if (s && s !== 'de') location.replace(LANG_URL[s] + location.hash);
+})();
+setLang(PAGE_LANG);
+
+const menuBtn = document.getElementById('menuBtn'), mobileNav = document.getElementById('mobileNav');
+const setMenu = (open) => {
+  document.documentElement.style.setProperty('--hh', document.getElementById('top').getBoundingClientRect().height + 'px');
+  mobileNav.classList.toggle('open', open); menuBtn.classList.toggle('open', open);
+  document.documentElement.classList.toggle('menu-open', open);
+  menuBtn.setAttribute('aria-expanded', open);
+};
+menuBtn.addEventListener('click', () => setMenu(!mobileNav.classList.contains('open')));
+mobileNav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => setMenu(false)));
+addEventListener('keydown', e => { if (e.key === 'Escape' && mobileNav.classList.contains('open')) { setMenu(false); menuBtn.focus(); } });
+addEventListener('resize', () => { if (innerWidth >= 1024 && mobileNav.classList.contains('open')) setMenu(false); });
+
+document.getElementById('year').textContent = new Date().getFullYear();
+
+if ('IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { threshold: 0.12 });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+} else {
+  document.querySelectorAll('.reveal').forEach(el => el.classList.add('in'));
+}
+</script>
+</body>
+</html>
