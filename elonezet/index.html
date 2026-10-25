@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ingyenes weboldal-előnézet – TekingXtra</title>
+<meta name="description" content="Ingyenes weboldal-előnézet a vállalkozásodnak 48 órán belül, kötelezettség nélkül. · Kostenlose Website-Vorschau in 48 Stunden. · Free website preview in 48 hours.">
+<link rel="icon" type="image/png" href="/assets/tekingxtra-logo.png">
+<meta property="og:title" content="Ingyenes weboldal-előnézet – TekingXtra">
+<meta property="og:image" content="https://tekingxtra.com/assets/tekingxtra-logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root { --navy:#0F172A; --cta:#0369A1; --cta-dark:#075985; --soft:#E0F2FE; --paper:#F8FAFC; --line:#E2E8F0; --text:#334155; --muted:#64748B; }
+  * { box-sizing:border-box; }
+  body { margin:0; font-family:'Schibsted Grotesk',system-ui,sans-serif; color:var(--text); background:var(--paper); line-height:1.5; }
+  a { color:var(--cta); }
+  header { background:#fff; border-bottom:1px solid var(--line); }
+  .bar { max-width:960px; margin:0 auto; padding:14px 16px; display:flex; align-items:center; justify-content:space-between; gap:12px; }
+  .brand { display:flex; align-items:center; gap:10px; text-decoration:none; color:var(--navy); font-weight:700; font-size:18px; }
+  .brand img { width:34px; height:34px; border-radius:8px; }
+  .langs a { margin-left:10px; font-size:14px; text-decoration:none; color:var(--muted); font-weight:600; }
+  .langs a.on { color:var(--navy); text-decoration:underline; }
+  main { max-width:960px; margin:0 auto; padding:40px 16px 64px; display:grid; gap:32px; grid-template-columns:1fr; }
+  @media (min-width:860px) { main { grid-template-columns:1fr 1.1fr; align-items:start; } }
+  h1 { color:var(--navy); font-size:34px; line-height:1.15; margin:0 0 14px; letter-spacing:-0.01em; }
+  .lead { font-size:18px; margin:0 0 22px; }
+  ul.steps { list-style:none; padding:0; margin:0 0 22px; }
+  ul.steps li { display:flex; gap:12px; margin-bottom:12px; font-size:16px; }
+  ul.steps b { flex:0 0 28px; height:28px; border-radius:50%; background:var(--soft); color:var(--cta); display:grid; place-items:center; font-size:14px; }
+  .price { font-size:15px; color:var(--muted); }
+  form { background:#fff; border:1px solid var(--line); border-radius:16px; padding:24px; }
+  label { display:block; font-weight:600; color:var(--navy); font-size:15px; margin:14px 0 6px; }
+  label:first-of-type { margin-top:0; }
+  .opt { font-weight:400; color:var(--muted); font-size:13px; }
+  input, textarea, select { width:100%; font:inherit; font-size:16px; padding:12px 14px; border:1px solid #CBD5E1; border-radius:10px; background:#fff; color:var(--navy); }
+  input:focus, textarea:focus, select:focus { outline:2px solid var(--cta); outline-offset:1px; border-color:var(--cta); }
+  textarea { min-height:96px; resize:vertical; }
+  button { margin-top:20px; width:100%; background:var(--cta); color:#fff; border:0; border-radius:12px; padding:15px 18px; font:inherit; font-weight:700; font-size:17px; cursor:pointer; }
+  button:hover { background:var(--cta-dark); }
+  .small { font-size:13px; color:var(--muted); margin-top:12px; }
+  .hp { position:absolute; left:-9999px; }
+  .thanks { display:none; background:#fff; border:1px solid var(--line); border-radius:16px; padding:28px; }
+  .thanks h2 { color:var(--navy); margin-top:0; }
+  footer { text-align:center; font-size:13px; color:var(--muted); padding:0 16px 32px; }
+</style>
+</head>
+<body>
+<header>
+  <div class="bar">
+    <a class="brand" href="/"><img src="/assets/tekingxtra-logo.png" alt="">TekingXtra</a>
+    <nav class="langs"><a href="?lang=hu" data-l="hu">HU</a><a href="?lang=de" data-l="de">DE</a><a href="?lang=en" data-l="en">EN</a></nav>
+  </div>
+</header>
+
+<main>
+  <section>
+    <h1 data-t="h1">Ingyenes weboldal-előnézet a vállalkozásodnak</h1>
+    <p class="lead" data-t="lead">48 órán belül elkészítem, hogyan nézhetne ki a weboldalad – ingyen, kötelezettség nélkül. Utána nyugodtan eldöntöd, kell-e.</p>
+    <ul class="steps">
+      <li><b>1</b><span data-t="s1">Kitöltöd a rövid űrlapot (1 perc).</span></li>
+      <li><b>2</b><span data-t="s2">48 órán belül e-mailben küldöm az előnézet linkjét.</span></li>
+      <li><b>3</b><span data-t="s3">Ha tetszik, együtt véglegesítjük. Ha nem, nincs vele dolgod.</span></li>
+    </ul>
+    <p class="price" data-t="price">Ha kéred a végleges oldalt: Svájcban 250 CHF-tól, az EU-ban 270 €-tól, Norvégiában 2 900 NOK-tól.</p>
+  </section>
+
+  <section>
+    <form id="f" action="https://formsubmit.co/reveszmarc@gmail.com" method="POST">
+      <input type="hidden" name="_subject" id="subj" value="Új előnézet-kérés – tekingxtra.com">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_next" id="next" value="https://tekingxtra.com/elonezet/?koszonjuk=1">
+      <input type="hidden" name="nyelv" id="nyelv" value="hu">
+      <input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off">
+
+      <label for="vallalkozas" data-t="lBiz">Vállalkozás neve és mivel foglalkozik</label>
+      <input id="vallalkozas" name="vallalkozas" required maxlength="200" data-ph="phBiz" placeholder="pl. Anna Szalon – fodrászat">
+
+      <label for="varos" data-t="lCity">Város / ország</label>
+      <input id="varos" name="varos" required maxlength="120" data-ph="phCity" placeholder="pl. Zürich, Svájc">
+
+      <label for="email" data-t="lMail">E-mail-cím (ide küldöm az előnézetet)</label>
+      <input id="email" name="email" type="email" required maxlength="160" data-ph="phMail" placeholder="nev@pelda.hu">
+
+      <label for="oldal"><span data-t="lSite">Meglévő weboldal vagy Facebook/Instagram</span> <span class="opt" data-t="opt">(nem kötelező)</span></label>
+      <input id="oldal" name="meglevo_oldal" maxlength="300" placeholder="https://">
+
+      <label for="telefon"><span data-t="lPhone">Telefon / WhatsApp</span> <span class="opt" data-t="opt2">(nem kötelező)</span></label>
+      <input id="telefon" name="telefon" type="tel" maxlength="40">
+
+      <label for="uzenet"><span data-t="lMsg">Amit még tudnom kell</span> <span class="opt" data-t="opt3">(nem kötelező)</span></label>
+      <textarea id="uzenet" name="uzenet" maxlength="2000" data-ph="phMsg" placeholder="pl. milyen nyelven legyen az oldal, mi a legfontosabb a vevőidnek"></textarea>
+
+      <button type="submit" data-t="btn">Kérem az ingyenes előnézetet</button>
+      <p class="small" data-t="note">Az adataidat csak az előnézethez és a válaszhoz használom. Az űrlapot a FormSubmit szolgáltatás továbbítja e-mailben. Részletek: <a href="/#privacy">Adatvédelem</a>.</p>
+    </form>
+    <div class="thanks" id="thanks">
+      <h2 data-t="tH">Köszönöm, megkaptam!</h2>
+      <p data-t="tP">48 órán belül e-mailben küldöm az előnézetet. Ha addig kérdésed van: reveszmarc@gmail.com</p>
+      <p><a href="/" data-t="tBack">Vissza a főoldalra</a></p>
+    </div>
+  </section>
+</main>
+<footer>TekingXtra · Révész Márton · <a href="mailto:reveszmarc@gmail.com">reveszmarc@gmail.com</a></footer>
+
+<script>
+(function(){
+  var T = {
+    hu: { title:'Ingyenes weboldal-előnézet – TekingXtra', subj:'Új előnézet-kérés – tekingxtra.com' },
+    de: { title:'Kostenlose Website-Vorschau – TekingXtra', subj:'Neue Vorschau-Anfrage – tekingxtra.com',
+      h1:'Kostenlose Website-Vorschau für Ihren Betrieb',
+      lead:'Innerhalb von 48 Stunden zeige ich Ihnen, wie Ihre Website aussehen könnte – kostenlos und unverbindlich. Danach entscheiden Sie in Ruhe.',
+      s1:'Sie füllen das kurze Formular aus (1 Minute).', s2:'Innerhalb von 48 Stunden schicke ich Ihnen den Link zur Vorschau per E-Mail.', s3:'Gefällt sie Ihnen, stellen wir sie gemeinsam fertig. Wenn nicht, ist nichts zu tun.',
+      price:'Wenn Sie die fertige Website möchten: in der Schweiz ab 250 CHF, in der EU ab 270 €, in Norwegen ab 2 900 NOK.',
+      lBiz:'Name Ihres Betriebs und was Sie anbieten', phBiz:'z. B. Coiffeur Anna – Damen & Herren', lCity:'Ort / Land', phCity:'z. B. Zürich, Schweiz',
+      lMail:'E-Mail-Adresse (dorthin schicke ich die Vorschau)', phMail:'name@beispiel.ch', lSite:'Bestehende Website oder Facebook/Instagram', opt:'(optional)', opt2:'(optional)', opt3:'(optional)',
+      lPhone:'Telefon / WhatsApp', lMsg:'Was ich sonst noch wissen sollte', phMsg:'z. B. Sprache der Website, was Ihren Kunden am wichtigsten ist',
+      btn:'Kostenlose Vorschau anfordern', note:'Ihre Angaben verwende ich nur für die Vorschau und meine Antwort. Das Formular wird über den Dienst FormSubmit per E-Mail übermittelt. Details: <a href="/?lang=de#privacy">Datenschutz</a>.',
+      tH:'Danke, ist angekommen!', tP:'Innerhalb von 48 Stunden schicke ich Ihnen die Vorschau per E-Mail. Fragen bis dahin: reveszmarc@gmail.com', tBack:'Zurück zur Startseite' },
+    en: { title:'Free website preview – TekingXtra', subj:'New preview request – tekingxtra.com',
+      h1:'Free website preview for your business',
+      lead:'Within 48 hours I’ll show you what your website could look like – free and with no strings attached. Then you decide in your own time.',
+      s1:'Fill in the short form (1 minute).', s2:'Within 48 hours I email you the link to your preview.', s3:'If you like it, we finish it together. If not, there’s nothing to do.',
+      price:'If you want the finished website: from CHF 250 in Switzerland, from €270 in the EU, from NOK 2,900 in Norway.',
+      lBiz:'Business name and what you do', phBiz:'e.g. Anna’s Salon – hairdresser', lCity:'City / country', phCity:'e.g. Zurich, Switzerland',
+      lMail:'Email address (I’ll send the preview here)', phMail:'name@example.com', lSite:'Existing website or Facebook/Instagram', opt:'(optional)', opt2:'(optional)', opt3:'(optional)',
+      lPhone:'Phone / WhatsApp', lMsg:'Anything else I should know', phMsg:'e.g. website language, what matters most to your customers',
+      btn:'Get my free preview', note:'I only use your details for the preview and my reply. The form is forwarded by email via the FormSubmit service. Details: <a href="/?lang=en#privacy">Privacy</a>.',
+      tH:'Thanks, got it!', tP:'I’ll email you the preview within 48 hours. Questions in the meantime: reveszmarc@gmail.com', tBack:'Back to the homepage' }
+  };
+  var q = new URLSearchParams(location.search);
+  var def = document.documentElement.getAttribute('data-default') || 'hu';
+  var lang = q.get('lang'); if (!T[lang]) lang = def;
+  var L = T[lang];
+  document.documentElement.lang = lang;
+  document.title = L.title;
+  document.getElementById('subj').value = L.subj;
+  document.getElementById('nyelv').value = lang;
+  document.getElementById('next').value = 'https://tekingxtra.com/elonezet/?lang=' + lang + '&koszonjuk=1';
+  if (lang !== 'hu') {
+    document.querySelectorAll('[data-t]').forEach(function(e){ var k=e.getAttribute('data-t'); if (L[k]) e.innerHTML = L[k]; });
+    document.querySelectorAll('[data-ph]').forEach(function(e){ var k=e.getAttribute('data-ph'); if (L[k]) e.placeholder = L[k]; });
+  }
+  document.querySelectorAll('.langs a').forEach(function(a){ if (a.getAttribute('data-l')===lang) a.className='on'; });
+  if (q.get('koszonjuk')) { document.getElementById('f').style.display='none'; document.getElementById('thanks').style.display='block'; }
+})();
+</script>
+</body>
+</html>
