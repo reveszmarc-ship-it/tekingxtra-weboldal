@@ -1016,9 +1016,9 @@ function updateDemoLinks(lang) {
   document.querySelectorAll('[data-i18n="ctaDemo"]').forEach((el) => {
     const a = el.closest('a');
     if (!a) return;
-    a.href = demoMailUrl(lang);
-    a.target = '_blank';
-    a.rel = 'noopener';
+    a.href = '/elonezet/?lang=' + (DEMO_MAIL[lang] ? lang : 'de');
+    a.removeAttribute('target');
+    a.removeAttribute('rel');
   });
 }
 const _setLangOrig = setLang;
