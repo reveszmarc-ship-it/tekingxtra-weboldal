@@ -7,6 +7,8 @@
 <link rel="alternate" hreflang="de" href="https://tekingxtra.com/?lang=de">
 <link rel="alternate" hreflang="hu" href="https://tekingxtra.com/?lang=hu">
 <link rel="alternate" hreflang="en" href="https://tekingxtra.com/?lang=en">
+<link rel="alternate" hreflang="es" href="https://tekingxtra.com/?lang=es">
+<link rel="alternate" hreflang="hr" href="https://tekingxtra.com/?lang=hr">
 <link rel="alternate" hreflang="x-default" href="https://tekingxtra.com/">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://tekingxtra.com/">
@@ -314,9 +316,24 @@
   .cta-video { filter: grayscale(1) sepia(1) hue-rotate(178deg) saturate(2.4) brightness(.9); } 
   header#top nav a, header#top a.bg-cta { white-space: nowrap; }
   @media (min-width: 1024px) and (max-width: 1279px) {  header#top nav { gap: 18px; font-size: 14px; } .lang-btn span { display: none; } }
+  
+  .legal-note { margin: 16px 0 0; padding: 10px 14px; border-radius: 10px; background: #F1F5F9; font-size: 14px; color: #0F172A; }
+  .lang-btn.bg-navy { order: -1; }
+  @media (min-width: 640px) and (max-width: 1439px) { .lang-btn span { display: none; } }
+  @media (max-width: 639px) {
+    .lang-wrap { position: relative; width: 38px; height: 34px; }
+    #langGroup { position: absolute; right: 0; top: 0; flex-direction: column; gap: 2px; background: #fff; z-index: 60; }
+    #langGroup .lang-btn { padding: 6px 7px !important; }
+    #langGroup .lang-btn:not(.bg-navy) { display: none; }
+    .lang-wrap.open #langGroup { box-shadow: 0 14px 30px -10px rgba(15,23,42,.35); }
+    .lang-wrap.open #langGroup .lang-btn { display: inline-flex; animation: langIn .25s cubic-bezier(.2,.8,.2,1) both; }
+    .lang-wrap.open #langGroup .lang-btn:nth-child(2) { animation-delay: .03s; } .lang-wrap.open #langGroup .lang-btn:nth-child(3) { animation-delay: .06s; }
+    .lang-wrap.open #langGroup .lang-btn:nth-child(4) { animation-delay: .09s; } .lang-wrap.open #langGroup .lang-btn:nth-child(5) { animation-delay: .12s; }
+  }
+  @keyframes langIn { from { opacity: 0; transform: translateY(-6px); } to { opacity: 1; transform: none; } }
 </style>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"ProfessionalService","name":"TekingXtra","url":"https://tekingxtra.com/","logo":"https://tekingxtra.com/assets/tekingxtra-logo.png","image":"https://tekingxtra.com/assets/tekingxtra-logo.png","description":"Websites und Social Media für kleine Unternehmen, mit kostenloser Demo.","founder":{"@type":"Person","name":"Márton Révész"},"email":"reveszmarc@gmail.com","telephone":"+36 70 234 8601","address":{"@type":"PostalAddress","streetAddress":"Józsefhegyi utca 8.","postalCode":"2045","addressLocality":"Törökbálint","addressCountry":"HU"},"areaServed":"Worldwide","availableLanguage":["de","hu","en"],"priceRange":"ab 250 €","sameAs":["https://www.facebook.com/tekingxtra","https://www.instagram.com/tekingxtra_hu/","https://www.tiktok.com/@tekingxtra_hu"]}
+{"@context":"https://schema.org","@type":"ProfessionalService","name":"TekingXtra","url":"https://tekingxtra.com/","logo":"https://tekingxtra.com/assets/tekingxtra-logo.png","image":"https://tekingxtra.com/assets/tekingxtra-logo.png","description":"Websites und Social Media für kleine Unternehmen, mit kostenloser Demo.","founder":{"@type":"Person","name":"Márton Révész"},"email":"reveszmarc@gmail.com","telephone":"+36 70 234 8601","address":{"@type":"PostalAddress","streetAddress":"Józsefhegyi utca 8.","postalCode":"2045","addressLocality":"Törökbálint","addressCountry":"HU"},"areaServed":"Worldwide","availableLanguage":["de","hu","en","es","hr"],"priceRange":"ab 250 €","sameAs":["https://www.facebook.com/tekingxtra","https://www.instagram.com/tekingxtra_hu/","https://www.tiktok.com/@tekingxtra_hu"]}
 </script></head>
 <body class="bg-paper text-ink antialiased">
 <div class="side-deco side-left" aria-hidden="true">
@@ -364,11 +381,13 @@
       <a href="#kontakt" class="hover:text-cta transition-colors duration-200 cursor-pointer" data-i18n="navContact">Kontakt</a>
     </nav>
     <div class="flex items-center gap-2">
-      <div class="flex rounded-lg border border-line p-0.5 text-[13px] font-medium" role="group" aria-label="Sprache / Nyelv / Language">
+      <div class="lang-wrap"><div id="langGroup" class="flex rounded-lg border border-line p-0.5 text-[13px] font-medium" role="group" aria-label="Sprache / Nyelv / Language / Idioma / Jezik">
         <button type="button" data-lang="de" aria-label="Deutsch" title="Deutsch" class="lang-btn inline-flex items-center gap-1.5 px-2 py-1 rounded-md cursor-pointer transition-colors duration-200"><svg class="fx-flag w-5 h-[14px] shrink-0 rounded-[3px] ring-1 ring-black/10" aria-hidden="true" preserveAspectRatio="none" viewBox="0 0 5 3"><rect width="5" height="3" fill="#000"/><rect width="5" height="2" y="1" fill="#DD0000"/><rect width="5" height="1" y="2" fill="#FFCE00"/></svg><span class="max-sm:hidden">DE</span></button>
         <button type="button" data-lang="hu" aria-label="Magyar" title="Magyar" class="lang-btn inline-flex items-center gap-1.5 px-2 py-1 rounded-md cursor-pointer transition-colors duration-200"><svg class="fx-flag w-5 h-[14px] shrink-0 rounded-[3px] ring-1 ring-black/10" aria-hidden="true" preserveAspectRatio="none" viewBox="0 0 6 3"><rect width="6" height="3" fill="#477050"/><rect width="6" height="2" fill="#FFFFFF"/><rect width="6" height="1" fill="#CE2939"/></svg><span class="max-sm:hidden">HU</span></button>
         <button type="button" data-lang="en" aria-label="English" title="English" class="lang-btn inline-flex items-center gap-1.5 px-2 py-1 rounded-md cursor-pointer transition-colors duration-200"><svg class="fx-flag w-5 h-[14px] shrink-0 rounded-[3px] ring-1 ring-black/10" aria-hidden="true" preserveAspectRatio="none" viewBox="0 0 60 30"><clipPath id="ukS"><path d="M0,0 v30 h60 v-30 z"/></clipPath><clipPath id="ukT"><path d="M30,15 h30 v15 z v15 h-30 z h-30 v-15 z v-15 h30 z"/></clipPath><g clip-path="url(#ukS)"><path d="M0,0 v30 h60 v-30 z" fill="#012169"/><path d="M0,0 L60,30 M60,0 L0,30" stroke="#fff" stroke-width="6"/><path d="M0,0 L60,30 M60,0 L0,30" clip-path="url(#ukT)" stroke="#C8102E" stroke-width="4"/><path d="M30,0 v30 M0,15 h60" stroke="#fff" stroke-width="10"/><path d="M30,0 v30 M0,15 h60" stroke="#C8102E" stroke-width="6"/></g></svg><span class="max-sm:hidden">EN</span></button>
-      </div>
+        <button type="button" data-lang="es" aria-label="Español" title="Español" class="lang-btn inline-flex items-center gap-1.5 px-2 py-1 rounded-md cursor-pointer transition-colors duration-200"><svg class="fx-flag w-5 h-[14px] shrink-0 rounded-[3px] ring-1 ring-black/10" aria-hidden="true" preserveAspectRatio="none" viewBox="0 0 3 2"><rect width="3" height="2" fill="#AA151B"/><rect width="3" height="1" y=".5" fill="#F1BF00"/></svg><span class="max-sm:hidden">ES</span></button>
+        <button type="button" data-lang="hr" aria-label="Hrvatski" title="Hrvatski" class="lang-btn inline-flex items-center gap-1.5 px-2 py-1 rounded-md cursor-pointer transition-colors duration-200"><svg class="fx-flag w-5 h-[14px] shrink-0 rounded-[3px] ring-1 ring-black/10" aria-hidden="true" preserveAspectRatio="none" viewBox="0 0 6 3"><rect width="6" height="3" fill="#171796"/><rect width="6" height="2" fill="#FFFFFF"/><rect width="6" height="1" fill="#FF0000"/><rect x="2.6" y=".62" width=".8" height=".8" fill="#FFFFFF"/><rect x="2.60" y="0.62" width=".16" height=".16" fill="#FF0000"/><rect x="2.92" y="0.62" width=".16" height=".16" fill="#FF0000"/><rect x="3.24" y="0.62" width=".16" height=".16" fill="#FF0000"/><rect x="2.76" y="0.78" width=".16" height=".16" fill="#FF0000"/><rect x="3.08" y="0.78" width=".16" height=".16" fill="#FF0000"/><rect x="2.60" y="0.94" width=".16" height=".16" fill="#FF0000"/><rect x="2.92" y="0.94" width=".16" height=".16" fill="#FF0000"/><rect x="3.24" y="0.94" width=".16" height=".16" fill="#FF0000"/><rect x="2.76" y="1.10" width=".16" height=".16" fill="#FF0000"/><rect x="3.08" y="1.10" width=".16" height=".16" fill="#FF0000"/><rect x="2.60" y="1.26" width=".16" height=".16" fill="#FF0000"/><rect x="2.92" y="1.26" width=".16" height=".16" fill="#FF0000"/><rect x="3.24" y="1.26" width=".16" height=".16" fill="#FF0000"/></svg><span class="max-sm:hidden">HR</span></button>
+      </div></div>
       <a href="#kontakt" class="hidden md:inline-flex items-center gap-2 bg-cta hover:bg-cta-dark text-white text-[15px] font-medium px-4 py-2 rounded-lg transition-colors duration-200 cursor-pointer" data-i18n="ctaDemo">Gratis-Demo anfordern</a>
       <button id="menuBtn" type="button" class="lg:hidden relative z-50 p-2 rounded-lg hover:bg-slate-100 cursor-pointer transition-colors duration-200" aria-expanded="false" aria-controls="mobileNav" aria-label="Menü">
         <span class="burger" aria-hidden="true"><i></i><i></i><i></i></span>
@@ -957,16 +976,21 @@ const T = {
   textMissing: { de: '[Text folgt]', hu: '[Szöveg később]', en: '[Text to follow]' },
   footerDemo: { de: 'Demo-Version', hu: 'Demó verzió', en: 'Demo version' }
 };
+const T_ESHR = {"ctaWrite":{"es":"Escríbeme","hr":"Piši mi"},"aboutSummary":{"es":"Conóceme mejor","hr":"Upoznaj me bolje"},"aboutHello":{"es":"¡Hola, soy Marci!","hr":"Bok, ja sam Marci!"},"aboutRole":{"es":"Desarrollador web · 18 años","hr":"Web developer · 18 godina"},"aboutP":{"es":"Ahora vivo en Hungría, pero veo mi futuro en el extranjero, así que lo que más me importa ahora es crear contactos y trabajar con el mayor número posible de negocios.","hr":"Trenutno živim u Mađarskoj, ali svoju budućnost vidim u inozemstvu, zato mi je sada najvažnije stvarati kontakte i surađivati s što više tvrtki."},"aboutStudyT":{"es":"Estudios","hr":"Školovanje"},"aboutLangT":{"es":"Idiomas","hr":"Jezici"},"aboutLang":{"es":"Hablo húngaro, inglés y alemán.","hr":"Govorim mađarski, engleski i njemački."},"aboutC1":{"es":"Certificado de inglés B2","hr":"Certifikat iz engleskog B2"},"aboutC2":{"es":"Certificado de alemán B2","hr":"Certifikat iz njemačkog B2"},"aboutC3":{"es":"Ganador del concurso nacional de alemán (nivel C1)","hr":"Pobjednik državnog natjecanja iz njemačkog (razina C1)"},"aboutBye":{"es":"Me encantará conocerte a ti y a tu negocio.","hr":"Veselim se upoznati tebe i tvoju tvrtku."},"aboutSchools":{"es":"Escuela Bálint Márton, Törökbálint · Instituto Illyés Gyula, Budaörs","hr":"Škola Bálint Márton, Törökbálint · Gimnazija Illyés Gyula, Budaörs"},"needTitle":{"es":"Qué necesito para tu demo","hr":"Što mi treba za tvoj demo"},"need1":{"es":"El nombre de tu negocio y a qué te dedicas","hr":"Naziv tvoje tvrtke i čime se baviš"},"need2":{"es":"Ciudad / país","hr":"Grad / država"},"need3":{"es":"Web actual o Facebook / Instagram (si los tienes)","hr":"Postojeća web stranica ili Facebook / Instagram (ako postoje)"},"need4":{"es":"Logo y algunas fotos (si los tienes)","hr":"Logo i nekoliko fotografija (ako postoje)"},"need5":{"es":"En qué idioma(s) debe estar la web","hr":"Na kojem jeziku (ili jezicima) treba biti stranica"},"needNote":{"es":"¿Falta algo? No pasa nada. Lo marco en el borrador.","hr":"Nešto nedostaje? Nema problema. Označit ću to u nacrtu."},"demobar":{"es":"Demo: los campos con borde discontinuo <span class=\"missing\">[ … ]</span> se completarán más adelante.","hr":"Demo: polja s isprekidanim okvirom <span class=\"missing\">[ … ]</span> bit će dopunjena."},"navServices":{"es":"Servicios","hr":"Usluge"},"navProcess":{"es":"Cómo trabajo","hr":"Kako radim"},"navWhy":{"es":"¿Por qué yo?","hr":"Zašto ja?"},"navRefs":{"es":"Trabajos","hr":"Radovi"},"navFaq":{"es":"Preguntas","hr":"Pitanja"},"navContact":{"es":"Contacto","hr":"Kontakt"},"ctaDemo":{"es":"Pide tu demo gratis","hr":"Zatraži besplatni demo"},"heroBadge":{"es":"En cualquier parte del mundo","hr":"Bilo gdje u svijetu"},"heroTitle":{"es":"Una web que trae clientes. <span class=\"grad-text\">Con demo gratis.</span>","hr":"Web stranica koja donosi kupce. <span class=\"grad-text\">Uz besplatni demo.</span>"},"heroSub":{"es":"Webs y redes sociales para pequeños negocios. Primero lo ves, después decides.","hr":"Web stranice i društvene mreže za male tvrtke. Prvo vidiš, zatim odlučiš."},"servicesTitle":{"es":"Todo para tu presencia online","hr":"Sve za tvoju online prisutnost"},"servicesSub":{"es":"Para peluquerías, cafeterías, artesanos y asociaciones.","hr":"Za frizerske salone, kafiće, obrtnike i udruge."},"s1t":{"es":"Diseño web","hr":"Izrada web stranica"},"s1d":{"es":"Moderna, rápida, adaptada al móvil. Desde 250 €.","hr":"Moderna, brza, prilagođena mobitelu. Od 250 €."},"s2t":{"es":"Facebook &amp; Instagram","hr":"Facebook &amp; Instagram"},"s2d":{"es":"Publicaciones y presencia constante.","hr":"Objave i redovita prisutnost."},"s3badge":{"es":"El primer paso","hr":"Prvi korak"},"s3t":{"es":"Demo gratis","hr":"Besplatni demo"},"s3d":{"es":"Tu web en borrador, antes de decidir.","hr":"Tvoja stranica kao nacrt, prije odluke."},"processTitle":{"es":"Online en 4 pasos","hr":"Online u 4 koraka"},"p1t":{"es":"Contacto","hr":"Javi se"},"p1d":{"es":"Escríbeme o llámame.","hr":"Piši mi ili nazovi."},"p2t":{"es":"Demo gratis","hr":"Besplatni demo"},"p2d":{"es":"Primer borrador, gratis.","hr":"Prvi nacrt, besplatno."},"p3t":{"es":"Ajustes","hr":"Dorada"},"p3d":{"es":"Lo pulimos juntos.","hr":"Zajedno je doradimo."},"p4t":{"es":"Publicación","hr":"Objava"},"p4d":{"es":"Tu web ya está online.","hr":"Tvoja stranica je online."},"whyTitle":{"es":"Método moderno, trato personal","hr":"Moderan način rada, osobni kontakt"},"whySub":{"es":"La IA hace el trabajo rutinario. Tú tienes más de mi tiempo.","hr":"UI obavlja rutinu. Ti dobivaš više mog vremena."},"w1t":{"es":"Tres idiomas","hr":"Tri jezika"},"w1d":{"es":"HU · DE · EN","hr":"HU · DE · EN"},"w2t":{"es":"Rápido","hr":"Brzo"},"w2d":{"es":"Un borrador concreto, pronto.","hr":"Konkretan nacrt, brzo."},"refsTitle":{"es":"Trabajos seleccionados","hr":"Odabrani radovi"},"refsSub":{"es":"Muy pronto.","hr":"Uskoro."},"refPh":{"es":"[Captura del proyecto]","hr":"[Snimka zaslona projekta]"},"refName":{"es":"[Cliente / sector]","hr":"[Klijent / djelatnost]"},"refType1":{"es":"Web","hr":"Web stranica"},"refType2":{"es":"Redes sociales","hr":"Društvene mreže"},"reviewPh":{"es":"[Opiniones de clientes: se añadirán cuando haya valoraciones reales]","hr":"[Recenzije klijenata: bit će dodane kada stignu stvarne povratne informacije]"},"faqTitle":{"es":"Preguntas frecuentes","hr":"Česta pitanja"},"q1":{"es":"¿Cuánto cuesta una web?","hr":"Koliko košta web stranica?"},"a1":{"es":"Una web empieza en 250 €. El precio exacto depende del alcance. Tras una breve conversación recibes un presupuesto personalizado en CHF, EUR o HUF.","hr":"Web stranica počinje od 250 €. Točna cijena ovisi o opsegu. Nakon kratkog razgovora dobivaš individualnu ponudu u CHF, EUR ili HUF."},"q2":{"es":"¿La demo es realmente gratis?","hr":"Je li demo stvarno besplatan?"},"a2":{"es":"Sí. La demo te muestra cómo podría ser tu web. Después decides con calma si quieres seguir.","hr":"Da. Demo ti pokazuje kako bi tvoja stranica mogla izgledati. Nakon toga u miru odlučuješ želiš li nastaviti."},"q3":{"es":"¿Qué necesitas para empezar?","hr":"Što ti treba za početak?"},"a3":{"es":"El nombre de tu negocio, qué ofreces y cómo pueden contactarte. Los textos, fotos o el logo que ya tengas ayudan. Lo que falte lo marco en el borrador.","hr":"Naziv tvoje tvrtke, što nudiš i kako te mogu kontaktirati. Postojeći tekstovi, fotografije ili logo pomažu. Što nedostaje, označim u nacrtu."},"q4":{"es":"¿Para qué usas la inteligencia artificial?","hr":"Za što koristiš umjetnu inteligenciju?"},"a4":{"es":"Para tareas repetitivas, como los primeros borradores y organizar el correo. El diseño, la coordinación y el contacto siguen siendo personales: conmigo.","hr":"Za ponavljajuće zadatke, poput prvih nacrta i organiziranja pošte. Dizajn, dogovor i kontakt ostaju osobni: sa mnom."},"q5":{"es":"¿Mi web puede estar en varios idiomas?","hr":"Može li moja stranica biti na više jezika?"},"a5":{"es":"Sí. Trabajo en alemán, húngaro e inglés, y tu web puede publicarse en uno o varios de estos idiomas.","hr":"Da. Radim na njemačkom, mađarskom i engleskom, a tvoja stranica može biti na jednom ili više tih jezika."},"q6":{"es":"¿También gestionas Facebook e Instagram?","hr":"Vodiš li i Facebook i Instagram?"},"a6":{"es":"Sí. Creo publicaciones y te mantengo presente con regularidad, también junto con tu web si quieres.","hr":"Da. Izrađujem objave i brinem se o tvojoj redovitoj prisutnosti, ako želiš i uz web stranicu."},"ctaBandTitle":{"es":"Mira tu nueva web antes de decidir.","hr":"Pogledaj svoju novu stranicu prije nego odlučiš."},"ctaBandSub":{"es":"Bastan unas líneas.","hr":"Dovoljno je nekoliko redaka."},"contactTitle":{"es":"Cuéntame sobre tu negocio","hr":"Ispričaj mi o svojoj tvrtki"},"cEmail":{"es":"Correo","hr":"E-pošta"},"cPhone":{"es":"Teléfono","hr":"Telefon"},"cArea":{"es":"Zona de trabajo","hr":"Područje rada"},"cAreaVal":{"es":"En cualquier parte del mundo","hr":"Bilo gdje u svijetu"},"cSocial":{"es":"Redes sociales","hr":"Društvene mreže"},"footerTag":{"es":"Webs y redes sociales para pequeños negocios y asociaciones.","hr":"Web stranice i društvene mreže za male tvrtke i udruge."},"footerLegal":{"es":"Legal","hr":"Pravne informacije"},"impressum":{"es":"Aviso legal","hr":"Impresum"},"privacy":{"es":"Privacidad","hr":"Privatnost"},"terms":{"es":"Condiciones","hr":"Uvjeti"},"footerDemo":{"es":"Versión demo","hr":"Demo verzija"}};
+for (const k in T_ESHR) Object.assign(T[k] = T[k] || {}, T_ESHR[k]);
+
 const TITLES = {
   de: 'TekingXtra – Websites & Social Media für KMU',
   hu: 'TekingXtra – Weboldal & közösségi média kisvállalkozásoknak',
-  en: 'TekingXtra – Websites & social media for small businesses'
+  en: 'TekingXtra – Websites & social media for small businesses',
+  es: 'TekingXtra – Webs y redes sociales para pequeños negocios',
+  hr: 'TekingXtra – Web stranice i društvene mreže za male tvrtke'
 };
 function setLang(lang) {
   document.documentElement.lang = lang;
   document.title = TITLES[lang];
   document.querySelectorAll('[data-i18n]').forEach(el => {
-    const e = T[el.dataset.i18n]; if (e && e[lang]) el.innerHTML = e[lang];
+    const e = T[el.dataset.i18n]; const v = e && (e[lang] || e.en); if (v) el.innerHTML = v;
   });
   document.querySelectorAll('.lang-btn').forEach(b => {
     const on = b.dataset.lang === lang;
@@ -1007,6 +1031,8 @@ const DEMO_MAIL = {
   de: { su: 'Anfrage: kostenlose Demo-Website', body: 'Hallo Márton\n\nich möchte gerne eine kostenlose Demo-Website.\n\nName des Betriebs: \nWas wir anbieten: \nOrt / Land: \nBestehende Website oder Facebook / Instagram (falls vorhanden): \nSprache(n) der Website: \nTelefon (optional): \n\nLogo und Fotos hänge ich – falls vorhanden – an diese E-Mail an.\n\nFreundliche Grüsse\n' },
   hu: { su: 'Ingyenes demó kérése', body: 'Szia Márton!\n\nIngyenes demó weboldalt szeretnék kérni.\n\nA vállalkozás neve: \nMivel foglalkozunk: \nVáros / ország: \nMeglévő weboldal vagy Facebook / Instagram (ha van): \nMilyen nyelven legyen az oldal: \nTelefonszám (nem kötelező): \n\nA logót és a fotókat – ha vannak – ehhez a levélhez csatolom.\n\nÜdvözlettel:\n' },
   en: { su: 'Request: free demo website', body: 'Hi Márton,\n\nI would like a free demo website.\n\nBusiness name: \nWhat we offer: \nCity / country: \nExisting website or Facebook / Instagram (if any): \nLanguage(s) of the website: \nPhone (optional): \n\nI will attach our logo and photos (if we have them) to this email.\n\nBest regards,\n' },
+  es: { su: 'Solicitud: web de demostración gratis', body: 'Hola, Márton:\n\nMe gustaría una web de demostración gratis.\n\nNombre del negocio: \nA qué nos dedicamos: \nCiudad / país: \nWeb actual o Facebook / Instagram (si los hay): \nIdioma(s) de la web: \nTeléfono (opcional): \n\nAdjunto nuestro logo y fotos (si los tenemos) a este correo.\n\nUn saludo,\n' },
+  hr: { su: 'Upit: besplatna demo web stranica', body: 'Bok Márton,\n\nželio/željela bih besplatnu demo web stranicu.\n\nNaziv tvrtke: \nČime se bavimo: \nGrad / država: \nPostojeća web stranica ili Facebook / Instagram (ako postoje): \nJezik (jezici) stranice: \nTelefon (nije obavezno): \n\nLogo i fotografije (ako ih imamo) prilažem ovom e-mailu.\n\nLijep pozdrav,\n' },
 };
 function demoMailUrl(lang) {
   const m = DEMO_MAIL[lang] || DEMO_MAIL.de;
@@ -1016,9 +1042,9 @@ function updateDemoLinks(lang) {
   document.querySelectorAll('[data-i18n="ctaDemo"]').forEach((el) => {
     const a = el.closest('a');
     if (!a) return;
-    a.href = '/elonezet/?lang=' + (DEMO_MAIL[lang] ? lang : 'de');
-    a.removeAttribute('target');
-    a.removeAttribute('rel');
+    a.href = demoMailUrl(lang);
+    a.target = '_blank';
+    a.rel = 'noopener';
   });
 }
 const _setLangOrig = setLang;
@@ -1043,8 +1069,8 @@ document.querySelectorAll('.legal-dlg').forEach(d => {
   d.addEventListener('click', e => { if (e.target === d) d.close(); });
 });
 const _setLangLegal = setLang;
-setLang = function (lang) { _setLangLegal(lang); document.querySelectorAll('.legal-body [data-ll]').forEach(el => el.classList.toggle('on', el.dataset.ll === lang)); document.querySelectorAll('.legal-x').forEach(b => b.setAttribute('aria-label', { de: 'Schließen', hu: 'Bezárás', en: 'Close' }[lang])); };
-const LANGS = ['de', 'hu', 'en'];
+setLang = function (lang) { _setLangLegal(lang); const ll = (lang === 'es' || lang === 'hr') ? 'en' : lang; document.querySelectorAll('.legal-body [data-ll]').forEach(el => el.classList.toggle('on', el.dataset.ll === ll)); document.querySelectorAll('.legal-x').forEach(b => b.setAttribute('aria-label', { de: 'Schließen', hu: 'Bezárás', en: 'Close', es: 'Cerrar', hr: 'Zatvori' }[lang])); const note = { es: 'Este texto legal se muestra en inglés. En caso de discrepancias prevalece la versión húngara.', hr: 'Ovaj pravni tekst prikazan je na engleskom. U slučaju odstupanja mjerodavna je mađarska verzija.' }[lang] || ''; document.querySelectorAll('.legal-body').forEach(b => { let n = b.querySelector('.legal-note'); if (!n) { n = document.createElement('p'); n.className = 'legal-note'; b.prepend(n); } n.textContent = note; n.hidden = !note; }); };
+const LANGS = ['de', 'hu', 'en', 'es', 'hr'];
 
 (() => {
   const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -1237,6 +1263,17 @@ const FX = {
     [demoCard, needBox && needBox.closest('.rounded-2xl')].forEach(el => el && el.classList.add('fx-ringed'));
   }
   onScroll();
+})();
+
+(() => {
+  const wrap = document.querySelector('.lang-wrap'); if (!wrap) return;
+  const small = () => matchMedia('(max-width: 639px)').matches;
+  wrap.addEventListener('click', (e) => {
+    const b = e.target.closest('.lang-btn'); if (!b || !small()) return;
+    if (!wrap.classList.contains('open') && b.classList.contains('bg-navy')) { e.stopImmediatePropagation(); e.preventDefault(); wrap.classList.add('open'); return; }
+    wrap.classList.remove('open');
+  }, true);
+  document.addEventListener('click', (e) => { if (!wrap.contains(e.target)) wrap.classList.remove('open'); });
 })();
 let initial = null;
 try { const q = new URLSearchParams(location.search).get('lang'); if (LANGS.includes(q)) initial = q; } catch (e) {}
