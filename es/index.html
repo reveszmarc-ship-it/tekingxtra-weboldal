@@ -534,6 +534,27 @@
   </div>
 </section>
 
+<section id="video" class="py-20 md:py-28 bg-paper scroll-mt-16">
+  <div class="max-w-4xl mx-auto px-4">
+    <div class="reveal text-center">
+      <h2 class="mt-3 text-[32px] md:text-[48px] leading-tight font-bold text-navy" data-i18n="videoTitle">¿Por qué tu web es el escaparate de hoy?</h2>
+      <p class="mt-4 text-[18px] text-slate2 leading-relaxed max-w-2xl mx-auto" data-i18n="videoSub">Cinco minutos sobre el «cliente invisible» y cómo la IA ayuda a crear una buena web. En húngaro, con subtítulos en cinco idiomas.</p>
+    </div>
+    <div class="reveal mt-10">
+      <button type="button" id="ytFacade" class="group relative block w-full overflow-hidden rounded-2xl shadow-lg ring-1 ring-black/10" style="aspect-ratio:16/9">
+        <img src="/assets/video-thumb.jpg" alt="" loading="lazy" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.04]">
+        <span class="absolute inset-0 flex items-center justify-center">
+          <span class="inline-flex items-center gap-3 rounded-full bg-cta text-white font-semibold text-[17px] px-6 py-3 shadow-lg transition-transform duration-300 group-hover:scale-105">
+            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+            <span data-i18n="videoPlay">Reproducir vídeo</span>
+          </span>
+        </span>
+      </button>
+      <p class="mt-3 text-center text-[13px] text-slate-600" data-i18n="videoNote">Al reproducirlo, el vídeo se carga desde YouTube.</p>
+    </div>
+  </div>
+</section>
+
 <section id="faq" class="py-20 md:py-28 bg-white scroll-mt-16">
   <div class="max-w-3xl mx-auto px-4">
     <div class="reveal text-center">
@@ -807,6 +828,10 @@ const T = {
   whyKicker: { de: 'Warum ich?', hu: 'Miért én?', en: 'Why me?' },
   whyTitle: { de: 'Moderne Arbeitsweise, persönlicher Kontakt', hu: 'Modern munkamódszer, személyes kapcsolat', en: 'Modern workflow, personal contact' },
   whySub: { de: 'KI für Routine – mehr Zeit für Sie.', hu: 'AI a rutinra – több idő rád.', en: 'AI does the routine work. You get more of my time.' },
+  videoTitle: { de: 'Warum Ihre Website das Schaufenster von heute ist', hu: 'Miért a weboldal a mai kirakat?', en: 'Why your website is today’s shop window', es: '¿Por qué tu web es el escaparate de hoy?', hr: 'Zašto je web-stranica današnji izlog?' },
+  videoSub: { de: 'Fünf Minuten über den „unsichtbaren Kunden“ und wie KI bei einer guten Website hilft. Auf Ungarisch, mit Untertiteln in fünf Sprachen.', hu: 'Öt perc arról, mi az a „láthatatlan vevő”, és hogyan segít az AI egy jó weboldal elkészítésében. Magyarul, öt nyelvű felirattal.', en: 'Five minutes on the “invisible customer” and how AI helps build a good website. In Hungarian, with subtitles in five languages.', es: 'Cinco minutos sobre el «cliente invisible» y cómo la IA ayuda a crear una buena web. En húngaro, con subtítulos en cinco idiomas.', hr: 'Pet minuta o „nevidljivom kupcu” i kako UI pomaže u izradi dobre web-stranice. Na mađarskom, s titlovima na pet jezika.' },
+  videoPlay: { de: 'Video abspielen', hu: 'Videó lejátszása', en: 'Play video', es: 'Reproducir vídeo', hr: 'Pokreni video' },
+  videoNote: { de: 'Beim Abspielen wird das Video von YouTube geladen.', hu: 'Lejátszáskor a videó a YouTube-ról töltődik be.', en: 'The video loads from YouTube when you press play.', es: 'Al reproducirlo, el vídeo se carga desde YouTube.', hr: 'Pokretanjem se video učitava s YouTubea.' },
   w1t: { de: 'Drei Sprachen', hu: 'Három nyelv', en: 'Three languages' },
   w1d: { de: 'DE · HU · EN', hu: 'HU · DE · EN', en: 'DE · HU · EN' },
   w2t: { de: 'Schnell', hu: 'Gyors', en: 'Fast' },
@@ -894,6 +919,18 @@ function setLang(lang) {
   try { localStorage.setItem('rm-lang', lang); } catch (e) {}
 }
 document.querySelectorAll('.lang-btn').forEach(b => b.addEventListener('click', (e) => { if (e.defaultPrevented) return; if (b.dataset.lang === document.documentElement.lang) { e.preventDefault(); return; } try { localStorage.setItem('rm-lang', b.dataset.lang); } catch (x) {} if (location.hash) b.href = b.getAttribute('href') + location.hash; }));
+document.getElementById('ytFacade')?.addEventListener('click', function () {
+  const l = document.documentElement.lang || 'de';
+  const f = document.createElement('iframe');
+  f.src = 'https://www.youtube-nocookie.com/embed/owyUjuCO7hU?autoplay=1&rel=0&hl=' + l + (l === 'hu' ? '' : '&cc_load_policy=1&cc_lang_pref=' + l);
+  f.title = this.textContent.trim();
+  f.allow = 'autoplay; encrypted-media; picture-in-picture; fullscreen';
+  f.allowFullscreen = true;
+  f.referrerPolicy = 'strict-origin-when-cross-origin';
+  f.className = 'block w-full rounded-2xl shadow-lg';
+  f.style.cssText = 'border:0;aspect-ratio:16/9';
+  this.replaceWith(f);
+});
 document.querySelectorAll('.cta-video').forEach((v) => { const slow = () => { if (v.duration) v.playbackRate = 1; }; v.addEventListener('loadedmetadata', slow); slow(); });
 (() => {
   const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
