@@ -248,6 +248,8 @@ address { font-style: normal; margin-top: 34px; display: grid; gap: 4px; }
   .pen { display: none; }
 }
 .faq-wrap { display: grid; grid-template-columns: 1fr 1.6fr; gap: 56px; align-items: start; }
+.faq-side { display: grid; gap: 36px; }
+.desk { width: 100%; max-width: 340px; height: auto; display: block; }
 .faq { display: grid; gap: 6px; }
 .faq details { border-radius: 14px; background: transparent; transition: background-color .3s ease; position: relative; }
 .faq details[open] { background: var(--bone-2); }
@@ -270,6 +272,19 @@ address { font-style: normal; margin-top: 34px; display: grid; gap: 4px; }
 @media (max-width: 1023px) { .faq-wrap { grid-template-columns: 1fr; gap: 24px; } }
 @media (max-width: 767px) { .faq summary { font-size: 20px; padding: 16px 14px; } .faq-a p { padding: 0 14px 18px; } .skyline { padding: 0 12px; margin-bottom: 24px; } }
 @media (prefers-reduced-motion: reduce) { .sky-draw path { transition: none; stroke-dashoffset: 0; } .faq summary::after { transition: none; } }
+.art-lines path { stroke-dasharray: 1; stroke-dashoffset: 1; transition: stroke-dashoffset 2.2s cubic-bezier(.4,0,.2,1); }
+.art.in .art-lines path { stroke-dashoffset: 0; }
+.art.in .art-lines path:nth-child(2) { transition-delay: .2s; } .art.in .art-lines path:nth-child(3) { transition-delay: .4s; } .art.in .art-lines path:nth-child(4) { transition-delay: .6s; }
+.art.in .art-lines path:nth-child(5) { transition-delay: .8s; } .art.in .art-lines path:nth-child(6) { transition-delay: 1s; } .art.in .art-lines path:nth-child(7) { transition-delay: 1.3s; }
+.art-fade { opacity: 0; transition: opacity .8s ease 2.2s; }
+.art.in .art-fade { opacity: 1; }
+
+.seal { position: absolute; right: -8px; top: -14px; width: 62px; height: 62px; opacity: 0; rotate: -12deg; animation: sealIn 8s cubic-bezier(.2,1.4,.4,1) .6s infinite; }
+@keyframes sealIn { 0%, 39% { opacity: 0; scale: 1.6; } 43% { opacity: .95; scale: .94; } 46% { scale: 1; opacity: .95; } 86% { opacity: .95; scale: 1; } 96%, 100% { opacity: 0; scale: 1; } }
+
+@media (max-width: 1023px) { .faq-side { gap: 20px; } .desk { max-width: 260px; } }
+@media (max-width: 767px) { .seal { width: 50px; height: 50px; right: -4px; top: -10px; } }
+@media (prefers-reduced-motion: reduce) { .art-lines path { transition: none; stroke-dashoffset: 0; } .art-fade { transition: none; opacity: 1; } .seal { animation: none; opacity: .95; } }
 </style>
 <style>
 /* TekingXtra FX-csomag (sablonok\fx-csomag.html) – ügyfélszínekre állítva; shine és ring nélkül (10. aranyszabály),
@@ -283,8 +298,8 @@ address { font-style: normal; margin-top: 34px; display: grid; gap: 4px; }
 .fx-btn-shine::after { content: ''; position: absolute; top: 0; bottom: 0; left: -60%; width: 30%; z-index: -1; pointer-events: none;
   background: rgba(255,255,255,.2); transform: skewX(-18deg); animation: fxBtnShine 7s ease-in-out 3s infinite; }
 @keyframes fxBtnShine { 0%, 70% { left: -60%; } 100% { left: 130%; } }
-@media (min-width: 768px) { .fx-steps-track { height: 140vh; overflow: clip !important; } .fx-steps-track .fx-steps-box { position: sticky !important; } }
-@media (max-width: 767px) { .fx-steps-track .fx-bar { display: none; } }
+@media (min-width: 1024px) { .fx-steps-track { height: 140vh; overflow: clip !important; } .fx-steps-track .fx-steps-box { position: sticky !important; } }
+@media (max-width: 1023px) { .fx-steps-track .fx-bar { display: none; } }
 .fx-steps-list > * { transition: transform .55s cubic-bezier(.2,.8,.2,1), background-color .55s ease, color .55s ease, opacity .55s ease; }
 .fx-steps-list > .fx-on { background: var(--fx-ink) !important; color: #fff; transform: translateY(-10px); }
 .fx-steps-list > .fx-on * { color: inherit !important; }
@@ -502,6 +517,7 @@ address { font-style: normal; margin-top: 34px; display: grid; gap: 4px; }
       <div class="head-row">
         <h2 id="menete-cim">Így intézzük az ügyét</h2>
         <div class="sign" aria-hidden="true">
+          <svg class="seal" viewBox="0 0 64 64"><circle cx="32" cy="32" r="28" fill="none" stroke="#7A5C2E" stroke-width="2.4"/><circle cx="32" cy="32" r="22" fill="none" stroke="#7A5C2E" stroke-width="1.2"/><text x="32" y="41" text-anchor="middle" font-family="Newsreader, Georgia, serif" font-size="26" font-weight="600" fill="#7A5C2E">G</text></svg>
           <svg viewBox="0 0 260 90"><path class="sign-line" pathLength="1" d="M8 78 H252"/><path class="sign-ink" pathLength="1" d="M12 60 C 20 30, 34 26, 36 46 C 38 62, 24 66, 26 52 C 30 34, 52 30, 58 50 C 62 62, 70 60, 74 48 C 78 36, 86 36, 88 50 C 90 62, 98 60, 102 46 C 106 30, 118 28, 120 46 C 122 64, 112 70, 110 56 C 108 40, 136 36, 150 50 C 160 60, 172 56, 180 44 C 186 36, 196 40, 200 52 C 204 62, 222 58, 246 40"/></svg>
           <svg class="pen" viewBox="0 0 40 40"><path d="M6 34 L10 22 L28 4 L36 12 L18 30 Z" fill="#14233D"/><path d="M6 34 L10 22 L18 30 Z" fill="#C3A06A"/><path d="M24 8 L32 16" stroke="#C3A06A" stroke-width="2"/></svg>
         </div>
@@ -516,7 +532,21 @@ address { font-style: normal; margin-top: 34px; display: grid; gap: 4px; }
 
   <section class="sec" id="gyik" aria-labelledby="gyik-cim">
     <div class="wrap faq-wrap">
-      <h2 id="gyik-cim">Gyakori kérdések</h2>
+      <div class="faq-side">
+        <h2 id="gyik-cim">Gyakori kérdések</h2>
+        <svg class="art desk" viewBox="0 0 360 280" aria-hidden="true">
+          <g class="art-lines" fill="none" stroke="#B08D57" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round">
+            <path pathLength="1" d="M8 268 H352"/>
+            <path pathLength="1" d="M40 228 H230 V268 H40 Z M52 228 V268 M146 236 H174 M146 260 H174"/>
+            <path pathLength="1" d="M56 192 H246 V228 H56 Z M68 192 V228 M160 198 H188 M160 222 H188"/>
+            <path pathLength="1" d="M46 160 H220 V192 H46 Z M58 160 V192 M136 166 H164 M136 186 H164"/>
+            <path pathLength="1" d="M70 160 Q105 138 140 154 Q175 138 210 160 M140 154 V160 M82 152 Q106 140 132 148 M148 148 Q174 140 198 152"/>
+            <path pathLength="1" d="M282 268 Q306 256 330 268 M306 262 V150 M276 150 H336 L322 108 H290 Z M306 108 V100"/>
+            <path pathLength="1" d="M180 132 L236 104 M236 104 L246 100 L240 110 Z M176 136 Q170 142 168 150"/>
+          </g>
+          <g class="art-fade" fill="#B08D57" font-family="Newsreader, Georgia, serif" font-size="20" text-anchor="middle"><text x="160" y="255">§</text><text x="174" y="217">§</text><text x="150" y="183">§</text></g>
+        </svg>
+      </div>
       <div class="faq">
         <details><summary>Hogyan kérhetek időpontot?</summary><div class="faq-a"><p>Telefonon vagy e-mailben – az elérhetőségeket a Kapcsolat résznél találja. Röviden elmondja, miről van szó, és egyeztetjük az időpontot.</p></div></details>
         <details><summary>Mit hozzak magammal az első egyeztetésre?</summary><div class="faq-a"><p>A személyazonosító igazolványát és a lakcímkártyáját (az ügyvédnek az ügyfelet azonosítania kell), valamint az üggyel kapcsolatos iratokat: szerződéseket, leveleket, határozatokat. Ha nem biztos benne, mire lesz szükség, telefonon előre megbeszéljük.</p></div></details>
@@ -620,12 +650,10 @@ address { font-style: normal; margin-top: 34px; display: grid; gap: 4px; }
       }
     });
   });
-  // Debrecen-látkép: kirajzolódik, amikor látszik
-  const sky = document.querySelector(".skyline");
-  if (sky) {
-    if (RM || !("IntersectionObserver" in window)) sky.classList.add("in");
-    else new IntersectionObserver((es, o) => es.forEach((e) => { if (e.isIntersecting) { sky.classList.add("in"); o.disconnect(); } }), { threshold: .35 }).observe(sky);
-  }
+  // vonalrajzok (Debrecen-látkép, ügyvédi asztal): kirajzolódnak, amikor látszanak
+  const arts = document.querySelectorAll(".skyline, .art");
+  if (RM || !("IntersectionObserver" in window)) arts.forEach((a) => a.classList.add("in"));
+  else { const io = new IntersectionObserver((es) => es.forEach((e) => { if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } }), { threshold: .35 }); arts.forEach((a) => io.observe(a)); }
 })();
 </script>
 <script>
@@ -633,6 +661,7 @@ address { font-style: normal; margin-top: 34px; display: grid; gap: 4px; }
 (() => {
   const RM = matchMedia('(prefers-reduced-motion: reduce)').matches;
   const MOBILE = () => matchMedia('(max-width: 767px)').matches;
+  const NOPIN = () => matchMedia('(max-width: 1023px)').matches; // a lépések rögzítése csak gépen (tableten ütközött a fejléccel)
   const $ = (s, r = document) => r.querySelector(s), $$ = (s, r = document) => [...r.querySelectorAll(s)];
   const header = $('header');
   const hh = () => (header ? header.getBoundingClientRect().height : 0);
@@ -668,7 +697,7 @@ address { font-style: normal; margin-top: 34px; display: grid; gap: 4px; }
     sec.classList.add('fx-steps-track'); box.classList.add('fx-steps-box'); list.classList.add('fx-steps-list');
     const items = [...list.children];
     const bar = document.createElement('div'); bar.className = 'fx-bar'; bar.setAttribute('aria-hidden', 'true'); bar.innerHTML = '<i></i>'; list.after(bar);
-    const center = () => { box.style.top = MOBILE() ? '' : Math.max(hh() + 28, (innerHeight - box.offsetHeight) / 2) + 'px'; }; // telefonon NINCS eltolás
+    const center = () => { box.style.top = NOPIN() ? '' : Math.max(hh() + 28, (innerHeight - box.offsetHeight) / 2) + 'px'; }; // telefonon NINCS eltolás
     center(); addEventListener('resize', center);
     let last = -1;
     if (MOBILE()) { /* telefonon: húzáskor a középső kártya kiemelve */
@@ -676,7 +705,7 @@ address { font-style: normal; margin-top: 34px; display: grid; gap: 4px; }
       items.forEach(it => io.observe(it));
     }
     ticks.push(() => {
-      if (MOBILE()) return;
+      if (NOPIN()) return;
       const r = sec.getBoundingClientRect(), total = sec.offsetHeight - innerHeight;
       const p = Math.min(Math.max(-r.top / Math.max(total, 1), 0), 1);
       bar.firstChild.style.width = (p * 100).toFixed(1) + '%';
