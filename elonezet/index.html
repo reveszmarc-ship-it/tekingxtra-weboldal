@@ -44,6 +44,25 @@
   .thanks { display:none; background:#fff; border:1px solid var(--line); border-radius:16px; padding:28px; }
   .thanks h2 { color:var(--navy); margin-top:0; }
   footer { text-align:center; font-size:13px; color:var(--muted); padding:0 16px 32px; }
+  footer nav { margin-top:8px; }
+  footer nav a { margin:0 6px; }
+  .legal-dlg { width:min(760px, calc(100vw - 32px)); max-height:calc(100dvh - 48px); padding:0; border:0; border-radius:20px; box-shadow:0 30px 80px rgba(2,6,23,.35); overflow:hidden; color:#334155; background:#fff; }
+  .legal-dlg[open] { display:flex; flex-direction:column; }
+  .legal-dlg::backdrop { background:rgba(15,23,42,.72); }
+  html:has(.legal-dlg[open]) { overflow:hidden; }
+  .legal-head { display:flex; align-items:center; justify-content:space-between; gap:16px; padding:18px 24px; border-bottom:1px solid #E2E8F0; }
+  .legal-head h2 { font-size:22px; font-weight:700; color:#0F172A; margin:0; }
+  .legal-dlg .legal-x { margin:0; width:40px; height:40px; flex:0 0 40px; padding:0; border-radius:9999px; font-size:26px; line-height:1; color:#334155; background:transparent; cursor:pointer; }
+  .legal-dlg .legal-x:hover { background:#F1F5F9; }
+  .legal-body { overflow-y:auto; padding:8px 24px 28px; font-size:15px; line-height:1.65; }
+  .legal-body [data-ll] { display:none; } .legal-body [data-ll].on { display:block; }
+  .legal-body h3 { margin:22px 0 6px; font-size:16px; font-weight:600; color:#0F172A; }
+  .legal-body p, .legal-body li { margin:6px 0; }
+  .legal-body ul { padding-left:0; list-style:none; }
+  .legal-body a { color:#0369A1; text-decoration:underline; text-underline-offset:2px; }
+  .legal-lead { margin-top:18px !important; font-size:16px; color:#0F172A; font-weight:500; }
+  .legal-date { margin-top:24px !important; font-size:13px; color:#64748B; }
+  .legal-form { margin-top:18px; padding:10px 14px; border-radius:10px; background:#F1F5F9; font-size:14px; color:#0F172A; }
 </style>
 </head>
 <body>
@@ -93,7 +112,7 @@
       <textarea id="uzenet" name="uzenet" maxlength="2000" data-ph="phMsg" placeholder="pl. milyen nyelven legyen az oldal, mi a legfontosabb a vevőidnek"></textarea>
 
       <button type="submit" data-t="btn">Kérem az ingyenes előnézetet</button>
-      <p class="small" data-t="note">Az adataidat csak az előnézethez és a válaszhoz használom. Az űrlapot a FormSubmit szolgáltatás továbbítja e-mailben. Részletek: <a href="/#privacy">Adatvédelem</a>.</p>
+      <p class="small" data-t="note">Az adataidat csak az előnézethez és a válaszhoz használom. Az űrlapot a FormSubmit szolgáltatás továbbítja e-mailben. Részletek: <a href="/hu/#privacy" data-legal="privacy">Adatvédelem</a>.</p>
     </form>
     <div class="thanks" id="thanks">
       <h2 data-t="tH">Köszönöm, megkaptam!</h2>
@@ -102,7 +121,9 @@
     </div>
   </section>
 </main>
-<footer>TekingXtra · Révész Márton · <a href="mailto:reveszmarc@gmail.com">reveszmarc@gmail.com</a></footer>
+<footer>TekingXtra · Révész Márton · <a href="mailto:reveszmarc@gmail.com">reveszmarc@gmail.com</a>
+  <nav aria-label="Jogi információk"><a href="/hu/#impressum" data-legal="impressum" data-t="fImp">Impresszum</a>·<a href="/hu/#privacy" data-legal="privacy" data-t="fPriv">Adatvédelem</a>·<a href="/hu/#terms" data-legal="terms" data-t="fTerms">ÁSZF</a></nav>
+</footer>
 
 <script>
 (function(){
@@ -116,8 +137,8 @@
       lBiz:'Name Ihres Betriebs und was Sie anbieten', phBiz:'z. B. Coiffeur Anna – Damen & Herren', lCity:'Ort / Land', phCity:'z. B. Zürich, Schweiz',
       lMail:'E-Mail-Adresse (dorthin schicke ich die Vorschau)', phMail:'name@beispiel.ch', lSite:'Bestehende Website oder Facebook/Instagram', opt:'(optional)', opt2:'(optional)', opt3:'(optional)',
       lPhone:'Telefon / WhatsApp', lMsg:'Was ich sonst noch wissen sollte', phMsg:'z. B. Sprache der Website, was Ihren Kunden am wichtigsten ist',
-      btn:'Kostenlose Vorschau anfordern', note:'Ihre Angaben verwende ich nur für die Vorschau und meine Antwort. Das Formular wird über den Dienst FormSubmit per E-Mail übermittelt. Details: <a href="/?lang=de#privacy">Datenschutz</a>.',
-      tH:'Danke, ist angekommen!', tP:'Innerhalb von 48 Stunden schicke ich Ihnen die Vorschau per E-Mail. Fragen bis dahin: reveszmarc@gmail.com', tBack:'Zurück zur Startseite' },
+      btn:'Kostenlose Vorschau anfordern', note:'Ihre Angaben verwende ich nur für die Vorschau und meine Antwort. Das Formular wird über den Dienst FormSubmit per E-Mail übermittelt. Details: <a href="/#privacy" data-legal="privacy">Datenschutz</a>.',
+      tH:'Danke, ist angekommen!', tP:'Innerhalb von 48 Stunden schicke ich Ihnen die Vorschau per E-Mail. Fragen bis dahin: reveszmarc@gmail.com', tBack:'Zurück zur Startseite', fImp:'Impressum', fPriv:'Datenschutz', fTerms:'AGB' },
     en: { title:'Free website preview – TekingXtra', subj:'New preview request – tekingxtra.com',
       h1:'Free website preview for your business',
       lead:'Within 48 hours I’ll show you what your website could look like – free and with no strings attached. Then you decide in your own time.',
@@ -126,8 +147,8 @@
       lBiz:'Business name and what you do', phBiz:'e.g. Anna’s Salon – hairdresser', lCity:'City / country', phCity:'e.g. Zurich, Switzerland',
       lMail:'Email address (I’ll send the preview here)', phMail:'name@example.com', lSite:'Existing website or Facebook/Instagram', opt:'(optional)', opt2:'(optional)', opt3:'(optional)',
       lPhone:'Phone / WhatsApp', lMsg:'Anything else I should know', phMsg:'e.g. website language, what matters most to your customers',
-      btn:'Get my free preview', note:'I only use your details for the preview and my reply. The form is forwarded by email via the FormSubmit service. Details: <a href="/?lang=en#privacy">Privacy</a>.',
-      tH:'Thanks, got it!', tP:'I’ll email you the preview within 48 hours. Questions in the meantime: reveszmarc@gmail.com', tBack:'Back to the homepage' }
+      btn:'Get my free preview', note:'I only use your details for the preview and my reply. The form is forwarded by email via the FormSubmit service. Details: <a href="/en/#privacy" data-legal="privacy">Privacy</a>.',
+      tH:'Thanks, got it!', tP:'I’ll email you the preview within 48 hours. Questions in the meantime: reveszmarc@gmail.com', tBack:'Back to the homepage', fImp:'Legal notice', fPriv:'Privacy', fTerms:'Terms' }
   };
   var q = new URLSearchParams(location.search);
   var def = document.documentElement.getAttribute('data-default') || 'hu';
@@ -143,6 +164,40 @@
     document.querySelectorAll('[data-ph]').forEach(function(e){ var k=e.getAttribute('data-ph'); if (L[k]) e.placeholder = L[k]; });
   }
   document.querySelectorAll('.langs a').forEach(function(a){ if (a.getAttribute('data-l')===lang) a.className='on'; });
+
+  // Jogi szövegek (Impresszum / Adatvédelem / ÁSZF): a főoldal azonos nyelvű változatából töltjük be, felugró ablakban
+  var PAGE = { hu:'/hu/', de:'/', en:'/en/' }[lang];
+  var FORMNOTE = {
+    hu:'<b>Az előnézet-űrlapról:</b> az itt megadott adatokat (vállalkozás neve, város/ország, e-mail-cím, és ha megadod: weboldal, telefon, üzenet) kizárólag az ingyenes előnézet elkészítéséhez és a válaszhoz használom. Az űrlapot a FormSubmit (formsubmit.co) külső szolgáltatás továbbítja e-mailben a reveszmarc@gmail.com címre. Jogalap: a kérésedre történő, szerződést előkészítő lépés (GDPR 6. cikk (1) b)).',
+    de:'<b>Zum Vorschau-Formular:</b> Die hier eingegebenen Angaben (Name des Betriebs, Ort/Land, E-Mail-Adresse und, falls angegeben, Website, Telefon, Nachricht) verwende ich nur für die kostenlose Vorschau und meine Antwort. Das Formular wird über den externen Dienst FormSubmit (formsubmit.co) per E-Mail an reveszmarc@gmail.com übermittelt. Rechtsgrundlage: vorvertragliche Maßnahme auf Ihre Anfrage (Art. 6 Abs. 1 lit. b DSGVO).',
+    en:'<b>About the preview form:</b> the details you enter here (business name, city/country, email address and, if provided, website, phone, message) are used only to create your free preview and to reply to you. The form is forwarded by email to reveszmarc@gmail.com via the external service FormSubmit (formsubmit.co). Legal basis: steps taken at your request prior to entering into a contract (Art. 6(1)(b) GDPR).'
+  }[lang];
+  var legalReady = null;
+  function loadLegal(){
+    if (!legalReady) legalReady = fetch(PAGE, { credentials:'same-origin' }).then(function(r){ if(!r.ok) throw 0; return r.text(); }).then(function(html){
+      var doc = new DOMParser().parseFromString(html, 'text/html');
+      ['impressum','privacy','terms'].forEach(function(k){
+        var d = doc.getElementById('dlg-' + k); if (!d) throw 0;
+        d.querySelectorAll('[data-ll]').forEach(function(el){ el.classList.toggle('on', el.getAttribute('data-ll') === lang); });
+        if (!d.querySelector('[data-ll].on')) { var f = d.querySelector('[data-ll]'); if (f) f.classList.add('on'); }
+        if (k === 'privacy') { var n = document.createElement('p'); n.className = 'legal-form'; n.innerHTML = FORMNOTE; var body = d.querySelector('[data-ll].on') || d.querySelector('.legal-body'); var lead = body.querySelector('.legal-lead'); if (lead) lead.insertAdjacentElement('afterend', n); else body.prepend(n); }
+        d.querySelector('.legal-x').setAttribute('aria-label', { hu:'Bezárás', de:'Schließen', en:'Close' }[lang]);
+        var node = document.importNode(d, true); document.body.appendChild(node);
+        node.querySelector('.legal-x').addEventListener('click', function(){ node.close(); });
+        node.addEventListener('click', function(e){ if (e.target === node) node.close(); });
+      });
+    });
+    return legalReady;
+  }
+  function openLegal(k){
+    loadLegal().then(function(){ var d = document.getElementById('dlg-' + k); d.showModal(); d.querySelector('.legal-body').scrollTop = 0; })
+      .catch(function(){ location.href = PAGE + '#' + k; });
+  }
+  document.querySelectorAll('[data-legal]').forEach(function(a){
+    a.setAttribute('href', PAGE + '#' + a.getAttribute('data-legal'));
+    a.addEventListener('click', function(e){ e.preventDefault(); openLegal(a.getAttribute('data-legal')); });
+  });
+  if (/^#(impressum|privacy|terms)$/.test(location.hash)) openLegal(location.hash.slice(1));
   if (q.get('koszonjuk')) { document.getElementById('f').style.display='none'; document.getElementById('thanks').style.display='block'; }
 })();
 </script>
